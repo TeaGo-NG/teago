@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html>
+   <head>
+ 
+      <title>Create new article</title>
+      <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+      <meta name="title" content="Create new article">
+      <meta name="description" content="WoWonder v3.0.2 is a Social Networking Platform. With our new feature, user can wonder posts, photos,">
+      <meta name="keywords" content="social, wowonder, social site">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="pinterest-rich-pin" content="false"/>
+	  	  <meta name="theme-color" content="#3D8CFA"/>
+	                                                                          
+      <link rel="shortcut icon" type="image/png" href="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/xicon.png.pagespeed.ic.iw6yNcFM3C.png"/>
+      <link rel="stylesheet" href="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/stylesheet/A.general-style-plugins.css,qversion=3.1.2.pagespeed.cf.BQMwCDt9FS.css">
+            <script src="js/book-v1.j"></script>
+     		 <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+            <script src="js/tinymce/js/tinymce/tinymce.min.js?version=3.1.2"></script>
+            <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js?version=3.1.2"></script>
+      <link rel="stylesheet" href="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/stylesheet/A.style.css,,qversion==3.1.2+w3.css,,qversion==3.1.2+theme-style.css,,qversion==3.1.2,Mcc.QqSCxLkX47.css.pagespeed.cf.NcYpEsXa9U.css"/>
+      
+	  
+            <link rel="stylesheet" href="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/stylesheet/font-awesome-4.7.0/css/font-awesome.min.css?version=3.1.2">
+           
+      <script src="js/jquery-3.1.1.min.js,qversion=3.1.2.pagespeed.jm.RvrvFCPmHb.js"></script>
+            <script src="js/bok-v1.js"></script>
+      <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js?version=3.1.2"></script>
+               <link rel="canonical" href="http://127.0.0.1:8080/itest/Script/create-blog/"/>
+      
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css?version=3.1.2">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js?version=3.1.2"></script>
+      	  
+	  
+      
+            
+      
+      
+
+
+      <link rel="stylesheet" href="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/player/fluidplayer.min.css,qversion=3.1.2.pagespeed.ce.uk-B457MA4.css" type="text/css"/>
+      <script src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/player/fluidplayer.min.js?version=3.1.2"></script>
+            <style></style>
+
+      <script type="text/javascript">function Wo_Ajax_Requests_File(){return"http://127.0.0.1:8080/itest/Script/requests.php"}function Wo_Ajax_Requests_Filee(){return"http://127.0.0.1:8080/itest/Script/ajax_loading.php"}var websiteUrl="http://127.0.0.1:8080/itest/Script";$(function(){if(navigator.geolocation){var location=navigator.geolocation.getCurrentPosition(Wo_UpdateLocation);}var box=$('#contnet');var ISAPI=$('#ISAPI').val();$(document).on('click','a[data-ajax]',function(e){if($('#live_post_id').length>0){DeleteLive();window.location=$(this).attr('href');return false;}Wo_CloseLightbox();$('body').removeAttr('no-more-posts');if($('.postText').length){if($('.postText').val().length>0){if(!confirm("You haven't finished your post yet. Do you want to leave without finishing?")){return false;}else{$('.postText').val("");}}}Wo_StartBar();window.post=0;var url=$(this).attr('data-ajax');e.preventDefault();if(!ISAPI){if(url=='?index.php?link1=home'){$get_value=$('#json-data').val();if($get_value){$('#load-more-posts').hide();json_data=JSON.parse($('#json-data').val());if(json_data.page=='home'){document.getElementById('posts').innerHTML='<div class="posts_load"><div class="wo_loading_post"><div class="wo_loading_post_child"></div></div></div>';loadposts();window.history.pushState({state:'new'},'',websiteUrl);$("html, body").animate({scrollTop:0},100);$('.user-details, .pac-container, .lightbox-container').remove();Wo_clearPRecording();Wo_CleanRecordNodes();Wo_stopRecording();Wo_StopLocalStream();return false;}}}$.post(Wo_Ajax_Requests_Filee()+url,{url:url},function(data){$('.user-details').remove();json_data=JSON.parse($(data).filter('#json-data').val());if(json_data.welcome_page==1||json_data.redirect==1){window.location.href=websiteUrl;return false;}if($('.message-option-btns').length>0){if(json_data.url=='index.php?index.php?link1=home'){window.location.href=websiteUrl;}else{window.location.href=json_data.url;}return false;}box.html(data);if(json_data.is_css_file==1){$('.styled-profile').remove();$('footer').append(json_data.css_file);$('.extra-css').html(json_data.css_file_header);}else{$('.styled-profile').attr('href','');$('.extra-css').empty();}Wo_clearPRecording();Wo_CleanRecordNodes();Wo_stopRecording();Wo_StopLocalStream();if(json_data.page=='timeline'){$('.content-container').addClass('container-fluid');$('.content-container').removeClass('container');}else{$('.content-container').addClass('container');$('.content-container').removeClass('container-fluid');}if(json_data.page=='home'){$('.filterby li.filter-by-li').on('click',function(e){$('.filterby li.filter-by-li').each(function(){$(this).removeClass('avtive');$(this).find('i').addClass('hidden');});$(this).find('i').removeClass('hidden');$(this).addClass('avtive');});window.history.pushState({state:'new'},'',websiteUrl);}else{window.history.pushState({state:'new'},'',json_data.url);}$('.postText').autogrow({vertical:true,horizontal:false,height:200});window.onpopstate=function(event){$(window).unbind('popstate');window.location.href=document.location;};if(json_data.page=='timeline'||json_data.page=='page'||json_data.page=='group'){$('.content-container').css('margin-top','25px');$('.ad-placement-header-footer').find('.contnet').css('margin-top','20px');}else{$('.content-container').css('margin-top','45px');$('.ad-placement-header-footer').find('.contnet').css('margin-top','0');}if(json_data.is_footer==1&&$('.second-footer').css('display')=='none'){$('footer .footer-wrapper').show();}else if(json_data.is_footer==1&&$('.second-footer').css('display')!='none'){}else{if($(window).width()<720){$('footer .footer-wrapper').show();}else{$('footer .footer-wrapper, .second-footer').hide();}}document.title=decodeHtml(json_data.title);document_title=decodeHtml(json_data.title);$("html, body").animate({scrollTop:0},150);Wo_FinishBar();$('#hidden-content').empty();$('#users-reacted-modal').modal("hide");});$('.user-details, .pac-container, .lightbox-container').remove();}});});function RunLiveAgora(channelName,DIV_ID){var agoraAppId='';var token=null;var client=AgoraRTC.createClient({mode:'live',codec:'vp8'});client.init(agoraAppId,function(){client.setClientRole('audience',function(){},function(e){});client.join(token,channelName,0,function(uid){},function(err){});},function(err){});client.on('stream-added',function(evt){var stream=evt.stream;var streamId=stream.getId();client.subscribe(stream,function(err){});});client.on('stream-subscribed',function(evt){var remoteStream=evt.stream;remoteStream.play(DIV_ID);$('#player_'+remoteStream.getId()).addClass('embed-responsive-item');});}</script>
+            
+    <style>@font-face{font-family:OpenSansLight;src:url(http://127.0.0.1:8080/itest/Script/themes/GradeFeed/fonts/OpenSansLight/OpenSansLight.woff) format("woff");font-weight:normal}@font-face{font-family:OpenSansRegular;src:url(http://127.0.0.1:8080/itest/Script/themes/GradeFeed/fonts/OpenSansRegular/OpenSansRegular.woff) format("woff");font-weight:normal}@font-face{font-family:OpenSansSemiBold;src:url(http://127.0.0.1:8080/itest/Script/themes/GradeFeed/fonts/OpenSansSemiBold/OpenSansSemiBold.woff) format("woff");font-weight:normal}@font-face{font-family:OpenSansBold;src:url(http://127.0.0.1:8080/itest/Script/themes/GradeFeed/fonts/OpenSansBold/OpenSansBold.woff) format("woff");font-weight:normal}.navbar-default{background:#4d91ea;border:none;height:45px;box-shadow:0 1px 4px rgba(0,0,0,.2)}.navbar-nav.left_part_header .search-container{background:#4d91ea}.round-check input[type="checkbox"]:checked+label:before{background:#4d91ea!important}.group-messages-wrapper a{color:#4d91ea!important}ul.profile-completion-bar li.completion-bar div.completion-bar-status{background:#4d91ea!important}.featured-users{background:#fff!important}.result-bar{background:#4d91ea!important}.avtive{border-color:#4d91ea!important}.left-sidebar ul li a i{color:#4d91ea!important}.cs-loader-inner,.main{color:#4d91ea}.login input:focus,ul.profile-completion-bar li.completion-bar div.completion-bar-wrapper{border-color:#4d91ea!important}.login:not(.loading) button:hover {background:#2e7be5!important;color:#fff}#search-nearby-users .nearby-users-relationship-collapse li.active .friends_toggle{border-color:#4d91ea}#search-nearby-users .nearby-users-relationship-collapse li.active .friends_toggle:after{background:#4d91ea}.login button,.wo_search_page .nav-tabs li.active a{background:#4d91ea!important;color:#fff!important}.mejs-controls .mejs-time-rail .mejs-time-current,.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{background-color:#4d91ea!important;background:#4d91ea!important;background-image:#4d91ea!important}.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#fff!important;background-color:#2e7be5!important}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover,.nav-names li:hover{color:#fff!important;background-color:#333!important}body{background-color:#f9f9f9}.navbar-default .navbar-nav>li>a{color:#fff;font-size:13px}a.unread-update,.head_clos_srch{color:#fff!important}.btn-main{color:#fff;background-color:#4d91ea;border-color:#4d91ea}.btn-main:hover{color:#fff;background-color:#2e7be5;border-color:#2e7be5}.active-wonder{color:#4d91ea}.admin-panel .col-md-9 .list-group-item:first-child,.setting-panel .col-md-8 .list-group-item:first-child,.profile-lists .list-group-item:first-child,.col-md-8 .list-group-item:first-child,.col-md-3.custom .list-group-item:first-child,.col-sm-4 .list-group-item:first-child,.col-md-7 .list-group-item:first-child,.col-md-9 .list-group-item:first-child,.red-list .list-group-item:first-child,.active.list-group-item:first-child{color:#444;background-color:#fcfcfc;border-bottom:1px solid #f1f1f1;padding:18px}.admin-panel .col-md-9 .list-group-item:first-child a,.setting-panel .col-md-8 .list-group-item:first-child a,.profile-lists .list-group-item:first-child a,.col-md-8 .list-group-item:first-child a,.col-md-7 .list-group-item:first-child a,.active.list-group-item:first-child a{color:#444!important}.list-group-item.black-list.active-list,.red-list.active-list{color:#fff;background-color:#4d91ea}.list-group-item.black-list{background:#4d91ea}.profile-top-line{background-color:#4d91ea}#bar{background-color:#4d91ea}.list-group-item.black-list a{color:#fff}.list-group-item.black-list.active-list a{color:#4d91ea}.main-color,.small-text a{color:#4d91ea!important}.nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover{color:#fff;cursor:default;color:#4d91ea;border-bottom:1px solid #4d91ea;background-color:transparent}.btn-active{color:#fff;background:#4d91ea;outline:none;border:1px solid #4d91ea}.btn-active:hover,.btn-active:focus{border:1px solid #2e7be5;color:#fff;background:#2e7be5}.btn-active-color:hover{background:#2e7be5}.chat-tab .online-toggle{background:#4d91ea}.profile-style .user-follow-button button.btn-active,.btn-login,.btn-register{background:#4d91ea;color:#fff}.profile-style .user-follow-button button.btn-active:hover,.btn-login:hover,.btn-login:focus,.btn-register:hover,.btn-register:focus{color:#fff;background:#2e7be5}.panel-login>.panel-heading a.active{color:#4d91ea;font-size:18px}.hash{color:#4d91ea}.message-text .hash{color:#fff!important}.search-container .search-input{color:#fff!important;background:#0147a9!important}.chat-messages-wrapper .outgoing{background:#4d91ea}.message p{color:#fff}.text-sender-container .outgoing .message-model .message{background:#4d91ea}.incoming .message. p {color:#555}.incoming.message p{color:#555}.incoming .message p{color:#555}.normal-container{width:100%;height:100%;margin-top:15px}.active.fa-thumbs-up{color:#4d91ea}.api-ex-urls{background-color:#4d91ea;color:#fff}.user-username{color:#4d91ea}.upload-image{border:3px dashed #4d91ea}.events-tab-list li{background-color:#4d91ea}.events-tab-list li:hover{background-color:#4d91ea}.active-e-tab{background-color:#4d91ea!important}.main{color:#4d91ea!important}.events-list-dropup-menu ul li a:hover{background:#4d91ea}.usr-offline{color:#4d91ea}.blog-dd-ul li span:hover,.blog-dd-ul li a:hover{background:#4d91ea!important}.blog_publ{background:#4d91ea;border:1px solid #4d91ea}.slide-film-desc:hover,.movies-top-breadcrumb li:hover,.movies-top-breadcrumb li a:hover{color:#4d91ea!important}.movies h3.latest-movies,h3.recommended-movies{border-left:3px solid #4d91ea}.wo_user_profile .user-bottom-nav li .menuactive{border-bottom:2px solid #4d91ea;color:#4d91ea}body,.navbar-default,.wo_about_wrapper_parent{padding-right:205px}@media (min-width:1420px){body,.navbar-default,.wo_about_wrapper_parent{padding-right:240px}.sun_blog_head{right:240px}}@media (max-width:1140px){.wo_about_wrapper_parent{padding-right:0}}.sun_blog_head{right:205px}.post .panel.active_shadow{box-shadow:0 0 0 1.5px #4d91ea!important}.ui-widget-header .ui-state-default{background-color:#4d91ea}.reaction-1::before{content:"Like"}.reaction-2::before{content:"Love"}.reaction-3::before{content:"HaHa"}.reaction-4::before{content:"WoW"}.reaction-5::before{content:"Sad"}.reaction-6::before{content:"Angry"}.navbar-default .dropdown-menu.ani-acc-menu>li>a:hover{color:#fff;background-color:#4d91ea}@media (min-width:992px){#wo_msg_right_prt .text-sender-container .outgoing .message-model .message p{color:#fff;background-color:#4d91ea}#wo_nw_msg_page .messages-recipients-list .msg_ava_name{color:#fff!important}#wo_nw_msg_page .messages-recipients-list.active .msg_ava_name{color:#333!important}}.sun_input input:focus,.sun_input textarea:focus,.sun_input select:focus{border-color:#4d91ea}.loading::before{background-color:#4d91ea}</style>    
+    
+                    <script crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    
+    <script src="js/socket.io.js"></script>
+      <script>let socket=null
+let groupChatListener={}
+$(()=>{});</script>
+   </head>
+   
+   <body>
+      		<div id="focus-overlay"></div>
+      <input type="hidden" class="main_session" value="4b7b3e2a233c24fd6361">
+               <header class="header-container">
+            <div class="navbar navbar-default navbar-fixed-top">
+	<nav class="header-fixed1000">
+		<div class="container-fluid">
+			<a class="brand header-brand" href="http://127.0.0.1:8080/itest/Script">
+				<script data-pagespeed-no-defer>//<![CDATA[
+(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/mod_pagespeed_beacon','http://127.0.0.1:8080/itest\/Script/create-blog/','5IWW-MxsGU',true,false,'QsqKYfqwVAA');
+//]]></script><img width="130" src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/130xNxlogo.png.pagespeed.ic.SGLhL5_3vd.png" alt="goo Logo" data-pagespeed-url-hash="1725139817" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</a>
+			<ul class="nav navbar-nav left_part_header">
+				<li class="head_name_links">
+					<a class="sixteen-font-size homelink_count" href="http://127.0.0.1:8080/itest/Script" data-ajax="?index.php?link1=home">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/></svg>
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="head_name_links">
+					<a class="sixteen-font-size homesrch_count" id="open_header_search" href="javascript:void(0);">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/></svg>
+					</a>
+				</li>
+				<li class="head_name_links">
+					<a class="sixteen-font-size keyshort_count" data-toggle="modal" data-target="#keyboard_shortcuts_box" href="javascript:void(0);">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19,10H17V8H19M19,13H17V11H19M16,10H14V8H16M16,13H14V11H16M16,17H8V15H16M7,10H5V8H7M7,13H5V11H7M8,11H10V13H8M8,8H10V10H8M11,11H13V13H11M11,8H13V10H11M20,5H4C2.89,5 2,5.89 2,7V17A2,2 0 0,0 4,19H20A2,2 0 0,0 22,17V7C22,5.89 21.1,5 20,5Z"/></svg>
+					</a>
+				</li>
+				
+																	
+				<li class="search-container">
+					<div class="dropdown head_srch_drop">
+						<div class="head_clos_srch" id="close_header_search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"/></svg></div>
+						<form class="navbar-form form-group" data-toggle="dropdown" role="button" id="navbar-searchbox" role="search">
+							<div class="form-group inner-addon left-addon ">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search glyphicon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+								<input type="text" class="form-control search-input" onkeyup="Wo_DetectSearchType(this.value), document.getElementById('wo_repeat_search').innerHTML = escapeHtml(this.value)" placeholder="Search for people, pages, Institutions and #hashtags" dir="auto" onfocus="Wo_GetRecentSearchs()">
+							</div>
+						</form>
+						<ul class="dropdown-menu search-dropdown-container" style="margin-left:7px;" role="menu">
+							<div class="search-dropdown-result">
+															</div>
+							<li>
+								<span class="search-advanced-container">
+									<a href="http://127.0.0.1:8080/itest/Script/search" class="search-advanced-link" data-ajax="?link1=search">
+										<div class="feather-svg-parent">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+										</div>
+										<span style="vertical-align: middle;display: table-cell;padding-left: 10px;">
+											Advanced Search 
+											<span id="wo_repeat_search"></span>
+										</span>
+									</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			
+</ul>
+<ul class="nav navbar-nav navbar-right pull-right" id="head_menu_rght">
+		<li class="dropdown head_name_links">
+		<a href="#" class="dropdown-toggle sixteen-font-size btn-main" data-toggle="dropdown" role="button" aria-expanded="false">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/></svg>
+		</a>
+		<ul class="dropdown-menu clearfix create_head_menu" role="menu">
+						<li class="animated">
+				<a href="http://127.0.0.1:8080/itest/Script/ads/create/" data-ajax="?link1=create-ads"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#9c27b0" d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z"/></svg> Create Ad</a>
+			</li>
+									<li class="animated_20">
+				<a href="http://127.0.0.1:8080/itest/Script/create-blog/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#009da0" d="M18,20H6V18H4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V18H18V20M14,2H6A2,2 0 0,0 4,4V12H6V4H14V8H18V12H20V8L14,2M11,16H8V14H11V16M16,16H13V14H16V16M3,14H6V16H3V14M21,16H18V14H21V16Z"/></svg> Create Blog</a>
+			</li>
+									<li class="animated_40">
+				<a href="http://127.0.0.1:8080/itest/Script/events/create-event/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f25e4e" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z"/></svg> Create Exam</a>
+			</li>
+									<li class="animated_60">
+				<a href="http://127.0.0.1:8080/itest/Script/create-group" data-ajax="?link1=create-group"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#03A9F4" d="M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6M6,8.17A2.5,2.5 0 0,0 3.5,10.67A2.5,2.5 0 0,0 6,13.17C6.88,13.17 7.65,12.71 8.09,12.03C7.42,11.18 7,10.15 7,9C7,8.8 7,8.6 7.04,8.4C6.72,8.25 6.37,8.17 6,8.17M18,8.17C17.63,8.17 17.28,8.25 16.96,8.4C17,8.6 17,8.8 17,9C17,10.15 16.58,11.18 15.91,12.03C16.35,12.71 17.12,13.17 18,13.17A2.5,2.5 0 0,0 20.5,10.67A2.5,2.5 0 0,0 18,8.17M12,14C10,14 6,15 6,17V19H18V17C18,15 14,14 12,14M4.67,14.97C3,15.26 1,16.04 1,17.33V19H4V17C4,16.22 4.29,15.53 4.67,14.97M19.33,14.97C19.71,15.53 20,16.22 20,17V19H23V17.33C23,16.04 21,15.26 19.33,14.97Z"/></svg> Create Institution</a>
+			</li>
+									<li class="animated_80">
+				<a href="http://127.0.0.1:8080/itest/Script/create-page" data-ajax="?link1=create-page"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f79f58" d="M14.4,6L14,4H5V21H7V14H12.6L13,16H20V6H14.4Z"/></svg> Create Page</a>
+			</li>
+					</ul>
+	</li>
+	<li class="dropdown requests-container" onclick="Wo_OpenRequestsMenu();">
+		<span class="new-update-alert hidden">
+			0		</span>
+		<a href="#" class="dropdown-toggle  sixteen-font-size" data-toggle="dropdown" role="button" aria-expanded="false">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"/></svg>
+		</a>
+		<ul class="dropdown-menu request-list clearfix notifications-dropdown" role="menu" id="requests-list">
+			<li>
+				<h5 class="text-center"><svg width='50px' height='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></h5>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown messages-notification-container" onclick="Wo_OpenMessagesMenu();">
+		<span class="new-update-alert hidden" data_messsages_count="0">
+			0		</span>
+		<a href="#" class="dropdown-toggle  sixteen-font-size" data-toggle="dropdown" role="button" aria-expanded="false">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2Z"/></svg>
+		</a>
+		<ul class="dropdown-menu clearfix notifications-dropdown messages-dropdown" role="menu" id="messages-list">
+			<li>
+				<h5 class="text-center"><svg width='50px' height='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></h5>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown notification-container" onclick="Wo_OpenNotificationsMenu();">
+		<span class="new-update-alert hidden">
+			0		</span>
+		<a href="#" class="dropdown-toggle  sixteen-font-size" data-toggle="dropdown" role="button" aria-expanded="false">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M21,19V20H3V19L5,17V11C5,7.9 7.03,5.17 10,4.29C10,4.19 10,4.1 10,4A2,2 0 0,1 12,2A2,2 0 0,1 14,4C14,4.1 14,4.19 14,4.29C16.97,5.17 19,7.9 19,11V17L21,19M14,21A2,2 0 0,1 12,23A2,2 0 0,1 10,21"/></svg>
+		</a>
+		<ul class="dropdown-menu clearfix notifications-dropdown" role="menu">
+			<li onclick="Wo_TurnOffSound();" class="turn-off-sound text-left">
+				<span>
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg> Turn off notification sound									</span> 
+			</li>
+			<li id="notification-list">
+				<h5 class="text-center"><svg width='50px' height='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></h5>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown sun_bd_hd_scrl_menu">
+		<a href="#" class="dropdown-toggle user-menu-combination" data-toggle="dropdown" role="button" aria-expanded="false">
+			<span id="user-full-name" class="User-Name hidden-xs">
+									admin							</span>
+			<div class="user-avatar">
+				<img id="updateImage-1" src="http://127.0.0.1:8080/itest/Script/upload/photos/2021/08/x1qG722cVj2FN6E8KMEF2_10_7a45502b89d58a9144447f46d41273d5_avatar.jpg,qcache=1628600754.pagespeed.ic.2NA7-oE08a.jpg" alt="admin Profile Picture" data-pagespeed-url-hash="2181026393" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+			</div>
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="mobi_menu_hd"><path fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+		</a>
+		<ul class="dropdown-menu ani-acc-menu" role="menu">
+			<li>
+				<a class="menu_firs_link" id="update-username" href="http://127.0.0.1:8080/itest/Script/admin" data-ajax="?link1=timeline&u=admin"><b>admin</b></a>
+									<a class="menu_sec_link" href="http://127.0.0.1:8080/itest/Script/setting/my_points" data-ajax="?link1=setting&page=my_points">
+						<p>Coin: 268</p>
+					</a>
+							</li>
+
+				
+			
+						<li><hr></li>
+							<li>
+					<a href="http://127.0.0.1:8080/itest/Script/boosted-posts" data-ajax="?link1=boosted-posts">
+						<svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#ffa412" d="M7,2V13H10V22L17,10H13L17,2H7Z"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Boosted Posts					</a>
+				</li>
+												<li>
+					<a href="http://127.0.0.1:8080/itest/Script/boosted-pages" data-ajax="?link1=boosted-pages">
+						<svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#ffa412" d="M7,2V13H10V22L17,10H13L17,2H7Z"/></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Boosted Pages					</a>
+				</li>
+				<li><hr></li>
+						        
+							<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/pages" data-ajax="?link1=pages"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#f79f58" d="M5,21 L5,1 L7,1 L7,2 L21.1247446,2 L18.1259893,7.99991055 L21.126034,14 L7,14 L7,21 L8,21 L8,23 L4,23 L4,21 L5,21 Z M7,12 L17.889966,12 L15.8900107,8.00008945 L17.8892554,4 L7,4 L7,12 Z"></path></svg> Pages</a>
+				</li>
+										<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/events/" data-ajax="?link1=events"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#f25e4e" d="M20,8 L20,5 L18,5 L18,6 L16,6 L16,5 L8,5 L8,6 L6,6 L6,5 L4,5 L4,8 L20,8 Z M20,10 L4,10 L4,20 L20,20 L20,10 Z M18,3 L20,3 C21.1045695,3 22,3.8954305 22,5 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,5 C2,3.8954305 2.8954305,3 4,3 L6,3 L6,2 L8,2 L8,3 L16,3 L16,2 L18,2 L18,3 Z M9,14 L7,14 L7,12 L9,12 L9,14 Z M13,14 L11,14 L11,12 L13,12 L13,14 Z M17,14 L15,14 L15,12 L17,12 L17,14 Z M9,18 L7,18 L7,16 L9,16 L9,18 Z M13,18 L11,18 L11,16 L13,16 L13,18 Z"></path></svg> Exams</a>
+				</li>
+			
+							<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/groups" data-ajax="?link1=groups"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#03A9F4" d="M6.5,22 C4.01471863,22 2,19.9852814 2,17.5 C2,15.0147186 4.01471863,13 6.5,13 C8.98528137,13 11,15.0147186 11,17.5 C11,19.9852814 8.98528137,22 6.5,22 Z M17.5,22 C15.0147186,22 13,19.9852814 13,17.5 C13,15.0147186 15.0147186,13 17.5,13 C19.9852814,13 22,15.0147186 22,17.5 C22,19.9852814 19.9852814,22 17.5,22 Z M6.5,11 C4.01471863,11 2,8.98528137 2,6.5 C2,4.01471863 4.01471863,2 6.5,2 C8.98528137,2 11,4.01471863 11,6.5 C11,8.98528137 8.98528137,11 6.5,11 Z M17.5,11 C15.0147186,11 13,8.98528137 13,6.5 C13,4.01471863 15.0147186,2 17.5,2 C19.9852814,2 22,4.01471863 22,6.5 C22,8.98528137 19.9852814,11 17.5,11 Z M17.5,9 C18.8807119,9 20,7.88071187 20,6.5 C20,5.11928813 18.8807119,4 17.5,4 C16.1192881,4 15,5.11928813 15,6.5 C15,7.88071187 16.1192881,9 17.5,9 Z M6.5,9 C7.88071187,9 9,7.88071187 9,6.5 C9,5.11928813 7.88071187,4 6.5,4 C5.11928813,4 4,5.11928813 4,6.5 C4,7.88071187 5.11928813,9 6.5,9 Z M17.5,20 C18.8807119,20 20,18.8807119 20,17.5 C20,16.1192881 18.8807119,15 17.5,15 C16.1192881,15 15,16.1192881 15,17.5 C15,18.8807119 16.1192881,20 17.5,20 Z M6.5,20 C7.88071187,20 9,18.8807119 9,17.5 C9,16.1192881 7.88071187,15 6.5,15 C5.11928813,15 4,16.1192881 4,17.5 C4,18.8807119 5.11928813,20 6.5,20 Z"></path></svg> Institutions</a>
+				</li>
+										<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/groups" data-ajax="?link1=groups"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f35d4d" d="M19,21 L5,21 C3.34314575,21 2,19.6568542 2,18 L2,3 L16,3 L18,3 L18,8 L22,8 L22,9 L22,18 C22,19.6568542 20.6568542,21 19,21 Z M16.1707057,19 C16.0601542,18.6872211 16,18.3506354 16,18 L16,5 L4,5 L4,18 C4,18.5522847 4.44771525,19 5,19 L16.1707057,19 Z M18,10 L18,18 C18,18.5522847 18.4477153,19 19,19 C19.5522847,19 20,18.5522847 20,18 L20,10 L18,10 Z M10,7 L10,11 L6,11 L6,7 L10,7 Z M14,8 L14,10 L11,10 L11,8 L14,8 Z M14,12 L14,14 L6,14 L6,12 L14,12 Z M14,15 L14,17 L6,17 L6,15 L14,15 Z"/></svg>Browse Books</a>
+				</li>
+										<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/groups" data-ajax="?link1=groups"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"/></svg> Favourite Books</a>
+				</li>
+			
+							<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/blogs" data-ajax="?link1=blogs"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#f35d4d" d="M19,21 L5,21 C3.34314575,21 2,19.6568542 2,18 L2,3 L16,3 L18,3 L18,8 L22,8 L22,9 L22,18 C22,19.6568542 20.6568542,21 19,21 Z M16.1707057,19 C16.0601542,18.6872211 16,18.3506354 16,18 L16,5 L4,5 L4,18 C4,18.5522847 4.44771525,19 5,19 L16.1707057,19 Z M18,10 L18,18 C18,18.5522847 18.4477153,19 19,19 C19.5522847,19 20,18.5522847 20,18 L20,10 L18,10 Z M10,7 L10,11 L6,11 L6,7 L10,7 Z M14,8 L14,10 L11,10 L11,8 L14,8 Z M14,12 L14,14 L6,14 L6,12 L14,12 Z M14,15 L14,17 L6,17 L6,15 L14,15 Z"></path></svg> Blog</a>
+				</li>
+			    				<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/my-blogs/" data-ajax="?link1=my-blogs"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#009da0" d="M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z M8,17 L8,15 L14,15 L14,17 L8,17 Z M8,13 L8,11 L16,11 L16,13 L8,13 Z"></path></svg> My articles</a>
+				</li>
+														<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/movies/"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#8d73cc" d="M23,19 C23,20.1045695 22.1045695,21 21,21 L9,21 C7.8954305,21 7,20.1045695 7,19 L7,5 C7,3.8954305 7.8954305,3 9,3 L21,3 C22.1045695,3 23,3.8954305 23,5 L23,19 Z M6,20 C4.8954305,20 4,19.1045695 4,18 L4,6 C4,4.8954305 4.8954305,4 6,4 L6,20 Z M3,19 C1.8954305,19 1,18.1045695 1,17 L1,7 C1,5.8954305 1.8954305,5 3,5 L3,19 Z M21,19 L21,5 L9,5 L9,19 L21,19 Z M13,9 L17,12 L13,15 L13,9 Z"></path></svg> Movies</a>
+				</li>
+						
+         
+							<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/forum/"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#8BC34A" d="M22,17 L22,19 L8,19 L8,17 L22,17 Z M22,11 L22,13 L8,13 L8,11 L22,11 Z M22,5 L22,7 L8,7 L8,5 L22,5 Z M4,20 C2.8954305,20 2,19.1045695 2,18 C2,16.8954305 2.8954305,16 4,16 C5.1045695,16 6,16.8954305 6,18 C6,19.1045695 5.1045695,20 4,20 Z M4,14 C2.8954305,14 2,13.1045695 2,12 C2,10.8954305 2.8954305,10 4,10 C5.1045695,10 6,10.8954305 6,12 C6,13.1045695 5.1045695,14 4,14 Z M4,8 C2.8954305,8 2,7.1045695 2,6 C2,4.8954305 2.8954305,4 4,4 C5.1045695,4 6,4.8954305 6,6 C6,7.1045695 5.1045695,8 4,8 Z"></path></svg> Forum</a>
+				</li>
+			
+							<li>
+					<a href="http://127.0.0.1:8080/itest/Script/advertise" data-ajax="?link1=advertise">
+						<svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#9c27b0" d="M12,8H4A2,2 0 0,0 2,10V14A2,2 0 0,0 4,16H5V20A1,1 0 0,0 6,21H8A1,1 0 0,0 9,20V16H12L17,20V4L12,8M21.5,12C21.5,13.71 20.54,15.26 19,16V8C20.53,8.75 21.5,10.3 21.5,12Z"></path></svg>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> Advertising					</a>
+				</li>
+										<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/my-products" data-ajax="?link1=my-products"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#6a7f9a" d="M17.118034,7 L20,7 C21.1045695,7 22,7.8954305 22,9 L22,11 C22,11.8400191 21.4821261,12.5590822 20.7482321,12.8553354 C20.7516471,12.9031122 20.7533839,12.9513533 20.7533839,13 C20.7533839,13.1459247 20.7374136,13.2914111 20.7057581,13.4338609 L19.1502025,20.4338609 C18.9468525,21.348936 18.1352257,22 17.1978284,22 L6.80217161,22 C5.86477431,22 5.05314751,21.348936 4.84979749,20.4338609 L3.29424193,13.4338609 C3.25094564,13.2390276 3.23766963,13.0445179 3.25133987,12.8551625 C2.51767261,12.5588026 2,11.8398557 2,11 L2,9 C2,7.8954305 2.8954305,7 4,7 L6.88196601,7 L9.10557281,2.5527864 C9.35256206,2.05880791 9.9532351,1.85858356 10.4472136,2.10557281 C10.9411921,2.35256206 11.1414164,2.9532351 10.8944272,3.4472136 L9.11803399,7 L14.881966,7 L13.1055728,3.4472136 C12.8585836,2.9532351 13.0588079,2.35256206 13.5527864,2.10557281 C14.0467649,1.85858356 14.6474379,2.05880791 14.8944272,2.5527864 L17.118034,7 Z M18.0002188,9 C17.9999331,9.36654113 17.7973775,9.71934526 17.4472136,9.89442719 C16.9532351,10.1414164 16.3525621,9.94119209 16.1055728,9.4472136 L15.881966,9 L8.11803399,9 L7.89442719,9.4472136 C7.64743794,9.94119209 7.0467649,10.1414164 6.5527864,9.89442719 C6.20262255,9.71934526 6.00006692,9.36654113 5.99978125,9 L4,9 L4,11 L20,11 L20,9 L18.0002188,9 Z M5.24661605,13 L6.80217161,20 L17.1978284,20 L18.7533839,13 L5.24661605,13 Z"></path></svg> My Products</a>
+				</li>
+										<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/products"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 30 30"><path fill="#7d8250" d="M23 14c-.7 0-1.4-.2-2-.6-.6.3-1.3.6-2 .6s-1.4-.2-2-.6c-.6.3-1.3.6-2 .6s-1.4-.2-2-.6c-.6.3-1.3.6-2 .6s-1.4-.2-2-.6c-.6.4-1.3.6-2 .6s-1.4-.2-2-.5c-.6.3-1.3.5-2 .5v11c0 1.1.9 2 2 2h12V17h6v10h2c1.1 0 2-.9 2-2V14c-.7 0-1.4-.2-2-.5-.6.3-1.3.5-2 .5zm-10 9H7v-6h6v6zM26 6V5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v1l-3 4c0 1.1.9 2 2 2s2-.9 2-2l2-4h3l-1 4c0 1.1.9 2 2 2s2-.9 2-2V6h4v4c0 1.1.9 2 2 2s2-.9 2-2l-1-4h3l2 4c0 1.1.9 2 2 2s2-.9 2-2l-3-4z"></path></svg> Market</a>
+				</li>
+						<li class="dropdown-search-link">
+					<a href="http://127.0.0.1:8080/itest/Script/albums" data-ajax="?link1=albums"><svg xmlns="http://www.w3.org/2000/svg" class="mobi_hd_ico" width="24" height="24" viewBox="0 0 24 24"><path fill="#8bc34a" d="M4,15.5857864 L8,11.5857864 L11.5,15.0857864 L18,8.58578644 L20,10.5857864 L20,4 L4,4 L4,15.5857864 Z M4,18.4142136 L4,20 L13.5857864,20 L8,14.4142136 L4,18.4142136 Z M16.4142136,20 L20,20 L20,13.4142136 L18,11.4142136 L12.9142136,16.5 L16.4142136,20 Z M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M11,5 C12.6568542,5 14,6.34314575 14,8 C14,9.65685425 12.6568542,11 11,11 C9.34314575,11 8,9.65685425 8,8 C8,6.34314575 9.34314575,5 11,5 Z M11,7 C10.4477153,7 10,7.44771525 10,8 C10,8.55228475 10.4477153,9 11,9 C11.5522847,9 12,8.55228475 12,8 C12,7.44771525 11.5522847,7 11,7 Z"></path></svg> Albums</a>
+			</li>
+			<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/saved-posts" data-ajax="?link1=saved-posts">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#673ab7" d="M17,19.381966 L17,17 L19,17 L19,22.618034 L12,19.118034 L5,22.618034 L5,4 C5,2.8954305 5.8954305,2 7,2 L17,2 C18.1045695,2 19,2.8954305 19,4 L19,5 L17,5 L17,4 L7,4 L7,19.381966 L12,16.881966 L17,19.381966 Z M18,10 L18,8 L20,8 L20,10 L22,10 L22,12 L20,12 L20,14 L18,14 L18,12 L16,12 L16,10 L18,10 Z"/></svg> Saved Posts				</a>
+			</li>
+						<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/poke" data-ajax="?link1=poke">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="#009688" d="M1 20.5zM23 12c-.8 0-1.5.5-1.8 1.2L21 13c0-1.1-.9-2-2-2s-2 .9-2 2v-1c0-1.1-.9-2-2-2s-2 .9-2 2V4c0-1.1-.9-2-2-2s-2 .9-2 2v15.5C6.4 18.2 5.3 18 4 18c-1.5 0-3 .6-3 2.5l4.5 2 3.2 3.2c1.5 1.5 3.5 2.3 5.7 2.3H21c2.2 0 4-1.8 4-4V14c0-1.1-.9-2-2-2z"/></svg> <span>Pokes</span>
+				</a>
+			</li>
+						<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/search?query=">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#e91e63" d="M1,13 C0.44771525,13 0,12.5522847 0,12 C0,11.4477153 0.44771525,11 1,11 L1.41604369,11 C2.18760031,9.23409522 3.94968096,8 6,8 C7.82440303,8 9.42058775,8.97711876 10.2937745,10.4365766 C10.7845275,10.1580384 11.3764731,10 12,10 C12.6235269,10 13.2154725,10.1580384 13.7062255,10.4365766 C14.5794122,8.97711876 16.175597,8 18,8 C20.050319,8 21.8123997,9.23409522 22.5839563,11 L23,11 C23.5522847,11 24,11.4477153 24,12 C24,12.5522847 23.5522847,13 23,13 C23,15.7614237 20.7614237,18 18,18 C15.2385763,18 13,15.7614237 13,13 C13,12.8312503 13.0083597,12.6644531 13.0246876,12.5 L13,12.5 C13,12.2965729 12.6045695,12 12,12 C11.3954305,12 11,12.2965729 11,12.5 L10.9753124,12.5 C10.9916403,12.6644531 11,12.8312503 11,13 C11,15.7614237 8.76142375,18 6,18 C3.23857625,18 1,15.7614237 1,13 Z M6,16 C7.65685425,16 9,14.6568542 9,13 C9,11.3431458 7.65685425,10 6,10 C4.34314575,10 3,11.3431458 3,13 C3,14.6568542 4.34314575,16 6,16 Z M18,16 C19.6568542,16 21,14.6568542 21,13 C21,11.3431458 19.6568542,10 18,10 C16.3431458,10 15,11.3431458 15,13 C15,14.6568542 16.3431458,16 18,16 Z"/></svg> Explore				</a>
+			</li>
+						<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/most_liked" data-ajax="?link1=most_liked">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#8d73cc" d="M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z M13,13.4142136 L13,18 L11,18 L11,13.4142136 L9.70710678,14.7071068 L8.29289322,13.2928932 L12,9.58578644 L15.7071068,13.2928932 L14.2928932,14.7071068 L13,13.4142136 Z"/></svg> Popular Posts				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/new-game" data-ajax="?link1=new-game">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="#03A9F4" d="M28.9 20.2l-2-10.7c-.2-1.2-1.2-2.1-2.3-2.4 0 0-5.5-1.1-9.6-1.1S5.4 7.1 5.4 7.1c-1.2.2-2.1 1.1-2.3 2.3l-2 10.7c-.1.3-.1.6-.1.9 0 2.2 1.8 4 4 4 1.2 0 2.2-.5 3-1.3L9.5 22h11l1.5 1.7c.7.8 1.8 1.3 3 1.3 2.2 0 4-1.8 4-4 0-.3 0-.6-.1-.8zM10 16H9v1c0 .6-.4 1-1 1s-1-.4-1-1v-1H6c-.6 0-1-.4-1-1s.4-1 1-1h1v-1c0-.6.4-1 1-1s1 .4 1 1v1h1c.6 0 1 .4 1 1s-.4 1-1 1zm11 1c0-.6.4-1 1-1s1 .4 1 1-.4 1-1 1-1-.4-1-1zm3-3c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-2-2c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-2 4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg> Games				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/friends-nearby/">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#b2c17c" d="M12.6577283,22.7532553 L12,23.3275712 L11.3422717,22.7532553 C5.81130786,17.9237218 3,13.70676 3,10 C3,4.7506636 7.09705254,1 12,1 C16.9029475,1 21,4.7506636 21,10 C21,13.70676 18.1886921,17.9237218 12.6577283,22.7532553 Z M5,10 C5,12.8492324 7.30661202,16.4335466 12,20.6634039 C16.693388,16.4335466 19,12.8492324 19,10 C19,5.8966022 15.8358849,3 12,3 C8.16411512,3 5,5.8966022 5,10 Z M12,5 C14.7614237,5 17,7.23857625 17,10 C17,12.7614237 14.7614237,15 12,15 C9.23857625,15 7,12.7614237 7,10 C7,7.23857625 9.23857625,5 12,5 Z M12,7 C10.3431458,7 9,8.34314575 9,10 C9,11.6568542 10.3431458,13 12,13 C13.6568542,13 15,11.6568542 15,10 C15,8.34314575 13.6568542,7 12,7 Z"/></svg> Find friends				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/jobs" data-ajax="?link1=jobs">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#4caf50;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Jobs				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/common_things" data-ajax="?link1=common_things">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ff5991" d="M15,2C16.94,2 18.59,2.7 19.95,4.05C21.3,5.41 22,7.06 22,9C22,10.56 21.5,11.96 20.58,13.2C19.64,14.43 18.44,15.27 16.97,15.7L17,15.38V15C17,12.81 16.23,10.93 14.65,9.35C13.07,7.77 11.19,7 9,7H8.63L8.3,7.03C8.73,5.56 9.57,4.36 10.8,3.42C12.04,2.5 13.44,2 15,2M9,8A7,7 0 0,1 16,15A7,7 0 0,1 9,22A7,7 0 0,1 2,15A7,7 0 0,1 9,8M9,10A5,5 0 0,0 4,15A5,5 0 0,0 9,20A5,5 0 0,0 14,15A5,5 0 0,0 9,10Z"></path></svg> Common Things				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/funding" data-ajax="?link1=funding">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #673AB7;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> Fundings				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/offers" data-ajax="?link1=offers">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f25e4e" d="M5.5,7A1.5,1.5 0 0,1 4,5.5A1.5,1.5 0 0,1 5.5,4A1.5,1.5 0 0,1 7,5.5A1.5,1.5 0 0,1 5.5,7M21.41,11.58L12.41,2.58C12.05,2.22 11.55,2 11,2H4C2.89,2 2,2.89 2,4V11C2,11.55 2.22,12.05 2.59,12.41L11.58,21.41C11.95,21.77 12.45,22 13,22C13.55,22 14.05,21.77 14.41,21.41L21.41,14.41C21.78,14.05 22,13.55 22,13C22,12.44 21.77,11.94 21.41,11.58Z"></path></svg> Offers				</a>
+			</li>
+									<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/memories" data-ajax="?link1=memories">
+					<svg class="mobi_hd_ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#009da0" d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3"></path></svg> Memories				</a>
+			</li>
+						
+			<li><hr></li>			<li class="dropdown-hidden-link">
+				<a href="http://127.0.0.1:8080/itest/Script/setting/profile-setting" data-ajax="?link1=setting&page=profile-setting">Edit</a>
+			</li>
+			<li class="dropdown-hidden-link">
+				<a href="http://127.0.0.1:8080/itest/Script/setting/general-setting" data-ajax="?link1=setting&page=general-setting">General Setting</a>
+			</li>
+			<li class="dropdown-search-link">
+				<a href="http://127.0.0.1:8080/itest/Script/setting" data-ajax="?link1=setting">Settings</a>
+			</li>
+							<li><hr></li>
+				<li>
+					<a href="http://127.0.0.1:8080/itest/Script/admin-cp">Admin Area</a>
+				</li>
+						<li><hr></li>
+			<li>
+				<a href="http://127.0.0.1:8080/itest/Script/logout">Log Out</a>
+			</li>
+			<li><hr></li>
+			<li class="dropdown-search-link">
+				<a href="javascript:void(0);" data-toggle="modal" data-target="#keyboard_shortcuts_box" id="keyboard_shortcut">
+					Keyboard shortcuts					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-command"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:void(0);" id="night_mode_toggle" data-mode='night'>
+					<span id="night-mode-text">Night mode</span>
+					<svg class="feather feather-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+				</a>
+			</li>
+			<span class="headtoppoint"></span>
+		</ul>
+	</li>
+</ul>		</div>
+	</nav>
+</div>
+
+<div class="barloading"></div>
+
+<script type="text/javascript">jQuery(document).ready(function($){$(".search-input").keydown(function(event){if(event.keyCode==13&&event.shiftKey==0){event.preventDefault();window.location='http://127.0.0.1:8080/itest/Script/search?query='+$(this).val();}});});var Searchcontainer=$('.search-container');var SearchBox=$('.search-container .search-input');var SearchResult=$('.search-dropdown-result');function Wo_ChangeHomeButtonIcon(){$('.navbar-home #home-button').html('<i class="fa fa-circle-o-notch fa-spin"></i>');}function Wo_DetectSearchType(query){var Hash=smokeTheHash(query);if(Hash){$('.search-advanced-container').hide(200);Wo_SearchhashResult(query);}else{$('.search-advanced-container').fadeIn(200);Wo_SearchResult(query);}}function Wo_ClearSearches(){$('.clear-searches').html('<i class="fa fa-spinner fa-spin"></i>');$.get(Wo_Ajax_Requests_File(),{f:'clearChat'},function(data){if(data.status==200){location.reload();}});}function Wo_GetRecentSearchs(){$.get(Wo_Ajax_Requests_File(),{f:'search',s:'recent'},function(data){if(data.status==200){if(data.html.length>0){SearchResult.html('<div class="recent"><div class="gray recent-searches pull-left"> Recent Searches</div><div onclick="Wo_ClearSearches();" class="gray recent-searches clear-searches pointer pull-right" style="color: #F44336;"><svg style="vertical-align: middle;margin-top: -3px;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>Clear</div><div class="clear"></div></div>'+data.html);}}});}function Wo_SearchResult(query){if(SearchBox.val()!=''){Wo_progressIconLoader(Searchcontainer.find('.navbar-form'));Searchcontainer.addClass('open');Searchcontainer.find('.search-advanced-link').attr('href','http://127.0.0.1:8080/itest/Script/search/'+query);Searchcontainer.find('.search-advanced-link').attr('data-ajax','?link1=search&query='+query);$.get(Wo_Ajax_Requests_File(),{f:'search',s:'normal',query:query},function(data){if(data.status==200){if(data.html.length==0){SearchResult.html('<span class="center-text">'+" No result to show"+'<span>');}else{SearchResult.html(data.html);}}Wo_progressIconLoader(Searchcontainer.find('.navbar-form'));});$(document).click(function(){Searchcontainer.removeClass('open');});}else{Searchcontainer.removeClass('open');}}function Wo_SearchhashResult(query){var Searchcontainer=$('.search-container');var SearchBox=$('.search-container .search-input');var SearchResult=$('.search-dropdown-result');if(SearchBox.val()!=''){Wo_progressIconLoader(Searchcontainer.find('.navbar-form'));Searchcontainer.addClass('open');Searchcontainer.find('.search-advanced-link').attr('href','http://127.0.0.1:8080/itest/Script/search/'+query);Searchcontainer.find('.search-advanced-link').attr('data-ajax','?link1=search&query='+query);$.get(Wo_Ajax_Requests_File(),{f:'search',s:'hash',query:query},function(data){if(data.status==200){if(data.html.length==0){SearchResult.html('<span class="center-text">'+" No result to show"+'<span>');}else{SearchResult.html(data.html);}}Wo_progressIconLoader(Searchcontainer.find('.navbar-form'));});$(document).click(function(){Searchcontainer.removeClass('open');});}else{Searchcontainer.removeClass('open');}}function smokeTheHash(str){var n=str.search("#");if(n!="-1"){return true;}else{return false;}}</script>         </header>
+                  <div class="content-container container" style="">
+         <div class="ad-placement-header-footer">
+                     </div>
+         <div id="contnet"><div class="page-margin">
+	<div class="row">
+		<div class="col-md-2 leftcol"><div class="left-sidebar">
+	<ul>
+		<li>
+			<a href="http://127.0.0.1:8080/itest/Script/admin" data-ajax="?link1=timeline&u=admin">
+				<img alt="admin Profile Picture" src="http://127.0.0.1:8080/itest/Script/upload/photos/2021/08/x1qG722cVj2FN6E8KMEF2_10_7a45502b89d58a9144447f46d41273d5_avatar.jpg,qcache=1628600754.pagespeed.ic.2NA7-oE08a.jpg" data-pagespeed-url-hash="2181026393" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> admin			</a>
+		</li>
+		<li>
+						<a href="http://127.0.0.1:8080/itest/Script" data-ajax="?index.php?link1=home">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="#3D8CFA" d="M26.7 11.3L25 9.9V6c0-.6-.4-1-1-1h-1c-.6 0-1 .4-1 1v1.4l-6.3-5.2c-.2-.1-.4-.2-.7-.2s-.5.1-.7.3l-11 9c-.2.2-.3.4-.3.7 0 .6.4 1 1 1h1v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V13h1c.6 0 1-.4 1-1 0-.3-.1-.5-.3-.7zM22 23h-4v-8h4v8z"/></svg> News Feed			</a>
+		</li>
+					<li class="link_separator">Education</li>
+				
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/events/" data-ajax="?link1=events">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f25e4e" d="M20,8 L20,5 L18,5 L18,6 L16,6 L16,5 L8,5 L8,6 L6,6 L6,5 L4,5 L4,8 L20,8 Z M20,10 L4,10 L4,20 L20,20 L20,10 Z M18,3 L20,3 C21.1045695,3 22,3.8954305 22,5 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,5 C2,3.8954305 2.8954305,3 4,3 L6,3 L6,2 L8,2 L8,3 L16,3 L16,2 L18,2 L18,3 Z M9,14 L7,14 L7,12 L9,12 L9,14 Z M13,14 L11,14 L11,12 L13,12 L13,14 Z M17,14 L15,14 L15,12 L17,12 L17,14 Z M9,18 L7,18 L7,16 L9,16 L9,18 Z M13,18 L11,18 L11,16 L13,16 L13,18 Z"/></svg> Exams			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/groups" data-ajax="?link1=groups">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#03A9F4" d="M6.5,22 C4.01471863,22 2,19.9852814 2,17.5 C2,15.0147186 4.01471863,13 6.5,13 C8.98528137,13 11,15.0147186 11,17.5 C11,19.9852814 8.98528137,22 6.5,22 Z M17.5,22 C15.0147186,22 13,19.9852814 13,17.5 C13,15.0147186 15.0147186,13 17.5,13 C19.9852814,13 22,15.0147186 22,17.5 C22,19.9852814 19.9852814,22 17.5,22 Z M6.5,11 C4.01471863,11 2,8.98528137 2,6.5 C2,4.01471863 4.01471863,2 6.5,2 C8.98528137,2 11,4.01471863 11,6.5 C11,8.98528137 8.98528137,11 6.5,11 Z M17.5,11 C15.0147186,11 13,8.98528137 13,6.5 C13,4.01471863 15.0147186,2 17.5,2 C19.9852814,2 22,4.01471863 22,6.5 C22,8.98528137 19.9852814,11 17.5,11 Z M17.5,9 C18.8807119,9 20,7.88071187 20,6.5 C20,5.11928813 18.8807119,4 17.5,4 C16.1192881,4 15,5.11928813 15,6.5 C15,7.88071187 16.1192881,9 17.5,9 Z M6.5,9 C7.88071187,9 9,7.88071187 9,6.5 C9,5.11928813 7.88071187,4 6.5,4 C5.11928813,4 4,5.11928813 4,6.5 C4,7.88071187 5.11928813,9 6.5,9 Z M17.5,20 C18.8807119,20 20,18.8807119 20,17.5 C20,16.1192881 18.8807119,15 17.5,15 C16.1192881,15 15,16.1192881 15,17.5 C15,18.8807119 16.1192881,20 17.5,20 Z M6.5,20 C7.88071187,20 9,18.8807119 9,17.5 C9,16.1192881 7.88071187,15 6.5,15 C5.11928813,15 4,16.1192881 4,17.5 C4,18.8807119 5.11928813,20 6.5,20 Z"/></svg> My Institution			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/groups" data-ajax="?link1=groups">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f35d4d" d="M19,21 L5,21 C3.34314575,21 2,19.6568542 2,18 L2,3 L16,3 L18,3 L18,8 L22,8 L22,9 L22,18 C22,19.6568542 20.6568542,21 19,21 Z M16.1707057,19 C16.0601542,18.6872211 16,18.3506354 16,18 L16,5 L4,5 L4,18 C4,18.5522847 4.44771525,19 5,19 L16.1707057,19 Z M18,10 L18,18 C18,18.5522847 18.4477153,19 19,19 C19.5522847,19 20,18.5522847 20,18 L20,10 L18,10 Z M10,7 L10,11 L6,11 L6,7 L10,7 Z M14,8 L14,10 L11,10 L11,8 L14,8 Z M14,12 L14,14 L6,14 L6,12 L14,12 Z M14,15 L14,17 L6,17 L6,15 L14,15 Z"/></svg> Browse Books			</a>
+		</li>
+
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/groups" data-ajax="?link1=groups">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z"/></svg> Favourite Books			</a>
+		</li>
+		
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/pages" data-ajax="?link1=pages">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f79f58" d="M5,21 L5,1 L7,1 L7,2 L21.1247446,2 L18.1259893,7.99991055 L21.126034,14 L7,14 L7,21 L8,21 L8,23 L4,23 L4,21 L5,21 Z M7,12 L17.889966,12 L15.8900107,8.00008945 L17.8892554,4 L7,4 L7,12 Z"/></svg> My Pages			</a>
+		</li>
+			   		<li class="link_separator">Blog</li>
+		<li>
+			<a href="http://127.0.0.1:8080/itest/Script/blogs">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f35d4d" d="M19,21 L5,21 C3.34314575,21 2,19.6568542 2,18 L2,3 L16,3 L18,3 L18,8 L22,8 L22,9 L22,18 C22,19.6568542 20.6568542,21 19,21 Z M16.1707057,19 C16.0601542,18.6872211 16,18.3506354 16,18 L16,5 L4,5 L4,18 C4,18.5522847 4.44771525,19 5,19 L16.1707057,19 Z M18,10 L18,18 C18,18.5522847 18.4477153,19 19,19 C19.5522847,19 20,18.5522847 20,18 L20,10 L18,10 Z M10,7 L10,11 L6,11 L6,7 L10,7 Z M14,8 L14,10 L11,10 L11,8 L14,8 Z M14,12 L14,14 L6,14 L6,12 L14,12 Z M14,15 L14,17 L6,17 L6,15 L14,15 Z"/></svg> Blog			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/my-blogs/" data-ajax="?link1=my-blogs">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#009da0" d="M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z M8,17 L8,15 L14,15 L14,17 L8,17 Z M8,13 L8,11 L16,11 L16,13 L8,13 Z"/></svg> My articles			</a>
+		</li>
+						<li class="link_separator">Market</li>
+		<li>
+			<a href="http://127.0.0.1:8080/itest/Script/products" data-ajax="?link1=products">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="#7d8250" d="M23 14c-.7 0-1.4-.2-2-.6-.6.3-1.3.6-2 .6s-1.4-.2-2-.6c-.6.3-1.3.6-2 .6s-1.4-.2-2-.6c-.6.3-1.3.6-2 .6s-1.4-.2-2-.6c-.6.4-1.3.6-2 .6s-1.4-.2-2-.5c-.6.3-1.3.5-2 .5v11c0 1.1.9 2 2 2h12V17h6v10h2c1.1 0 2-.9 2-2V14c-.7 0-1.4-.2-2-.5-.6.3-1.3.5-2 .5zm-10 9H7v-6h6v6zM26 6V5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v1l-3 4c0 1.1.9 2 2 2s2-.9 2-2l2-4h3l-1 4c0 1.1.9 2 2 2s2-.9 2-2V6h4v4c0 1.1.9 2 2 2s2-.9 2-2l-1-4h3l2 4c0 1.1.9 2 2 2s2-.9 2-2l-3-4z"/></svg> Market			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/my-products" data-ajax="?link1=my-products">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#6a7f9a" d="M17.118034,7 L20,7 C21.1045695,7 22,7.8954305 22,9 L22,11 C22,11.8400191 21.4821261,12.5590822 20.7482321,12.8553354 C20.7516471,12.9031122 20.7533839,12.9513533 20.7533839,13 C20.7533839,13.1459247 20.7374136,13.2914111 20.7057581,13.4338609 L19.1502025,20.4338609 C18.9468525,21.348936 18.1352257,22 17.1978284,22 L6.80217161,22 C5.86477431,22 5.05314751,21.348936 4.84979749,20.4338609 L3.29424193,13.4338609 C3.25094564,13.2390276 3.23766963,13.0445179 3.25133987,12.8551625 C2.51767261,12.5588026 2,11.8398557 2,11 L2,9 C2,7.8954305 2.8954305,7 4,7 L6.88196601,7 L9.10557281,2.5527864 C9.35256206,2.05880791 9.9532351,1.85858356 10.4472136,2.10557281 C10.9411921,2.35256206 11.1414164,2.9532351 10.8944272,3.4472136 L9.11803399,7 L14.881966,7 L13.1055728,3.4472136 C12.8585836,2.9532351 13.0588079,2.35256206 13.5527864,2.10557281 C14.0467649,1.85858356 14.6474379,2.05880791 14.8944272,2.5527864 L17.118034,7 Z M18.0002188,9 C17.9999331,9.36654113 17.7973775,9.71934526 17.4472136,9.89442719 C16.9532351,10.1414164 16.3525621,9.94119209 16.1055728,9.4472136 L15.881966,9 L8.11803399,9 L7.89442719,9.4472136 C7.64743794,9.94119209 7.0467649,10.1414164 6.5527864,9.89442719 C6.20262255,9.71934526 6.00006692,9.36654113 5.99978125,9 L4,9 L4,11 L20,11 L20,9 L18.0002188,9 Z M5.24661605,13 L6.80217161,20 L17.1978284,20 L18.7533839,13 L5.24661605,13 Z"/></svg> My Products			</a>
+		</li>
+				<li class="link_separator">Explore</li>
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/most_liked" data-ajax="?link1=most_liked">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#8d73cc" d="M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z M13,13.4142136 L13,18 L11,18 L11,13.4142136 L9.70710678,14.7071068 L8.29289322,13.2928932 L12,9.58578644 L15.7071068,13.2928932 L14.2928932,14.7071068 L13,13.4142136 Z"/></svg> Popular Posts			</a>
+		</li>
+		        
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/new-game" data-ajax="?link1=new-game">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="#03A9F4" d="M28.9 20.2l-2-10.7c-.2-1.2-1.2-2.1-2.3-2.4 0 0-5.5-1.1-9.6-1.1S5.4 7.1 5.4 7.1c-1.2.2-2.1 1.1-2.3 2.3l-2 10.7c-.1.3-.1.6-.1.9 0 2.2 1.8 4 4 4 1.2 0 2.2-.5 3-1.3L9.5 22h11l1.5 1.7c.7.8 1.8 1.3 3 1.3 2.2 0 4-1.8 4-4 0-.3 0-.6-.1-.8zM10 16H9v1c0 .6-.4 1-1 1s-1-.4-1-1v-1H6c-.6 0-1-.4-1-1s.4-1 1-1h1v-1c0-.6.4-1 1-1s1 .4 1 1v1h1c.6 0 1 .4 1 1s-.4 1-1 1zm11 1c0-.6.4-1 1-1s1 .4 1 1-.4 1-1 1-1-.4-1-1zm3-3c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-2-2c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-2 4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/></svg> Games			</a>
+		</li>
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/search?query=">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#e91e63" d="M1,13 C0.44771525,13 0,12.5522847 0,12 C0,11.4477153 0.44771525,11 1,11 L1.41604369,11 C2.18760031,9.23409522 3.94968096,8 6,8 C7.82440303,8 9.42058775,8.97711876 10.2937745,10.4365766 C10.7845275,10.1580384 11.3764731,10 12,10 C12.6235269,10 13.2154725,10.1580384 13.7062255,10.4365766 C14.5794122,8.97711876 16.175597,8 18,8 C20.050319,8 21.8123997,9.23409522 22.5839563,11 L23,11 C23.5522847,11 24,11.4477153 24,12 C24,12.5522847 23.5522847,13 23,13 C23,15.7614237 20.7614237,18 18,18 C15.2385763,18 13,15.7614237 13,13 C13,12.8312503 13.0083597,12.6644531 13.0246876,12.5 L13,12.5 C13,12.2965729 12.6045695,12 12,12 C11.3954305,12 11,12.2965729 11,12.5 L10.9753124,12.5 C10.9916403,12.6644531 11,12.8312503 11,13 C11,15.7614237 8.76142375,18 6,18 C3.23857625,18 1,15.7614237 1,13 Z M6,16 C7.65685425,16 9,14.6568542 9,13 C9,11.3431458 7.65685425,10 6,10 C4.34314575,10 3,11.3431458 3,13 C3,14.6568542 4.34314575,16 6,16 Z M18,16 C19.6568542,16 21,14.6568542 21,13 C21,11.3431458 19.6568542,10 18,10 C16.3431458,10 15,11.3431458 15,13 C15,14.6568542 16.3431458,16 18,16 Z"/></svg> Explore			</a>
+		</li>
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/memories" data-ajax="?link1=memories">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#009da0" d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3"></path></svg> Memories			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/friends-nearby/">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#b2c17c" d="M12.6577283,22.7532553 L12,23.3275712 L11.3422717,22.7532553 C5.81130786,17.9237218 3,13.70676 3,10 C3,4.7506636 7.09705254,1 12,1 C16.9029475,1 21,4.7506636 21,10 C21,13.70676 18.1886921,17.9237218 12.6577283,22.7532553 Z M5,10 C5,12.8492324 7.30661202,16.4335466 12,20.6634039 C16.693388,16.4335466 19,12.8492324 19,10 C19,5.8966022 15.8358849,3 12,3 C8.16411512,3 5,5.8966022 5,10 Z M12,5 C14.7614237,5 17,7.23857625 17,10 C17,12.7614237 14.7614237,15 12,15 C9.23857625,15 7,12.7614237 7,10 C7,7.23857625 9.23857625,5 12,5 Z M12,7 C10.3431458,7 9,8.34314575 9,10 C9,11.6568542 10.3431458,13 12,13 C13.6568542,13 15,11.6568542 15,10 C15,8.34314575 13.6568542,7 12,7 Z"/></svg> Find friends			</a>
+		</li>
+				
+				<!-- <li>
+			<a href="">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#8d73cc" d="M23,19 C23,20.1045695 22.1045695,21 21,21 L9,21 C7.8954305,21 7,20.1045695 7,19 L7,5 C7,3.8954305 7.8954305,3 9,3 L21,3 C22.1045695,3 23,3.8954305 23,5 L23,19 Z M6,20 C4.8954305,20 4,19.1045695 4,18 L4,6 C4,4.8954305 4.8954305,4 6,4 L6,20 Z M3,19 C1.8954305,19 1,18.1045695 1,17 L1,7 C1,5.8954305 1.8954305,5 3,5 L3,19 Z M21,19 L21,5 L9,5 L9,19 L21,19 Z M13,9 L17,12 L13,15 L13,9 Z"/></svg> 			</a>
+		</li> -->
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/albums" data-ajax="?link1=albums">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#8bc34a" d="M4,15.5857864 L8,11.5857864 L11.5,15.0857864 L18,8.58578644 L20,10.5857864 L20,4 L4,4 L4,15.5857864 Z M4,18.4142136 L4,20 L13.5857864,20 L8,14.4142136 L4,18.4142136 Z M16.4142136,20 L20,20 L20,13.4142136 L18,11.4142136 L12.9142136,16.5 L16.4142136,20 Z M4,2 L20,2 C21.1045695,2 22,2.8954305 22,4 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,4 C2,2.8954305 2.8954305,2 4,2 Z M11,5 C12.6568542,5 14,6.34314575 14,8 C14,9.65685425 12.6568542,11 11,11 C9.34314575,11 8,9.65685425 8,8 C8,6.34314575 9.34314575,5 11,5 Z M11,7 C10.4477153,7 10,7.44771525 10,8 C10,8.55228475 10.4477153,9 11,9 C11.5522847,9 12,8.55228475 12,8 C12,7.44771525 11.5522847,7 11,7 Z"/></svg> Albums			</a>
+		</li>
+		<li>
+			<a href="http://127.0.0.1:8080/itest/Script/saved-posts" data-ajax="?link1=saved-posts">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#673ab7" d="M17,19.381966 L17,17 L19,17 L19,22.618034 L12,19.118034 L5,22.618034 L5,4 C5,2.8954305 5.8954305,2 7,2 L17,2 C18.1045695,2 19,2.8954305 19,4 L19,5 L17,5 L17,4 L7,4 L7,19.381966 L12,16.881966 L17,19.381966 Z M18,10 L18,8 L20,8 L20,10 L22,10 L22,12 L20,12 L20,14 L18,14 L18,12 L16,12 L16,10 L18,10 Z"/></svg> Saved Posts			</a>
+		</li>
+		
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/forum/" data-ajax="?link1=forum">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#8BC34A" d="M22,17 L22,19 L8,19 L8,17 L22,17 Z M22,11 L22,13 L8,13 L8,11 L22,11 Z M22,5 L22,7 L8,7 L8,5 L22,5 Z M4,20 C2.8954305,20 2,19.1045695 2,18 C2,16.8954305 2.8954305,16 4,16 C5.1045695,16 6,16.8954305 6,18 C6,19.1045695 5.1045695,20 4,20 Z M4,14 C2.8954305,14 2,13.1045695 2,12 C2,10.8954305 2.8954305,10 4,10 C5.1045695,10 6,10.8954305 6,12 C6,13.1045695 5.1045695,14 4,14 Z M4,8 C2.8954305,8 2,7.1045695 2,6 C2,4.8954305 2.8954305,4 4,4 C5.1045695,4 6,4.8954305 6,6 C6,7.1045695 5.1045695,8 4,8 Z"/></svg> Forum			</a>
+		</li>
+				
+		
+				<li>
+			<a href="http://127.0.0.1:8080/itest/Script/poke" data-ajax="?link1=poke">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30"><path fill="#009688" d="M1 20.5zM23 12c-.8 0-1.5.5-1.8 1.2L21 13c0-1.1-.9-2-2-2s-2 .9-2 2v-1c0-1.1-.9-2-2-2s-2 .9-2 2V4c0-1.1-.9-2-2-2s-2 .9-2 2v15.5C6.4 18.2 5.3 18 4 18c-1.5 0-3 .6-3 2.5l4.5 2 3.2 3.2c1.5 1.5 3.5 2.3 5.7 2.3H21c2.2 0 4-1.8 4-4V14c0-1.1-.9-2-2-2z"/></svg> <span>Pokes</span>
+			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/offers" data-ajax="?link1=offers">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#f25e4e" d="M5.5,7A1.5,1.5 0 0,1 4,5.5A1.5,1.5 0 0,1 5.5,4A1.5,1.5 0 0,1 7,5.5A1.5,1.5 0 0,1 5.5,7M21.41,11.58L12.41,2.58C12.05,2.22 11.55,2 11,2H4C2.89,2 2,2.89 2,4V11C2,11.55 2.22,12.05 2.59,12.41L11.58,21.41C11.95,21.77 12.45,22 13,22C13.55,22 14.05,21.77 14.41,21.41L21.41,14.41C21.78,14.05 22,13.55 22,13C22,12.44 21.77,11.94 21.41,11.58Z"></path></svg> Offers			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/jobs" data-ajax="?link1=jobs">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#4caf50;"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Jobs			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/common_things" data-ajax="?link1=common_things">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ff5991" d="M15,2C16.94,2 18.59,2.7 19.95,4.05C21.3,5.41 22,7.06 22,9C22,10.56 21.5,11.96 20.58,13.2C19.64,14.43 18.44,15.27 16.97,15.7L17,15.38V15C17,12.81 16.23,10.93 14.65,9.35C13.07,7.77 11.19,7 9,7H8.63L8.3,7.03C8.73,5.56 9.57,4.36 10.8,3.42C12.04,2.5 13.44,2 15,2M9,8A7,7 0 0,1 16,15A7,7 0 0,1 9,22A7,7 0 0,1 2,15A7,7 0 0,1 9,8M9,10A5,5 0 0,0 4,15A5,5 0 0,0 9,20A5,5 0 0,0 14,15A5,5 0 0,0 9,10Z"></path></svg> Common Things			</a>
+		</li>
+						<li>
+			<a href="http://127.0.0.1:8080/itest/Script/funding" data-ajax="?link1=funding">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #673AB7;"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg> Fundings			</a>
+		</li>
+			</ul>
+</div>
+
+<script>$(document).ready(function(){$('div.leftcol').theiaStickySidebar({additionalMarginTop:65});});function Wo_StorePosts(type){if(type>1){return false;}if(type==0){$('.order_all').addClass('active');$('.order_people').removeClass('active');}else{$('.order_all').removeClass('active');$('.order_people').addClass('active');}$('#posts-laoded').html('<div class="wo_loading_post"><div class="wo_loading_post_child"></div></div>');$.get(Wo_Ajax_Requests_File()+'?f=update_order_by',{type:type},function(data){if(data.status==200){loadposts();}});}</script></div>
+		<div class="col-md-10 singlecol wo-create-forms">
+			<div class="wo_settings_page">
+				<div class="sun_head_onboard shortpwidth blog">
+					<img class="sho_img" src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/cads/blog.svg" alt="Blog" data-pagespeed-url-hash="1084890299" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+					<span class="go_back_link">
+						<a data-ajax="?link1=my-blogs" href="http://127.0.0.1:8080/itest/Script/my-blogs/">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg>My articles						</a>
+					</span>
+					<div class="sun_head_onboard_innr">
+						<h2>Create new article</h2>
+					</div>
+				</div>
+				
+				<form class="form form-horizontal create-article-form" method="post" id="insert-blog" action="#">
+					<div class="setting-panel row">
+						<div class="form-group col-lg-12">
+							<label class="col-md-12" for="new-blog-title">Title</label>
+							<div class="col-md-12">
+								<input id="blog_title" name="blog_title" type="text" class="form-control input-md" autofocus> 
+							</div>
+						</div>
+						<div class="form-group col-lg-12">
+							<label class="col-md-12" for="new-blog-desc">Description</label>
+							<div class="col-md-12">
+								<textarea name="blog_description" id="new-blog-desc" rows="3" type="text" class="form-control input-md"></textarea>
+							</div>
+						</div>
+						
+						<div class="create_blog_area_acombo">
+						<div class="form-group th-alert col-sm-7">
+							<div class="col-md-12">
+								<div class="main prv-img pointer" id="select-img" data-block="thumdrop-zone">
+									<div class="thumbnail-rendderer">
+										<div>
+											<h4 class="bold">Drop Image Here</h4>
+											<div class="error-text-renderer"></div>
+											<div>
+												<span>OR</span>
+												<p>Browse To Upload</p>
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-5 no-padding-right">
+							<div class="form-group col-lg-12">
+							<label class="col-md-12" for="blog_category">Category</label>
+							<div class="col-md-12">
+								<select name="blog_category" class="form-control" id="blog_category">
+									<option value="0">
+									Category									</option>
+																		<option value="2">
+									Cars and Vehicles									</option>
+																		<option value="3">
+									Comedy									</option>
+																		<option value="4">
+									Economics and Trade									</option>
+																		<option value="5">
+									Education									</option>
+																		<option value="6">
+									Entertainment									</option>
+																		<option value="7">
+									Movies & Animation									</option>
+																		<option value="8">
+									Gaming									</option>
+																		<option value="9">
+									History and Facts									</option>
+																		<option value="10">
+									Live Style									</option>
+																		<option value="11">
+									Natural									</option>
+																		<option value="12">
+									News and Politics									</option>
+																		<option value="13">
+									People and Nations									</option>
+																		<option value="14">
+									Pets and Animals									</option>
+																		<option value="15">
+									Places and Regions									</option>
+																		<option value="16">
+									Science and Technology									</option>
+																		<option value="17">
+									Sport									</option>
+																		<option value="18">
+									Travel and Events									</option>
+																		<option value="1">
+									Other									</option>
+																	</select>
+							</div>
+						</div>
+						<div class="form-group col-lg-12">
+							<label class="col-md-12" for="blog_tags">Tags</label>
+							<div class="col-md-12">
+								<input data-role="tagsinput" id="blog_tags" name="blog_tags" type="text" class="form-control input-md" placeholder="Tags"> 
+							</div>
+						</div>
+						</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="col-md-12">
+								<textarea name="blog_content" id="blog" placeholder="Content"></textarea> 
+							</div>
+						</div>
+						
+						<input type="file" class="hidden" id="thumbnail" name="thumbnail" accept="image/*">
+					</div>
+					
+					<div class="setting-update-alert" id="blog-alert"></div>
+
+					<div class="form-group last-sett-btn modal-footer">
+						<div class="ball-pulse"><div></div><div></div><div></div></div>
+						<button type="submit" class="btn btn-main setting-panel-mdbtn">Publish</button>
+					</div>
+					<input type="hidden" name="hash_id" value="a6c121df57e1caca31d2207026d0606112d74094">
+					<input name="image" type="file" id="upload" class="hidden">
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- .row -->
+</div>
+
+<script src="js/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js"></script>
+<script>jQuery(document).ready(function($){var thumb_drop_block=$("[data-block='thumdrop-zone']");if(typeof(window.FileReader)=='undefined'){thumb_drop_block.find('.thumbnail-rendderer div').text('Drag drop is not supported in your browser!');}else{thumb_drop_block[0].ondragover=function(){thumb_drop_block.addClass('hover');return false;};thumb_drop_block[0].ondragleave=function(){thumb_drop_block.removeClass('hover');return false;};thumb_drop_block[0].ondrop=function(event){event.preventDefault();thumb_drop_block.removeClass('hover');var file=event.dataTransfer.files;$("#thumbnail").prop('files',file);$(".prv-img").html("<img src='"+window.URL.createObjectURL(event.dataTransfer.files[0])+"' alt='Picture'>")};}$("#blog_tags").tagsinput({maxTags:15,});$("#select-img").click(function(event){$("#thumbnail").click()});$("#thumbnail").change(function(event){$(".prv-img").html("<img src='"+window.URL.createObjectURL(this.files[0])+"' alt='Picture'>")});$('#insert-blog').ajaxForm({url:Wo_Ajax_Requests_File()+'?f=insert-blog',beforeSend:function(){$('.wo_settings_page').find('.last-sett-btn .ball-pulse').fadeIn(100);},success:function(data){if(data['status']==200){$("#blog-alert").html('<div class="alert alert-success">'+data['message']+'</div>');window.location=data.url;}else if(data['status']==300){$("#approve_post").modal('show');Wo_Delay(function(){$("#approve_post").modal('hide');location.reload();},3000);}else if(data['message']){$("#blog-alert").html('<div class="alert alert-danger">'+data['message']+'</div>');}$('.wo_settings_page').find('.last-sett-btn .ball-pulse').fadeOut(100);}});});tinymce.init({selector:'#blog',height:270,images_upload_credentials:true,paste_data_images:true,image_advtab:true,entity_encoding:"raw",images_upload_url:Wo_Ajax_Requests_File()+'?f=upload-blog-image',toolbar1:"insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",toolbar2:"print preview media | forecolor backcolor emoticons",plugins:["advlist autolink lists link image charmap print preview hr anchor pagebreak","searchreplace wordcount visualblocks visualchars code fullscreen","insertdatetime media nonbreaking save table contextmenu directionality","emoticons template paste textcolor colorpicker textpattern"],file_picker_callback:function(callback,value,meta){if(meta.filetype=='image'){$('#upload').trigger('click');$('#upload').on('change',function(){var file=this.files[0];var reader=new FileReader();reader.onload=function(e){callback(e.target.result,{alt:''});};reader.readAsDataURL(file);});}},});</script> </div> 
+                  <footer>
+            <div class="page-margin">
+	<div class="footer-wrapper long_foooter">
+		<hr>
+		<div class="footer-powered pull-left">
+			<p>
+				© 2021 goo			</p>
+		</div>
+		<div class="lang_selct dropup pull-right">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				<svg fill="#7a7a7a" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="feather feather-translate" style="margin-top: -3px;width: 15px;height: 15px;"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z"/></svg> 
+				Language			</a>
+			<ul class="dropdown-menu sun_lang_select_menu">
+                              <li class="language_select"><a href="?lang=english" rel="nofollow" class="English">English</a></li>
+                              <li class="language_select"><a href="?lang=arabic" rel="nofollow" class="Arabic">Arabic</a></li>
+                              <li class="language_select"><a href="?lang=dutch" rel="nofollow" class="Dutch">Dutch</a></li>
+                              <li class="language_select"><a href="?lang=french" rel="nofollow" class="French">French</a></li>
+                              <li class="language_select"><a href="?lang=german" rel="nofollow" class="German">German</a></li>
+                              <li class="language_select"><a href="?lang=italian" rel="nofollow" class="Italian">Italian</a></li>
+                              <li class="language_select"><a href="?lang=portuguese" rel="nofollow" class="Portuguese">Portuguese</a></li>
+                              <li class="language_select"><a href="?lang=russian" rel="nofollow" class="Russian">Russian</a></li>
+                              <li class="language_select"><a href="?lang=spanish" rel="nofollow" class="Spanish">Spanish</a></li>
+                              <li class="language_select"><a href="?lang=turkish" rel="nofollow" class="Turkish">Turkish</a></li>
+                           </ul>
+		</div>
+		<div class="clear"></div>
+		<ul class="list-inline text-center">
+			<li><a href="http://127.0.0.1:8080/itest/Script">Home</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/terms/about-us">About</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/contact-us">Contact Us</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/terms/privacy-policy">Privacy Policy</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/terms/terms">Terms of Use</a></li>
+							<li><a href="http://127.0.0.1:8080/itest/Script/terms/refund">Request refund</a></li>
+										<li><a href="http://127.0.0.1:8080/itest/Script/blogs">Blog</a></li>
+										<li><a data-ajax="?link1=developers" href="http://127.0.0.1:8080/itest/Script/developers">Developers</a></li>
+								</ul>
+	</div>
+</div>         </footer>
+         <div class="second-footer" style=" ">
+            <div class="page-margin">
+	<div class="footer-wrapper long_foooter">
+		<hr>
+		<div class="footer-powered pull-left">
+			<p>
+				© 2021 goo			</p>
+		</div>
+		<div class="lang_selct dropup pull-right">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				<svg fill="#7a7a7a" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="feather feather-translate" style="margin-top: -3px;width: 15px;height: 15px;"><path d="M12.87,15.07L10.33,12.56L10.36,12.53C12.1,10.59 13.34,8.36 14.07,6H17V4H10V2H8V4H1V6H12.17C11.5,7.92 10.44,9.75 9,11.35C8.07,10.32 7.3,9.19 6.69,8H4.69C5.42,9.63 6.42,11.17 7.67,12.56L2.58,17.58L4,19L9,14L12.11,17.11L12.87,15.07M18.5,10H16.5L12,22H14L15.12,19H19.87L21,22H23L18.5,10M15.88,17L17.5,12.67L19.12,17H15.88Z"/></svg> 
+				Language			</a>
+			<ul class="dropdown-menu sun_lang_select_menu">
+                              <li class="language_select"><a href="?lang=english" rel="nofollow" class="English">English</a></li>
+                              <li class="language_select"><a href="?lang=arabic" rel="nofollow" class="Arabic">Arabic</a></li>
+                              <li class="language_select"><a href="?lang=dutch" rel="nofollow" class="Dutch">Dutch</a></li>
+                              <li class="language_select"><a href="?lang=french" rel="nofollow" class="French">French</a></li>
+                              <li class="language_select"><a href="?lang=german" rel="nofollow" class="German">German</a></li>
+                              <li class="language_select"><a href="?lang=italian" rel="nofollow" class="Italian">Italian</a></li>
+                              <li class="language_select"><a href="?lang=portuguese" rel="nofollow" class="Portuguese">Portuguese</a></li>
+                              <li class="language_select"><a href="?lang=russian" rel="nofollow" class="Russian">Russian</a></li>
+                              <li class="language_select"><a href="?lang=spanish" rel="nofollow" class="Spanish">Spanish</a></li>
+                              <li class="language_select"><a href="?lang=turkish" rel="nofollow" class="Turkish">Turkish</a></li>
+                           </ul>
+		</div>
+		<div class="clear"></div>
+		<ul class="list-inline text-center">
+			<li><a href="http://127.0.0.1:8080/itest/Script">Home</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/terms/about-us">About</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/contact-us">Contact Us</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/terms/privacy-policy">Privacy Policy</a></li>
+			<li><a href="http://127.0.0.1:8080/itest/Script/terms/terms">Terms of Use</a></li>
+							<li><a href="http://127.0.0.1:8080/itest/Script/terms/refund">Request refund</a></li>
+										<li><a href="http://127.0.0.1:8080/itest/Script/blogs">Blog</a></li>
+										<li><a data-ajax="?link1=developers" href="http://127.0.0.1:8080/itest/Script/developers">Developers</a></li>
+								</ul>
+	</div>
+</div>         </div>
+         <div class="extra">
+            <div class="chat-all-container">
+	<div class="chat-tab"></div>
+	<div class="chat-container full" style="">
+		<div class="online-toggle pointer" onclick="Wo_OpenChatUsersTab();">
+			Chat		</div>
+		<div class="chat-status">
+			<span class="pointer" style="margin-right: 5px;" onclick="Wo_CreateGChat(event)">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M13,13C11,13 7,14 7,16V18H19V16C19,14 15,13 13,13M19.62,13.16C20.45,13.88 21,14.82 21,16V18H24V16C24,14.46 21.63,13.5 19.62,13.16M13,11A3,3 0 0,0 16,8A3,3 0 0,0 13,5A3,3 0 0,0 10,8A3,3 0 0,0 13,11M18,11A3,3 0 0,0 21,8A3,3 0 0,0 18,5C17.68,5 17.37,5.05 17.08,5.14C17.65,5.95 18,6.94 18,8C18,9.06 17.65,10.04 17.08,10.85C17.37,10.95 17.68,11 18,11M8,10H5V7H3V10H0V12H3V15H5V12H8V10Z"/></svg>
+			</span>
+			<div class="dropdown" style="display: inline;">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+				<ul class="dropdown-menu dropdown-menu-right" role="menu" style="min-width: 80px; font-size: 12px;">
+					<li><a href="#" onclick="Wo_UpdateStatus('online',event);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> Online</a></li>
+					<li><a href="#" onclick="Wo_UpdateStatus('offline',event);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye-off"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg> Offline</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="search">
+			<input type="text" class="form-control search-users-chat" placeholder="Search for users" onkeyup="Wo_ChatSearchUsers(this.value);">
+		</div>
+		
+		<div class="online-content-toggler" style="display:block">
+			<div class="chat-opacity ">
+				<div class="text-center">
+					<h5 class="empty_state">
+						<span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye-off"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+							You are currently offline, turn on the chat to start chatting.						</span>
+					</h5>
+				</div>
+			</div>
+			
+			<ul class="nav nav-tabs wo_chat_tabs">
+				<li class="active">
+					<a data-toggle="tab" data-target="#users-chat" href="#" data-toggle="tooltip" data-placement="bottom" title="Users">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/></svg>
+						<span class="count-online-users">0</span>
+					</a>
+				</li>
+						
+				<li>
+					<a data-toggle="tab" data-target="#groups-chat" href="#" data-toggle="tooltip" data-placement="bottom" title="Institutions">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6M6,8.17A2.5,2.5 0 0,0 3.5,10.67A2.5,2.5 0 0,0 6,13.17C6.88,13.17 7.65,12.71 8.09,12.03C7.42,11.18 7,10.15 7,9C7,8.8 7,8.6 7.04,8.4C6.72,8.25 6.37,8.17 6,8.17M18,8.17C17.63,8.17 17.28,8.25 16.96,8.4C17,8.6 17,8.8 17,9C17,10.15 16.58,11.18 15.91,12.03C16.35,12.71 17.12,13.17 18,13.17A2.5,2.5 0 0,0 20.5,10.67A2.5,2.5 0 0,0 18,8.17M12,14C10,14 6,15 6,17V19H18V17C18,15 14,14 12,14M4.67,14.97C3,15.26 1,16.04 1,17.33V19H4V17C4,16.22 4.29,15.53 4.67,14.97M19.33,14.97C19.71,15.53 20,16.22 20,17V19H23V17.33C23,16.04 21,15.26 19.33,14.97Z"/></svg>
+					</a>
+				</li>				
+			</ul>
+			<div class="tab-content">
+				<div id="users-chat" class="tab-pane fade in active">
+					<div class="online-users">
+											</div>
+					<div class="offline-users">
+						<div class="recipient-chat-user" id="online_8">
+		<div class="user-info" onclick="Wo_OpenChatTab(8);" title="5 w">
+		<div class="pull-right" style="margin-top:8px;">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"><path fill="#CDCDCD" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+			<span class="chat-loading-icon"></span>
+		</div>
+		<span class="chat-user-text" id="chat-tab-id">
+			<div class="avatar pull-left">
+				<span class="new-message-alert hidden">0</span>
+				<img src="http://127.0.0.1:8080/itest/Script/upload/photos/2021/05/xUOsxPpGckxlh73YZazhs_02_d1d39c77df2bafbb98dc512f47408395_avatar.jpg,qcache=1619981160.pagespeed.ic.dAfIFjC8Ue.jpg" alt="http://127.0.0.1:8080/itest/Script/upload/photos/2021/05/UOsxPpGckxlh73YZazhs_02_d1d39c77df2bafbb98dc512f47408395_avatar.jpg?cache=1619981160 Profile Picture" data-pagespeed-url-hash="2437195673" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</div>
+			<span class="wo_cen_onuser">bopmack</span>
+		</span>
+	</div>
+</div>
+<div class="clear"></div><div class="recipient-chat-user" id="online_13">
+		<div class="user-info" onclick="Wo_OpenChatTab(13);" title="8 w">
+		<div class="pull-right" style="margin-top:8px;">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"><path fill="#CDCDCD" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+			<span class="chat-loading-icon"></span>
+		</div>
+		<span class="chat-user-text" id="chat-tab-id">
+			<div class="avatar pull-left">
+				<span class="new-message-alert hidden">0</span>
+				<img src="http://127.0.0.1:8080/itest/Script/upload/photos/xd-avatar.jpg,qcache=0.pagespeed.ic.6gqfnLzxqs.jpg" alt="http://127.0.0.1:8080/itest/Script/upload/photos/d-avatar.jpg?cache=0 Profile Picture" data-pagespeed-url-hash="438964967" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</div>
+			<span class="wo_cen_onuser">ayodele.akintomi5280</span>
+		</span>
+	</div>
+</div>
+<div class="clear"></div><div class="recipient-chat-user" id="online_12">
+		<div class="user-info" onclick="Wo_OpenChatTab(12);" title="8 w">
+		<div class="pull-right" style="margin-top:8px;">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"><path fill="#CDCDCD" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+			<span class="chat-loading-icon"></span>
+		</div>
+		<span class="chat-user-text" id="chat-tab-id">
+			<div class="avatar pull-left">
+				<span class="new-message-alert hidden">0</span>
+				<img src="http://127.0.0.1:8080/itest/Script/upload/photos/xd-avatar.jpg,qcache=0.pagespeed.ic.6gqfnLzxqs.jpg" alt="http://127.0.0.1:8080/itest/Script/upload/photos/d-avatar.jpg?cache=0 Profile Picture" data-pagespeed-url-hash="438964967" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</div>
+			<span class="wo_cen_onuser">ayodele.akintomi5002</span>
+		</span>
+	</div>
+</div>
+<div class="clear"></div><div class="recipient-chat-user" id="online_9">
+		<div class="user-info" onclick="Wo_OpenChatTab(9);" title="11 w">
+		<div class="pull-right" style="margin-top:8px;">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"><path fill="#CDCDCD" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+			<span class="chat-loading-icon"></span>
+		</div>
+		<span class="chat-user-text" id="chat-tab-id">
+			<div class="avatar pull-left">
+				<span class="new-message-alert hidden">0</span>
+				<img src="http://127.0.0.1:8080/itest/Script/upload/photos/xf-avatar.jpg,qcache=0.pagespeed.ic.25M99R6iMO.jpg" alt="http://127.0.0.1:8080/itest/Script/upload/photos/f-avatar.jpg?cache=0 Profile Picture" data-pagespeed-url-hash="3546310045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</div>
+			<span class="wo_cen_onuser">wizzy hakj.weA K.JWEQQ AKEAWQ </span>
+		</span>
+	</div>
+</div>
+<div class="clear"></div><div class="recipient-chat-user" id="online_11">
+		<div class="user-info" onclick="Wo_OpenChatTab(11);" title="12 w">
+		<div class="pull-right" style="margin-top:8px;">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"><path fill="#CDCDCD" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+			<span class="chat-loading-icon"></span>
+		</div>
+		<span class="chat-user-text" id="chat-tab-id">
+			<div class="avatar pull-left">
+				<span class="new-message-alert hidden">0</span>
+				<img src="http://127.0.0.1:8080/itest/Script/upload/photos/2021/06/xJFxHRScXC6Z2nRoUTOtY_20_8d17bed38680f05078d2e4d522849fd9_avatar.jpg,qcache=0.pagespeed.ic.sv5EXrTOdm.jpg" alt="http://127.0.0.1:8080/itest/Script/upload/photos/2021/06/JFxHRScXC6Z2nRoUTOtY_20_8d17bed38680f05078d2e4d522849fd9_avatar.jpg?cache=0 Profile Picture" data-pagespeed-url-hash="1872912633" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</div>
+			<span class="wo_cen_onuser">Akintomide Ayodele</span>
+		</span>
+	</div>
+</div>
+<div class="clear"></div><div class="recipient-chat-user" id="online_10">
+		<div class="user-info" onclick="Wo_OpenChatTab(10);" title="18 w">
+		<div class="pull-right" style="margin-top:8px;">
+			
+			<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"><path fill="#CDCDCD" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg>
+			<span class="chat-loading-icon"></span>
+		</div>
+		<span class="chat-user-text" id="chat-tab-id">
+			<div class="avatar pull-left">
+				<span class="new-message-alert hidden">0</span>
+				<img src="http://127.0.0.1:8080/itest/Script/upload/photos/2021/05/x5usTgyCWAQniPp4sDrwp_14_59577208898b5e60f5551c39db44c0d7_avatar.jpg,qcache=0.pagespeed.ic.GZvfWunB46.jpg" alt="http://127.0.0.1:8080/itest/Script/upload/photos/2021/05/5usTgyCWAQniPp4sDrwp_14_59577208898b5e60f5551c39db44c0d7_avatar.jpg?cache=0 Profile Picture" data-pagespeed-url-hash="36754361" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+			</div>
+			<span class="wo_cen_onuser">badmus</span>
+		</span>
+	</div>
+</div>
+<div class="clear"></div>					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="groups-chat" class="tab-pane fade groups chat_groups">
+														</div>
+			</div>
+		</div>
+		
+		<!--Activities -->
+		<div class="chat_acts">
+                        <ul class="list-group activity-container sun_side_activities">
+                <li class="text-muted sidebar-title-back" contenteditable="false">
+					What&#039;s happening					                </li>
+                <li class="activities-wrapper" id="activities-wrapper">
+                    <h2><div class="no-activities text-center">No new activities</div><h2>                </li>
+				<div class="no-activities center-text"></div>
+            </ul>
+        </div>
+		
+	</div>
+</div>
+<div class="modal fade" id="create_group_chat" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+				<h4 class="modal-title">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+					Create New Institution				</h4>
+			</div>
+			<form id="insert-caht-parts" class="wo_create_chat_group">
+				<div class="modal-body">
+					<div id="insert-caht-alert"></div>
+					<div class="form-group input-group">
+						<span class="input-group-addon pointer" onclick="$('#group_chat_avatar').trigger('click');">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+						</span>
+						<input type="text" class="form-control" name="group_name" placeholder="Name">
+					</div>
+					<div class="w100">
+						<div class="group_chat_avatar"></div>
+						<div class="clear"></div>
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon" id="group_chat_mbrs">0</span>
+						<input type="text" class="form-control" placeholder="Add participant" onkeydown="Wo_GetGChatParticipants(this.value)">
+					</div>
+					<div class="form-group">
+						<div class="group_chat_mbr_list"></div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="ball-pulse"><div></div><div></div><div></div></div>
+					<button id="delete-all-post" type="submit" class="btn btn-main">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+						Create					</button>
+				</div>
+				<input type="hidden" name="parts" id="chat_group_users">
+				<input type="reset" id="reset" class="hidden">
+				<input type="file" name="avatar" class="hidden" id="group_chat_avatar" onchange="$('.group_chat_avatar').html('<img src=\'' + window.URL.createObjectURL(this.files[0]) + '\' alt=\'Picture\'>');" accept="image/jpeg,image/png,image/gif">
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="manage_group_chat" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+				<h4 class="modal-title">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+					Institution members					(<span id="group_chat_mbrs">0</span>)
+					<div class="clear"></div>
+				</h4>
+			</div>
+			<form id="insert-caht-parts">
+				<div id="insert-caht-alert"></div>
+				<div class="modal-body"></div>
+				<input type="hidden" name="parts" id="chat_group_users">
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade sun_modal" id="edit_group_chat" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<form id="edit_chat_group_form" class="wo_edit_chat_group">
+				<div class="modal-body">
+					<div class="edit_grp_info_modal">
+						<div class="group_chat_avatar__container" onclick="$('#edit_group_chat_avatar_').trigger('click');">
+							<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"/></svg></span>
+						</div>
+						<input type="text" class="form-control" name="group_name" placeholder="Name" id="edit_group_name">
+						<div class="clear"></div>
+					</div>
+					<div id="edit_chat_group_alert"></div>
+				</div>
+				<div class="modal-footer">
+					<div class="ball-pulse"><div></div><div></div><div></div></div>
+					<button id="delete-all-post" type="submit" class="btn btn-main">Update</button>
+				</div>
+				<input type="hidden" id="edit_group_id" class="hidden" name="group_id">
+				<input type="file" name="avatar" class="hidden" id="edit_group_chat_avatar_" onchange="change_avatar(this);" accept="image/jpeg,image/png,image/gif">
+			</form>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">function Wo_ShowMessageOptions(id){$('.deleteMessage').hide();$('#messageId_'+id).find('.deleteMessage').show();}function change_avatar(self){$('.group_chat_avatar__container').css('background-image',"url('"+window.URL.createObjectURL(self.files[0])+"')");}function Wo_GetGChatParticipants(name){if(!name){return false;}$.ajax({url:Wo_Ajax_Requests_File(),type:'GET',dataType:'json',data:{f:'chat',s:'get_parts',name:name},}).done(function(data){if(data.status==200){$('.group_chat_mbr_list').html(data.html);}else{$('.group_chat_mbr_list').html('<p class="no_participant">No result to show</p>');}}).fail(function(){console.log("error");})}function Wo_CreateGChat(e){e.preventDefault();$('#create_group_chat').modal('show');}function Wo_EditGChat(e,group_id){e.preventDefault();$.get(Wo_Ajax_Requests_File(),{f:'chat',s:'get_group_info',group_id:group_id},function(data){if(data.status==200){$('.group_chat_avatar__container').css('background-image',"url('"+data.group.avatar+"')");$('#edit_group_name').val(data.group.group_name);$('#edit_group_id').val(data.group.group_id);$('#edit_group_chat').modal('show');}});}function socketSide(){}$(()=>{socketSide()})
+function Wo_ChatSide(id){if(current_width<700){return false;}if($('.search-users-chat').val().length>0){return false;}if($('body').attr('sending-'+id)=='true'){return false;}var chat_container=$('.chat-tab').find('.chat_main_'+id);var offline_users_container=$('.offline-users');var user_id=chat_container.find('.chat-user-id').val();var message_id=chat_container.find('.chat-messages-wrapper').find('.messages-wrapper:last').attr('data-message-id');var chat_user_tab=chat_container.find('.chat-wrapper').find('.chat-status');var online_users_container=$('.online-users');var last_id=chat_container.find('.messages-text:last').attr('data-message-id');var is_empty_seen=1;var chat_groups=$(".chat_groups");var last_group=($(".groups-list").length>0)?$(".groups-list").last().attr('data-chat-group'):0;if(!$('.messages-text:last').find('.message-seen').is(':empty')){is_empty_seen=0;}if(typeof user_id==='undefined'){user_id=0;}if(typeof message_id==='undefined'){message_id=0;}if(typeof last_id==='undefined'){last_id=0;}var count_span=$('.count-online-users');$.get(Wo_Ajax_Requests_File(),{f:'chat',s:'chat_side',user_id:user_id,message_id:message_id,last_id:last_id,last_group:last_group},function(data){if(data.status==200&&data.chat_groups.length>0){chat_groups.html(data.chat_groups);}if(data.status==200){count_span.html(data.count_chat);}if(data.update_group_status.length>0){if('create_blog'!='messages'){for(var i=0;i<data.update_group_status.length;i++){if($(".chat_group_"+data.update_group_status[i]).length==0){$("[data-chat-group='"+data.update_group_status[i]+"']").find('.group-lastseen').html('<i class="fa fa-circle main" style="font-size:10px;"></i>');}}}else if('create_blog'=='messages'){}{for(var i=0;i<data.update_group_status.length;i++){if($(".chat_group_"+data.update_group_status[i]).length==0&&$("#messages-group-id").val()!=data.update_group_status[i]){$("#messages-group-"+data.update_group_status[i]).find('.group-lastseen').html('<i class="fa fa-circle main" style="font-size:10px;"></i>');}}}}if(data.online_users.length==0){online_users_container.html('');}else{online_users_container.html(data.online_users);}if(data.offline_users.length==0){offline_users_container.html('');}else{offline_users_container.html(data.offline_users);}if(data.chat_user_tab==200){chat_user_tab.html('active');}else{chat_user_tab.removeClass('active');}if(data.messages==200){chat_container.find('.chat-messages-wrapper').find("div[class*='message-seen']").empty();chat_container.find('.chat-messages-wrapper').find("div[class*='message-typing']").empty();chat_container.find('.chat-messages-wrapper').append(data.messages_html);setTimeout(function(){chat_container.find('.chat-messages-wrapper').scrollTop(chat_container.find('.chat-messages-wrapper')[0].scrollHeight);},100);if(data.sender!=user_id){document.getElementById('message-sound').play();}if(!$('#sendMessage').is(':focus')){document.title='New Message | '+document_title;}}if(is_empty_seen==1&&data.can_seen==1){chat_container.find('.messages-text:last').find('.message-seen').hide().html('<i class="fa fa-check"></i> Seen (<span class="ajax-time" title="'+data.time+'">'+data.seen+'</span>)').fadeIn(300);setTimeout(function(){chat_container.find('.chat-messages-wrapper').scrollTop(chat_container.find('.chat-messages-wrapper')[0].scrollHeight);},100);}if(data.is_typing==200){chat_container.find('.messages-text:last').find('.message-typing').html('<img class="user-avatar-left" src="'+data.img+'" alt="Profile Picture"><div id="loading"> <img class="typing" src="'+data.typing+'"></div>').fadeIn(300);setTimeout(function(){chat_container.find('.chat-messages-wrapper').scrollTop(chat_container.find('.chat-messages-wrapper')[0].scrollHeight);},100);}else{chat_container.find('.messages-text:last').find('.message-typing').empty();}if(data.chat_color){$(".chat_"+user_id).find('.online-toggle, .outgoing').css('background',data.chat_color);$(".chat_"+user_id).find('.outgoing p').css('color','#fff');$(".chat_"+user_id).find('#color').val(data.chat_color);$(".chat_"+user_id).find('.select-color').css('color',data.chat_color);}});}var chat_part_array=[];$(function(){setTimeout(function(){Timeout();},7000);$(document).on('click','.group_chat_mbr_part',function(event){event.preventDefault();var self_id=$(this).attr('id');if($.inArray(self_id,chat_part_array)==-1){chat_part_array.push(self_id);$("#group_chat_mbrs").text(chat_part_array.length);$(this).fadeOut(100,function(){$("#chat_group_users").val(chat_part_array.join());$(this).remove();})}else{$(this).addClass('disabled').removeAttr('title');}});$('#insert-caht-parts').ajaxForm({url:Wo_Ajax_Requests_File()+'?f=chat&s=create_group',type:'POST',dataType:'json',beforeSend:function(){Wo_progressIconLoader($('#insert-caht-parts').find('button'));$('#insert-caht-parts').find('.modal-footer .ball-pulse').fadeIn(100);},success:function(data){if(data['status']==200){$("#create_group_chat").modal('hide');Wo_OpenChatTab(0,data.group_id);$("#insert-caht-parts").find('#reset').trigger('click');$(".group_chat_mbr_list").empty();$(".group_chat_avatar").empty();chat_part_array=[];socket.emit("sync_groups")}else if(data.status==500){$("#insert-caht-alert").html('<div class="alert alert-danger">'+data['message']+'</div>');}$('#insert-caht-parts').find('.modal-footer .ball-pulse').fadeOut(100);}});$('#edit_chat_group_form').ajaxForm({url:Wo_Ajax_Requests_File()+'?f=chat&s=edit_group',type:'POST',dataType:'json',beforeSend:function(){Wo_progressIconLoader($('#edit_chat_group_form').find('button'));$('#edit_chat_group_form').find('.modal-footer .ball-pulse').fadeIn(100);},success:function(data){if(data['status']==200){$("#edit_group_chat").modal('hide');location.reload();}else{$("#edit_chat_group_alert").html('<div class="alert alert-danger">'+data['message']+'</div>');}$('#edit_chat_group_form').find('.modal-footer .ball-pulse').fadeOut(100);}});});function Timeout(){var inputs=$("input.chat-user-id");if(inputs.length>0){for(var i=0;i<inputs.length;i++){Wo_ChatSide($(inputs[i]).val());}}else{Wo_ChatSide(0);}setTimeout(function(){Timeout();},7000);}function Wo_ChatSearchUsers(search_query){var input=$($('.search-users-chat'));var offline_users_container=$('.online-users');if(input.val()==""){Wo_ChatSide(0);}$.post(Wo_Ajax_Requests_File()+'?f=chat&s=search_for_recipients',{search_query:search_query},function(data){if(data.status==200){if(data.html.length==0){offline_users_container.html('<span class="no-online-users center-text">No users to show</span>');}else{offline_users_container.html(data.html);}$('.chat-container').scrollTop($('.chat-container')[0].scrollHeight);}});}function Wo_UpdateStatus(status,event){event.preventDefault();if(status=='offline'){socket.emit('on_user_loggedoff',{from_id:_getCookie("user_id")});}if(status=='online'){socket.emit('on_user_loggedin',{from_id:_getCookie("user_id")});}var status_container=$('.online-content-toggler');var offline_status=status_container.find('.chat-opacity');$.post(Wo_Ajax_Requests_File()+'?f=chat&s=update_chat_status',{status:status},function(data){if(data.status==0){offline_status.removeClass('active').fadeOut(200);}else{offline_status.addClass('active').fadeIn(200);}});}function Wo_RegisterTyping(id){recipient_id=$('.chat_main_'+id).find('#user-id').val();if(typeof recipient_id==='undefined'){return false;}$.get(Wo_Ajax_Requests_File(),{f:'chat',s:'recipient_is_typing',recipient_id:recipient_id});}function Wo_DeleteTyping(id){chat_container=$('.chat_main_'+id);recipient_id=chat_container.find('#user-id').val();if(typeof recipient_id==='undefined'){return false;}$.get(Wo_Ajax_Requests_File(),{f:'chat',s:'remove_typing',recipient_id:recipient_id});}function Wo_CloseChat(id,type){var tab_type={};if(!type){Wo_CleanRecordNodes();Wo_StopLocalStream();Wo_DeleteTyping(id);$('.chat_main_'+id).fadeOut(200,function(){$(this).remove();});$(document.body).removeAttr('data-chat-recipient');tab_type={f:'chat',s:'close_chat',id:id};}else if(type=='group'){$('.chat_main_0').fadeOut(200,function(){$(this).remove();});tab_type={f:'chat',s:'close_group',id:id};}else if(type=='page'){$('.chat_main_0').fadeOut(200,function(){$(this).remove();});tab_type={f:'chat',s:'close_page',id:id};}$.get(Wo_Ajax_Requests_File(),tab_type);}function Wo_DeleteChatMessage(message_id){$.get(Wo_Ajax_Requests_File(),{f:'messages',s:'delete_message',message_id:message_id},function(data){if(data.status==200){$('#messageId_'+message_id).slideUp(200,function(){$(this).remove();});}});}function Wo_ShareChatFile(id){document.title=document_title;$("form.chat-sending-form-"+id+" #sendMessage").focus();$("form.chat-sending-form-"+id).submit();}function Wo_AddEmoToChat(code,id){inputTag=$('.chat-sending-form-'+id+' textarea');inputVal=inputTag.val();if(typeof(inputTag.attr('placeholder'))!="undefined"){inputPlaceholder=inputTag.attr('placeholder');if(inputPlaceholder==inputVal){inputTag.val('');inputVal=inputTag.val();}}if(inputVal.length==0){inputTag.val(code+' ');}else{inputTag.val(inputVal+' '+code);}inputTag.keyup().focus();}function Wo_AddEmoToGroup(code,id,type=''){inputTag=$('.group-chat-sending-'+id+' textarea');if(type=='page'){inputTag=$('.page-chat-sending-'+id+' textarea');}inputVal=inputTag.val();$('.emo-container').hide();if(typeof(inputTag.attr('placeholder'))!="undefined"){inputPlaceholder=inputTag.attr('placeholder');if(inputPlaceholder==inputVal){inputTag.val('');inputVal=inputTag.val();}}if(inputVal.length==0){inputTag.val(code+' ');}else{inputTag.val(inputVal+' '+code);}inputTag.keyup().focus();}function Wo_SubmitChatForm(e,id){document.title=document_title;var typing_chat_con=$('.chat_main_'+id);if(typing_chat_con.find('#sendMessage').val().length>1){if(typeof(typing_chat_con.attr('data-typing'))=="undefined"||typing_chat_con.attr('data-typing')=='false'){typing_chat_con.attr('data-typing','true');Wo_RegisterTyping(id);}}else if(typing_chat_con.find('#sendMessage').val().length==1){if(typeof(typing_chat_con.attr('data-typing'))!="undefined"){if(typing_chat_con.attr('data-typing')=='true'){typing_chat_con.attr('data-typing','false');Wo_DeleteTyping(id);}}}chat_tab_container=$('.chat_main_'+id);if(e.keyCode==13&&e.shiftKey==0){Wo_DeleteTyping(id);e.preventDefault();Wo_RegisterTabMessage(id);typing_chat_con.find('.messages-text:last').find('.message-seen').empty();$('form.chat-sending-form-'+id).submit()}else{if(e.keyCode&&![17,18,9].includes(e.keyCode)){Wo_Typing(e,id)}}}function Wo_Typing(e,recipient_id){}function Wo_SearchGChatParticipants(name,group_id){if(!name||!group_id){return false;}$.ajax({url:Wo_Ajax_Requests_File(),type:'GET',dataType:'json',data:{f:'chat',s:'search_parts',name:name,group_id:group_id},}).done(function(data){if(data.status==200){$('.group_chat_mbr_list_'+group_id).html(data.html);}else{$('.group_chat_mbr_list_'+group_id).html('<p class="search-filter-center-text">No result to show</p>');}}).fail(function(){console.log("error");})}function Wo_AddGChatPart(group_id,user_id){if(!user_id||!group_id){return false;}$.ajax({url:Wo_Ajax_Requests_File(),type:'GET',dataType:'json',data:{f:'chat',s:'add_gchat_user',user_id:user_id,group_id:group_id},}).done(function(data){if(data.status==200&&data.code==1){$("[data-group-chat-part='"+user_id+"']").find('span.status').html('<i class="fa fa-times main"></i>');}else if(data.status==200&&data.code==0){$("[data-group-chat-part='"+user_id+"']").find('span.status').html('<i class="fa fa-plus-square-o main"></i');}else{return false;}}).fail(function(){console.log("error");})}</script>
+<div class="modal fade sun_modal" id="logged-out-modal" role="dialog" data-backdrop="static" data-keyboard="false">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="modal-title"><i class="fa fa-exclamation-circle"></i> Session Expired</h4>
+         </div>
+         <div class="modal-body">
+            <p>Your Session has been expired, please login again.</p>
+         </div>
+         <div class="modal-footer">
+            <a href="http://127.0.0.1:8080/itest/Script/welcome" type="button" class="btn btn-default">Login</a>
+         </div>
+      </div>
+   </div>
+</div>                     </div>
+      </div>
+      <!-- Load modal alerts -->
+    <div class="modal fade in" id="comment_report_box" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 16px;">
+          <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>      
+          <span class="msg">Comment reported successfully.</span>
+        </p>
+      </div>
+      
+    </div>
+</div>
+
+<div class="modal fade in" id="post-shared" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 16px;">
+          <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>      
+          Post was successfully added to your timeline!        </p>
+      </div>
+      
+    </div>
+</div>
+<div class="modal fade in" id="modal-alert" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 16px;">
+          <i class="fa fa-info-circle" aria-hidden="true" style="color: #31708f;"></i>      
+          <span id="modal-alert-msg">
+            You have reached your limit of 5000 friends!          </span>
+        </p>
+      </div>
+    </div>
+</div>
+<div class="modal fade in" id="invalid_file" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 14px;">
+          <i class="fa fa-info-circle main" aria-hidden="true" style="color:#f2dede;"></i>      
+          File size error: The file exceeds allowed the limit (92 MB) and can not be uploaded.        </p>
+      </div>
+      
+    </div>
+</div>
+<div class="modal fade in" id="file_not_supported" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 14px;">
+          <i class="fa fa-info-circle main" aria-hidden="true" style="color:#f2dede;"></i>      
+          Unable to upload a file: This file type is not supported.        </p>
+      </div>
+      
+    </div>
+</div>
+<div class="modal fade" id="modal_light_box" role="dialog">
+	<button type="button" class="close comm_mod_img_close" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+  <div class="modal-dialog">
+    <div class="modal-content">              
+      <div class="modal-body" style="padding: 0;">
+        <img class="image" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade in" id="adult_image_file" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 14px;">
+          <i class="fa fa-info-circle main" aria-hidden="true" style="color:#f2dede;"></i>      
+          We have detected some adult content on the image you uploaded, therefore we have declined your upload process.        </p>
+      </div>
+      
+    </div>
+</div>
+
+
+<div class="modal fade sun_modal" id="views-info-modal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+				<h4 class="modal-title"><span id="views_info_title"></span></h4>
+			</div>
+			<div class="modal-body">
+				<div id="views_info" class="wo_react_ursrs_list"></div>
+				<div class="clearfix"></div>
+				<div id="views_info_load" style="display: none;">
+					<div class="load-more views_info_load_ wo_react_ursrs_list_lod_mor">
+						<button class="btn btn-default text-center views_info_load_more" data-type="" post-id="" table-type="" onclick="Wo_LoadViewsInfo(this);"><span id="load_more_info_btn">Load more</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade sun_modal" id="users-reacted-modal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+				<h4 class="modal-title">
+					<div class="who_react_modal">
+                          <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(1);">
+                <div class="inline_post_emoji inline_act_emoji"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABC1BMVEUAAADcqULfrEPdqkPeqkLdqUPwr1DeqkPeqkTywFngrEXdqkPcqELeqkTdqkTapz/ap0HapUDZoEDXpELxvlftulTeqkLms0zjr0ndqUPerEXZpkDap0Hbp0Lbpz/bpj/ZqEDbqULcqkPZpkDgrUPjrkfdqELos0bsuVLjr0notk/otVDjr0TdqkXfq0berEbbqELeq0TZpkHYp0XepkP/zGb+y2Tyukv9yWH8yF/2vlH7xl32wlv3wVb6xFr7yGH4xV70v1bxvFLuulLoskffrEThrEPdqkLptU7ns0zttkjqtEjjr0jjr0T2xFz0wlr4wljvuEvlsEXhrUX3xFz2wFXstk7qtEverESchXbAAAAANXRSTlMA4vTp3dkE46D+6NKqmZKLXSANCvf27uvqwaWYdGVWSkA4Myj+/Pj38/Pw7+vMxrmyi4YaF/39YwQAAAFwSURBVDjLlZPncoJAFIUFsbfYuyaa3tsCCpHeBOzt/Z8kLCask8w6yff3fDP37N3d0D+JxmNU95jQvgZ07eyIkBEBECJHhCwPALg9xQsvUOCzeKEheoLwhBceWU8Q03iBAh6JFjbvV6FQy+NPycMKD9i8kAQe5ROsEE9AoYrdZO8GQErPUcyAmAB87ohsrvna7v/Ii/XpPjd1W56IvLw86NJIpahwifZJLJgZDcUBEeTvSVagv1FsZsZCgSMDoVOmEVPNdS3TNC0nh47H0wjLVe2Noiibc9QhIqB84jJDDnagOdSBYBHTBTMcAAhXCYTwAMEt7bEs8RNeUnNI4HxWIreSLc0wjJ2m7YxmCAmjPZKiyDP9a8SAjKKS0kfAWmfW/hrYCySk50PEQoUdeGkbRyO69wxibuia4zjLyzwSokQ4RlCxK19QVYaDa9ge/o63IrzOViSpjudjnRnBp10phH6T72TqKYIiSTKS7oX+xieXeVq0fiCjiwAAAABJRU5ErkJggg==" data-pagespeed-url-hash="2443242568" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+              </span>
+                          <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(2);">
+                <div class="inline_post_emoji inline_act_emoji"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAwFBMVEUAAAD0AADnBAX3ExfjAgDmAwP/GiL+Gh/sBwvlAgHjAQDmBATkAQDjAgDjAQDmAwLkAQDkAgHjAgDjAADxDhHjAADlAAD/GyHlAAD/HBzoAADjAAD0ERXzERTsCQvsCgzlAgH/HCP/HCP3FBj3FBj/HCL/HCP/GyP/HCT/HCP/HCPjAADlAADjAAD/GyLjAQD7Fx39GSDxDRDqBwjnBATzDxP5FRv4FBnvDA71ERXuCgzlAgH2ExfoBQbrCAnsCQupgyLXAAAALnRSTlMAA1H+mHh3UCb408asofTu6NyAb1lLOi4dEhAJ9fXt7OzU06molJKCgWZlWzs3qPVF8QAAAV1JREFUOMu9j9dygzAUBQUOxd1O7Lil94pAIETn//8q51qDmQmJH70vHs8u5wI7GRvHtj9Wzb/Vu207G9biPsZ+4Hneg8OAc++BwH9yG7+4VhQQL4bxTL8UqKuF9qaQPR2At1fvEKTCJL+9SWShgxb4WElxu0VgVf8EhUxqC8GwykSq/KAp2gsyqYYIpmEmOhN0IRVZeIegX9aJxAQVrfcVXQj7CObRfoKKoPVxgYGqnCMY5WWViBRHUGjgeykNRCMEZh6FdKRQSDSxIp+FUb5EYAzyMsxoQ6k4ho1jVaSSDuQDg4FvrguMFAr0SCfwEb+EBhaPSlwRQsoUSCkE7sNbZIkzjveosgQNkeBx8meswRijKMOqzvbUpHM+NlhbYIMSDelcP99ywTlWNKT5OfuFOeEEHNH/ZB2+ZvzADN/XZT1s/GDN/mQ31n6067r2Ven1jrCcTkx2FNdlJ+cHPUxjfII9xOgAAAAASUVORK5CYII=" data-pagespeed-url-hash="2623976069" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+              </span>
+                          <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(3);">
+                <div class="inline_post_emoji inline_act_emoji"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAB71BMVEUAAAC32ob/00h3xrv/ykX/pi//qiv/rjn/4F/pxVn/oir/3Vr/4F//xkf/yUL/pi//oir/2VX/yT//vk7/qjT/4F//oilauKv/sz7/4F//0kv/3Vr/py//0Uv/0kv/ukj/qjX/4F//x0QRudQZttYYt9j/xkb/xkb/0kv/0Ur/1lH/tkP/tkP/rTofutv/yEEeuNv/yUEnvd8ovN8StdQQtdX/oiv/oCsrvOEsu+AwLDv/x0P/xkb/yUD/y0L/z0f/tkP/0kv/sj7/1lD/////rjn/2VX/vk7/ukj/qjT/3Vr/pi9czvX/wlBWSD1MQD09NTw0Lzx2YD1y1f75+/xs0/xp0vpn0fnw8vdg0PdYzfNPye/g5e5LyO1Dxuo8w+c2wuUrvuCuxI3txlP/xEnrt0R5YkFsVz05MztxXT130/RXzPJiyd1kydtFwNadz8Ncu7G2y5yuxpiRjpaJh5CDgIl1doZub351cnxnZXDlxl3uwlpNSVfKXVa1VlOnUVD7xU/wsEeifEaVdUW6kkSnfkOPcUP5xEHOo0HLoEGbe0E1MkHFSkCwRUBQNkC0kD/tvD7Tpz6Faz5eTj6IPj6uiz2khD1FPDxIMTx7vKB8vZ+5yY67yIzSxnrUxnnhwGPiwGLjrkzlsEvCmkDBmUD4s62qAAAAOnRSTlMAAwn+i4oI/vr6+erp6eno6OPj4uLHxbuojYJ3dFZTUlI9PQ7PzMjFqaiIhYKAenl3dmhmU088OyopioQHkAAAAfxJREFUOMuV03VT40AUAPANpcXd5dBzd9mU87ueNFra0hbqiru7u9sJzgflhWYKCWEGfn/svrz3ZnY3s4uugSjNy0qMjU3MyislFMpRBQm/IhIKouT1G2nfJdKKpPX8LxfcJ86tfveTgntnHdEfFOVH1n9/iSJx/+kVYGVzY7lCtLyxuSLM6eGzPIFwiscYB5fC9aUgfPBTED1DgEgmSZLHdCiwxR2R4JjbCoRozEOYLOyzDILpVZ9QmgkJIz8jjL7VaRjLhCPA7CHlxGQ0NNzWelRurQK3yqO9Aw1JvfV1/5Ua/tXV9yZBQ1yDxdzi9Y3P+tdohuU4lqHX/LPjPm+L2dIQBw0qq8nQ5GXwXH9Pd0d7W1t7R3dP/xxmvE0Gk1WF0Fu73mioHWY7q6sqv4oqq6o72eFag1Fvf4ee261mo2mX7pI2dNE7JqPZan+BHjtseou+dRLLTLZC2uZ4il66HDW2GvchJ61zB25IO1yvEHHT5XQ29lFj0oYxqq/R6XTdgn9dntP8d5+idH6MF4cGBgcHhhYx9usoau9Pc045ApoM3alRdnt9YX5+YX2bHQ1nMsSrW/wjbGQiwASDTGBiREwUI9GDj4oenl3a3M8Kcs8/n0cx32Ri1NLnVZL5UyKzBMloClN+R6QUapQe72t1dmp8fGq2+g2Bru4EyqPVroYg3cwAAAAASUVORK5CYII=" data-pagespeed-url-hash="785299837" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+              </span>
+                          <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(4);">
+                <div class="inline_post_emoji inline_act_emoji"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABa1BMVEUAAAD/u0T/xT//xUj/xUj/xUn/ykX/pi//xUj/4F//oir/4F//w0//yUL/pi//oir/2VX/qjT/4F//oin/0kr/sz7/4F//w0z/tkP/0kv/3Vr/yUH/wVH/py//2FX/y0H/ukj/qjX/4F//oSv//1X/3Vr/3Vr/yT//vk7/yT//vk7/1lH/rTr/wU//////wk7/yEIwLDv/wE//w0z/xkf/yT//xEn/1lD/y0L/ukj/2VX/tkP/sj7/rjn/3Vr/qjT/pi///Pb/673/46T/1nr/ykb19fZ5doBDP03/0kv/z0fb293a2tzW1dj/78z/6bj/z3D/02f/xVL7z0rWrzvOpzejhCr29vff4OT/6rn/6bmIho96d4Hwtk/pskxhVExCPkzVo0tLREvNUkqxh0f5ykVkPUWadUJ4PUKhdj/wvz5AMT6AXjrgszmDXji/gzbIojW/mjOxkDC5lC+dfyiafSeTdiTRlD3QlD1oeq/gAAAALnRSTlMAAgj56caLij36+enp6ejo4+LHxamojYuEgnd3dHRVVFJSPTsD6unk4+LhiIA6HOwTnAAAAadJREFUOMuVk+VWw0AQhSkUiru7OwuhIRSXunsplLbU3QUen9lI003hcPj+zJ2dm+zsZtL1D7Y3ZyeHBgaGJmc3t38ody/u3LfYXeyW1lfHrwnGV4mybOGygyNZW33a6PZU602f2wi4fc161eM2TouOPpOn4at4veWECUiUvd6Kr+ExLQj1NVWhllVJyNYKqjW+/4OLX9jjzrJ0htE6nVoIpF5iOxzBS+onhJ7UsEzoEdxnP158RizPUt2PjwBRg5BFr7cgpCH1WR8YemmafkW6D4oy6JCd1HQvGOQQbchKAVZkIzUtB0MPxDekM8BTL8hOaroHGxiGgX3N+ncz7EtqBhvkDCB0LtVy3KQSOOXOrpRq3OScksXlcLggSPQcvqjTdkIhIj3BVz0s5pFwIBCOiPkwOxLL5wLBqB8hfzTYWljmPvehkMcplriQ7/Oju37Fk+IMKSFf7+KZv+HIcIYMn86LQztzy/JF5ZLJHPXJZTPtY318x5JPx2LpPKcVuC6yMfGAKRWLJVZMbHT8eiujjy1GV6D/DmRbiqmxwcGxKcWW+Pa/+QYiOaGeGQ25gQAAAABJRU5ErkJggg==" data-pagespeed-url-hash="2499555466" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+              </span>
+                          <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(5);">
+                <div class="inline_post_emoji inline_act_emoji"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAACFlBMVEUAAAD/qlX/ykL//27/xUj/pCz/xEn/pi//ukn/4F//oir/4F//w0//xEr/yUL/vk7/4F//oin/x0T/w0z/00z/tkT/0kv/3Vr/yUH/wVH/py//2FX/y0H/ukgatM//4F//xEn/oSsPtNRqzOX/3Vr/xkf/3Vr/xkf/2VX/yT//2VX/yT//qjT/xkY9wuf/0kv/0Uz/sz//4GD/4F8QtNT/qjb/xkX/wU8RsdP/w03/yEH/wlD/xkf/x0P/y0H/z0f/0kz/1lD/////tkT/sj7/rjn/2VUwLDv/qjT/xEr/3Vr/xEn/pi//vk7/uknr6uzd3N//783ptztq0/v//fr5+fno6OkPtNT/6LYzLz3GnTKigij//PZZzfT/2Yl2c33/0nFaV2NXVGD4tEc6NkQ5Mz3mtDx01fw0weT/6r20srimpKr/35//4Zr/25T/3pCCf4j/033/13f/0GXwwmD/yV7/ylv/zFr/x1j/zVZMSFX/y1D0uFD5vk/ssUzdqUzLlkWHakTnpkP0v0H0v0B9YUBsVT/tuT7uuz1EOz3crTjXqzWwjCytiyucfiaWeCWTdiRfz/bz8vNLyO1KyO1ozeopvd/W1dj/8tTPztI6vNKQzM57yc4etMvHxsr/7cf/6rypzbp/v6ylo6q9x5+Kh5D/2oV5doCWrnpvbHfMv3ZsaXPXw3JhXWr/zmjjwmZQQj5PQT6v7Gi8AAAAOXRSTlMAAwgC+ejGiv76+enp6enix8WNi4iEgnd3dHRVVFJHPTw7+vTq6uno5OTi4uHIxqmop42McFE/Oi4odalTAAACGklEQVQ4y5WTZXPbQBCGHSeOw8ycMjNZ1hUuba+ta8syUxw7jtMwM6dhTpmZuf2HvZUV22qVmeT5IL2z+8zN6XSr2AYx5ScykhMTkzNOlsfItJX5u26E2ZOv/LdfvO+qhAPFknZs3qX/yImN6h+9KMOxiJFzQZa8jX7J+U0oEfd/kKEsrayaGBHT6soSvPeHvqUASu71Zdf8hjDvWl53g14gnE8awyyuuaYZCdOutUWGSYMTO4NQvXsODba3diGRrtb2QTTnrkeoggpZVJhCHz1WDj8ehvYwjzmrxYumTAhlUeEwS+m2vHMSv+015EabnwSbLd2Q46mwG4LDWFdLSA3uZ9l+XFNbR5xGB9T3UiEOAt/UwREyhH0s68NDtg5Cmniox4Ggo9AVfjx6+Qn36XR9dIUP3BejA+ogpF6n+HDzN4y5RsivbP4n2Gj5CTmVCvEawOuxWjE/AHGAx3exxyuUYZPZGoHetpZOjUhnS1tvKGVToUJIvzSynIWjTtFqtT0PvmuB0fHxUW2EFOFKFNL0xvycPkcmg4QEJ0fCQmHod6fre26Zq7/qx/4Q58KCk/we04dIF69uacJ7Krw1zM5MBAyGwMTMrEEgoVQhkvvMfOf+06rbVSJiyI2MzM7qew32wGUpx6PG50jDQ/uLK1LU0eNVtsNu/3wtmkOnFRLOnSorUt0MoypSyg1vpTpTlZSkylRXwupb5S87htPXtDqX+AAAAABJRU5ErkJggg==" data-pagespeed-url-hash="170040159" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+              </span>
+                          <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers(6);">
+                <div class="inline_post_emoji inline_act_emoji"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAACN1BMVEUAAAD/0lT/xjr/xUj/xUn/pCzQ2d3P2d7V3eLU3OH/4F//oirU3N//3Vr/4F/rzIr/4F//oinix5vP2dz/0krP2N3/4F//x0T/oir/00z/0kvP2N3/3Vr/py/tvHf/2FX/y0H/4F//oSvO2d7P19/jxpnjxZnS1tLT1dL/yUL/x0T/2VX/yT//2VX/yT//xkb/xkb/yEH/yUH/xkX/yET/////yEH/1lD/xkYxLDv/0kv/xEn/yT/9/f3/2VX/y0L/x0L/wlH/3Vr/z0f/qjT/pi/2om33pWr6sV7/wk//v07/ukj/x0T/tkP/sj7/rjn+wE3/xUju8fP8vlBxXD6TdyT09vf6s1v7tljm6+3i5+rh5unY3+LW3Nv/5bHlzpzzlnr0mHn5rWL7uVXTokn4zEi2j0R2XkH2wz9FPDzIoTT//PXx8/X8vlH+xkb4+fr3+fn19vXw8/Tq7vDp7fDl6uzd5Of/9+bb4uX/9N7V2djY1cfb1L7/6Lnbz7bkxZXozJTpyY7/2ov/1ofzyW79yG7/0Gn/zGf4qmT5uF70t136v1vPkVv/zFr9v1rdqUyjekvGmEl2WkamgkX0xkN6YULNo0HJn0DDmkD7xj6Eaj5VRj5nVT06MzverzjZrDa+mjKoiCukhCqefyj/+vD/8dX/79D/6bvs3Lfs2rT+36j+3pj/2o70rlv0sFr/ylj/yVX3sVD3sk/tuUauh0btukWviEXmtUPntULRqDbQpzXFnDHEnDC7eoUYAAAANXRSTlMAAgj56eiPZvv7+vn46unbx8W5tamZjY2LiIJ8d3RwVVQ9Oy8f8vLw7+rp5OTi4sjFeXY/PJyAnokAAAJrSURBVDjLlZNXVxpBFIABBey995bey2x2XUnWkAAmJlmaIiAoIE3E3nuvsfde0nvvPy6zkxWC+uJ35syZO/ebO/flco4BNzMuIiwoKCwiLpN7RJqXEnrbQ2gK72A+/dxNHy6k+1ZPunGIRO5/+ZjciopcH2Ac4zUSxeLtXfWOc16MmHfuqHe3xeKk/XzGLQb7rz21kzk41Xs/7egqg+3/Yt4/Vv6ot/LyttS/V9iL8zwkXME8bNoxzL7pja+iDs9g2OLqDxhSSyoK7qolZv++uohhZ5k+r1EUTtqINdW6g1imIMuEY121RthInKKuQyG+0E2b380SBLFhLURYN2Aw+9ZMuwvjoXAJp80mqXRi+ttXnOXzl+kJicRkpvHLUPCXK4ul5WUSmZLE8cdoyatkkrJyaTHt9oeC375QRX4wDMnlQ8/fk6yglPsxAklrTBLJiEbZ9+QNCemrfK3UjEilJg2NBP8BY++oTFY8+Ax0kohO8HRQI5ON9hoHmC/CWxQN7eOTr0SgNd+icjhUlvxWIDJMjrc3KFrCoXCqBoD6l80AVA7PEYi54UoAml/UA1BzGgohAAARgPTPEDarxWK1ETP9gL0MgUK0AiAMBQtTBYiphQIDQCiioSBsQu9rO3ryPfR01KIaTUIoCBrRuahIZ7zHYtS5itCrRgEUkrXsh9Vt91naqtm2tMlQyAlUiAB6oH/AokclgUgRmMOBCAN0Wn0dAK6uhyxdLgDq9FpdgJCDyBbERpWWlJSOPWIZY6KoWEE2x0vaie5Pdzx87D6Zdmj0Uvl3PfBTeUcNb1ZCJD84mB+ZkMU9xsz/BYgA5Efk+RejAAAAAElFTkSuQmCC" data-pagespeed-url-hash="3806854436" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
+              </span>
+            						<!-- <span class="how_reacted like-btn-like pointer" id="_post333" onclick="Wo_LoadReactedUsers('like');">
+							<div class="inline_post_emoji inline_act_emoji"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/reaction/like-sm.png"></div>
+						</span>
+						<span class="how_reacted like-btn-love pointer" id="_post333" onclick="Wo_LoadReactedUsers('love');">
+							<div class="inline_post_emoji inline_act_emoji"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/reaction/love-sm.png"></div>
+						</span>
+						<span class="how_reacted like-btn-haha pointer" id="_post333" onclick="Wo_LoadReactedUsers('haha');">
+							<div class="inline_post_emoji inline_act_emoji"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/reaction/haha-sm.png"></div>
+						</span>
+						<span class="how_reacted like-btn-wow pointer" id="_post333" onclick="Wo_LoadReactedUsers('wow');">
+							<div class="inline_post_emoji inline_act_emoji"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/reaction/wow-sm.png"></div>
+						</span>
+						<span class="how_reacted like-btn-sad pointer" id="_post333" onclick="Wo_LoadReactedUsers('sad');">
+							<div class="inline_post_emoji inline_act_emoji"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/reaction/sad-sm.png"></div>
+						</span>
+						<span class="how_reacted like-btn-angry pointer" id="_post333" onclick="Wo_LoadReactedUsers('angry');">
+							<div class="inline_post_emoji inline_act_emoji"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/reaction/angry-sm.png"></div>
+						</span> -->
+					</div>
+				</h4>
+			</div>
+			<div class="modal-body">
+				<div id="reacted_users_box" class="wo_react_ursrs_list"></div>
+				<div class="clearfix"></div>
+				<div id="reacted_users_load" style="display: none;">
+					<div class="load-more wo_react_ursrs_list_lod_mor">
+						<button class="btn btn-default text-center reacted_users_load_more" data-type="" post-id="" col-type="" onclick="Wo_LoadMoreReactedUsers(this);"><span id="load_more_reacted_btn">Load more</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade in" id="approve_post" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 14px;">
+          <i class="fa fa-info-circle main" aria-hidden="true" style="color:#f2dede;"></i>      
+          Your post was submitted, we will review your content soon.        </p>
+      </div>
+      
+    </div>
+</div>
+<div class="modal fade in" id="pro_upload_file" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 14px;">
+          <i class="fa fa-info-circle main" aria-hidden="true" style="color:#f2dede;"></i>      
+          To upload images, videos, and audio files, you have to upgrade to pro member. <a href="http://127.0.0.1:8080/itest/Script/go-pro">Upgrade To Pro</a>
+        </p>
+      </div>
+      
+    </div>
+</div>
+
+<div class="modal fade in" id="error_post" role="dialog">
+    <div class="modal-dialog">
+    
+      <div class="modal-content">
+        <p style="text-align: center;padding: 30px 20px;font-family: Hind,Arial;font-size: 14px;" id="error_post_text">
+        </p>
+      </div>
+      
+    </div>
+</div>
+
+<div class="modal fade sun_modal" id="edit-offer-modal" role="dialog">
+<div class="modal-dialog">
+      <div class="modal-content">
+            <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span></button>
+                  <h4 class="modal-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> Edit Offer</h4>
+            </div>
+            <div class="modal-body">
+                  <div class="wo_settings_page">
+                        <form class="edit-offer-form form-horizontal" method="post">
+                              <div class="app-offer-alert app-general-alert"></div>
+                              <div class="clear"></div>
+                              <div class="setting-panel row job-setting-panel edit_offer_modal_form">
+                                    
+
+                              </div>
+
+                              <div class="publisher-hidden-option">
+                                    <div id="progress" class="create-offer-progress">
+                                          <span id="percent" class="create-product-percent pull-right">0%</span>
+                                          <div class="progress">
+                                                <div id="bar" class="progress-bar active create-product-bar"></div> 
+                                          </div>
+                                          <div class="clear"></div>
+                                    </div>
+                              </div>
+
+                              
+                              <div class="form-group last-sett-btn modal-footer">
+                                    <div class="ball-pulse"><div></div><div></div><div></div></div>
+                                    <button type="submit" class="btn btn-main setting-panel-mdbtn">Publish</button>
+                              </div>
+                        </form>
+                  </div>
+            </div>
+      </div>
+</div>
+</div>    
+                
+        
+        <div class="lb-preloader"><svg width='50px' height='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></div>
+    
+    <div class="modal fade sun_modal" id="keyboard_shortcuts_box" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+				<h4 class="modal-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-command"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg> Keyboard shortcuts</h4>
+			</div>
+			<div class="modal-body">
+				<table class="key_shortcts">
+					<tbody>
+						<tr>
+							<th><span>J</span></th>
+							<td>Scroll to the next post</td>
+						</tr>
+						<tr>
+							<th><span>K</span></th>
+							<td>Scroll to the previous post</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>        
+      <!-- JS FILES -->
+                           <script type="text/javascript">const node_socket_flow="0"</script>
+            <script type="text/javascript" src="js/script.js,qversion=3.1.2.pagespeed.jm.oxwNjroO9q.js"></script>
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOfpaMO_tMMsuvS2T4zx4llbtsFqMuT9Y&libraries=places"></script>
+            <script src="js/audioRecord/recorder.js,qversion==3.1.2+record.js,qversion==3.1.2.pagespeed.jc.nJNgUFcc29.js"></script><script>eval(mod_pagespeed_pD8flaDZpS);</script>
+      <script>eval(mod_pagespeed_HD$f6GhAaQ);</script>
+                  <div class="extra-css"></div>
+            <script>$(document).ready(function(){$('div.leftcol').theiaStickySidebar({additionalMarginTop:65});});</script>
+      <script type="text/javascript">jQuery(document).ready(function(){jQuery('.custom-fixed-element').theiaStickySidebar({additionalMarginTop:65});});</script>
+          
+      <!-- End 'JS FILES' -->
+      <script type="text/javascript">(function(factory){if(typeof define==='function'&&define.amd){define(['jquery'],factory);}else{factory(jQuery);}}(function($){$.timeago=function(timestamp){if(timestamp instanceof Date){return inWords(timestamp);}else if(typeof timestamp==="string"){return inWords($.timeago.parse(timestamp));}else if(typeof timestamp==="number"){return inWords(new Date(timestamp));}else{return inWords($.timeago.datetime(timestamp));}};var $t=$.timeago;$.extend($.timeago,{settings:{refreshMillis:60000,allowPast:true,allowFuture:false,localeTitle:false,cutoff:0,strings:{prefixAgo:null,prefixFromNow:null,suffixAgo:"ago",suffixFromNow:"from now",inPast:"any moment now",seconds:"now",minute:"minute",minutes:"minutes",hour:"hour",hours:"hours",day:"day",days:"days",month:"month",months:"months",year:"year",years:"years",wordSeparator:" ",numbers:[]}},inWords:function(distanceMillis){if(!this.settings.allowPast&&!this.settings.allowFuture){throw'timeago allowPast and allowFuture settings can not both be set to false.';}var $l=this.settings.strings;var prefix=$l.prefixAgo;var suffix=$l.suffixAgo;if(this.settings.allowFuture){if(distanceMillis<0){prefix=$l.prefixFromNow;suffix=$l.suffixFromNow;}}if(!this.settings.allowPast&&distanceMillis>=0){return this.settings.strings.inPast;}var seconds=Math.abs(distanceMillis)/1000;var minutes=seconds/60;var hours=minutes/60;var days=hours/24;var weeks=days/7;var years=days/365;function substitute(stringOrFunction,number){var string=$.isFunction(stringOrFunction)?stringOrFunction(number,distanceMillis):stringOrFunction;var value=($l.numbers&&$l.numbers[number])||number;return number+' '+string.replace(/%d/i,value);}var words='';if(seconds<45){words=substitute($l.seconds,'');}else if(seconds<90){words=substitute('m',1);}else if(minutes<45){words=substitute('m',Math.round(minutes));}else if(minutes<90){words=substitute('h',1);}else if(hours<24){words=substitute('hrs',Math.round(hours));}else if(hours<42){words=substitute('d',1);}else if(days<7){words=substitute('d',Math.round(days));}else if(weeks<2){words=substitute('w',1);}else if(weeks<52){words=substitute('w',Math.round(weeks));}else if(years<1.5){words=substitute('y',1);}else{words=substitute('yrs',Math.round(years));}var separator=$l.wordSeparator||"";if($l.wordSeparator===undefined){separator=" ";}return $.trim([prefix,words].join(separator));},parse:function(iso8601){var s=$.trim(iso8601);s=s.replace(/\.\d+/,"");s=s.replace(/-/,"/").replace(/-/,"/");s=s.replace(/T/," ").replace(/Z/," UTC");s=s.replace(/([\+\-]\d\d)\:?(\d\d)/," $1$2");s=s.replace(/([\+\-]\d\d)$/," $100");return new Date(s);},datetime:function(elem){var iso8601=$t.isTime(elem)?$(elem).attr("datetime"):$(elem).attr("title");return $t.parse(iso8601);},isTime:function(elem){return $(elem).get(0).tagName.toLowerCase()==="time";}});var functions={init:function(){var refresh_el=$.proxy(refresh,this);refresh_el();var $s=$t.settings;if($s.refreshMillis>0){this._timeagoInterval=setInterval(refresh_el,$s.refreshMillis);}},update:function(time){var parsedTime=$t.parse(time);$(this).data('timeago',{datetime:parsedTime});if($t.settings.localeTitle)$(this).attr("title",parsedTime.toLocaleString());refresh.apply(this);},updateFromDOM:function(){$(this).data('timeago',{datetime:$t.parse($t.isTime(this)?$(this).attr("datetime"):$(this).attr("title"))});refresh.apply(this);},dispose:function(){if(this._timeagoInterval){window.clearInterval(this._timeagoInterval);this._timeagoInterval=null;}}};$.fn.timeago=function(action,options){var fn=action?functions[action]:functions.init;if(!fn){throw new Error("Unknown function name '"+action+"' for timeago");}this.each(function(){fn.call(this,options);});return this;};function refresh(){var data=prepareData(this);var $s=$t.settings;if(!isNaN(data.datetime)){if($s.cutoff==0||Math.abs(distance(data.datetime))<$s.cutoff){$(this).text(inWords(data.datetime));}}return this;}function prepareData(element){element=$(element);if(!element.data("timeago")){element.data("timeago",{datetime:$t.datetime(element)});var text=$.trim(element.text());if($t.settings.localeTitle){element.attr("title",element.data('timeago').datetime.toLocaleString());}else if(text.length>0&&!($t.isTime(element)&&element.attr("title"))){element.attr("title",text);}}return element.data("timeago");}function inWords(date){return $t.inWords(distance(date));}function distance(date){return(new Date().getTime()-date.getTime());}document.createElement("abbr");document.createElement("time");}));$(function(){setInterval(function(){if($('.ajax-time').length>0){$('.ajax-time').timeago().removeClass('.ajax-time');}},1000);});</script>      
+      <script>var create_bar=$('.create-product-bar');var create_percent=$('.create-product-percent');$(document).ready(function(){$('form.edit-offer-form').ajaxForm({url:Wo_Ajax_Requests_File()+'?f=offer&s=edit_offer',beforeSend:function(){var percentVal='0%';create_bar.width(percentVal);create_percent.html(percentVal);$('.edit-offer-form').find('.last-sett-btn .ball-pulse').fadeIn(100);},uploadProgress:function(event,position,total,percentComplete){var percentVal=percentComplete+'%';create_bar.width(percentVal);$('.edit-offer-form').find('.create-product-progress').slideDown(200);create_percent.html(percentVal);},success:function(data){if(data.status==200){$('.edit-offer-form').find('.app-general-alert').html("<div class='alert alert-success'>Offer successfully updated.</div>");$('.edit-offer-form').find('.alert-success').fadeIn(300);setTimeout(function(argument){$('.edit-offer-form').find('.alert-success').fadeOut(300);window.location.reload(true);},3000);}else{$('.edit-offer-form').animate({scrollTop:$('html, body').offset().top});$('.edit-offer-form').find('.app-general-alert').html('<div class="alert alert-danger">'+data.error+'</div>');$('.edit-offer-form').find('.alert-danger').fadeIn(300);setTimeout(function(argument){$('.edit-offer-form').find('.alert-danger').fadeOut(300);},3000);}$('.edit-offer-form').find('.last-sett-btn .ball-pulse').fadeOut(100);}});});function Wo_GetNewActivities(){var before_activity_id=$('#activities-wrapper > .activity').attr('data-activity-id');if(typeof before_activity_id==='undefined'){return false;}$.post(Wo_Ajax_Requests_File()+'?f=activities&s=get_new_activities',{before_activity_id:before_activity_id},function(data){if(data.status==200){$('.activities-wrapper').prepend(data.html);}});}function Wo_GetMoreActivities(){var activity_container=$('.activity-container');var after_activity_id=$('#activities-wrapper .activity:last').attr('data-activity-id');Wo_progressIconLoader(activity_container);$.post(Wo_Ajax_Requests_File()+'?f=activities&s=get_more_activities',{after_activity_id:after_activity_id},function(data){if(data.status==200){if(data.html.length==0){$('.no-activities').html(data.message);}else{$('#activities-wrapper').append(data.html);}$("#activities-wrapper").animate({scrollTop:$('#activities-wrapper')[0].scrollHeight},100);Wo_progressIconLoader(activity_container);}});};function Wo_RegisterReactionLike(element,reaction_icon){var reaction=$(element).attr('data-reaction-id');var post_id=$(element).attr('data-post-id');if($('#react_'+post_id).attr('data_react')==1){return false;}var path="http://127.0.0.1:8080/itest/Script/themes/GradeFeed";var lang=$(element).attr('data-reaction-lang');if(!post_id||!reaction){return false;}$('.reactions-box-container-'+post_id).fadeOut(1);var reaction_color='';reaction_icon='<div class="inline_post_emoji"><img class="" src="'+reaction_icon+'"></div>';$('.status-reaction-'+post_id).html(reaction_icon+lang).css({"color":reaction_color});$('.status-reaction-'+post_id).addClass("active-like");$.get(Wo_Ajax_Requests_File(),{f:'posts',s:'register_reaction',post_id:post_id,reaction:reaction},function(data){if(data.status==200){$('.post-reactions-icons-'+post_id).html(data.reactions);}if(data.can_send==1){Wo_SendMessages();}$('#react_'+post_id).attr('data_react','1');});}function Wo_RegisterReaction(element,reaction_icon){var reaction=$(element).attr('data-reaction-id');var post_id=$(element).attr('data-post-id');var path="http://127.0.0.1:8080/itest/Script/themes/GradeFeed";var lang=$(element).attr('data-reaction-lang');if(!post_id||!reaction){return false;}$('.reactions-box-container-'+post_id).fadeOut(1);var reaction_color='';reaction_icon='<div class="inline_post_emoji"><img class="" src="'+reaction_icon+'"></div>';$('.status-reaction-'+post_id).html(reaction_icon+lang).css({"color":reaction_color});$('.status-reaction-'+post_id).addClass("active-like");$.get(Wo_Ajax_Requests_File(),{f:'posts',s:'register_reaction',post_id:post_id,reaction:reaction},function(data){if(data.status==200){$('.post-reactions-icons-'+post_id).html(data.reactions);}if(data.can_send==1){Wo_SendMessages();}$('#react_'+post_id).attr('data_react','1');});}function Wo_RegisterFollowNotify(id,type){var _follow_con=$('[id=Notify-'+id+']');data_next=$('[id=Notify-'+id+']').attr('title');title=$('[id=Notify-'+id+']').attr('data_next');html_='<span id="Notify-'+id+'" title="'+title+'" data_next="'+data_next+'"><button type="button" onclick="Wo_RegisterFollowNotify('+id+',0)" class="btn-active btn btn-default btn-sm wo_following_btn wo_user_folw_empty_btns"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell-off"><path d="M13.73 21a2 2 0 0 1-3.46 0"></path><path d="M18.63 13A17.89 17.89 0 0 1 18 8"></path><path d="M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14"></path><path d="M18 8a6 6 0 0 0-9.33-5"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg></button></span>';if(type==0){html_='<span id="Notify-'+id+'" title="'+title+'" data_next="'+data_next+'"><button type="button" onclick="Wo_RegisterFollowNotify('+id+',1)" class="btn btn-default btn-sm wo_user_folw_empty_btns"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></button></span>';}_follow_con.replaceWith(html_);$.get(Wo_Ajax_Requests_File(),{f:'notify_user',following_id:id},function(data){});}function Wo_RegisterFollow(id,is_confirm,show_modal=false){var _follow_con=$('[id=Follow-'+id+']');is_confirm_f=0;if(is_confirm==1){is_confirm_f=1;}if(show_modal==true){$('#unfriend_btn').attr('onclick','Wo_RegisterFollow('+id+')');$('#un_friend_modal').modal('show');return false;}$('#un_friend_modal').modal('hide');html_='<button type="button" onclick="Wo_RegisterFollow('+id+', '+is_confirm_f+')" class="btn-active btn btn-default btn-sm wo_following_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg><span class="button-text"> Following</span></button>';if(is_confirm_f==1){html_='<button type="button" onclick="Wo_RegisterFollow('+id+', '+is_confirm_f+')" class="btn-requested btn btn-default btn-sm wo_request_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg><span class="button-text"> Requested</span></button>';}if(_follow_con.find('button').hasClass('btn-active')||_follow_con.find('button').hasClass('btn-requested')){html_='<button type="button" onclick="Wo_RegisterFollow('+id+', '+is_confirm_f+')" class="btn btn-default btn-sm wo_follow_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg><span class="button-text"> Follow</span></button>';}_follow_con.html(html_);$.get(Wo_Ajax_Requests_File(),{f:'follow_user',following_id:id},function(data){if(data.can_send==1){Wo_SendMessages();}else if(data.status==400){html_='<button type="button" onclick="Wo_RegisterFollow('+id+')" class="btn btn-default btn-sm wo_follow_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg><span class="button-text"> Add Friend</span></button>';_follow_con.html(html_);$("#modal-alert").modal('show');Wo_Delay(function(){$("#modal-alert").modal('hide');},3000);}});}function Wo_RegisterGroupJoin(id,is_confirm){var _join_con=$('[id=join-'+id+']');is_confirm_=0;if(is_confirm==1){is_confirm_=1;}html_join='<button type="button" onclick="Wo_RegisterGroupJoin('+id+', '+is_confirm_+')" class="btn-active btn btn-default btn-sm wo_following_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="button-text"> Joined</span></button>';if(is_confirm_==1){html_join='<button type="button" onclick="Wo_RegisterGroupJoin('+id+', '+is_confirm_+')" class="btn-requested btn btn-default btn-sm wo_request_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span class="button-text"> Requested</span></button>';}if(_join_con.find('button').hasClass('btn-requested')||_join_con.find('button').hasClass('btn-active')){html_join='<button type="button" onclick="Wo_RegisterGroupJoin('+id+', '+is_confirm_+')" class="btn btn-default btn-sm wo_follow_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg><span class="button-text"> Join</span></button>';}_join_con.html(html_join);$.get(Wo_Ajax_Requests_File(),{f:'join_group',group_id:id},function(data){if(data.can_send==1){Wo_SendMessages();}});}function Wo_RegisterEventGoing(id){var _join_con=$('[id=going-'+id+']');html_join='<button type="button" onclick="Wo_RegisterEventGoing('+id+')" class="btn-active btn btn-default btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span class="button-text"> Going</span></button>';if(_join_con.find('button').hasClass('btn-active')){html_join='<button type="button" onclick="Wo_RegisterEventGoing('+id+')" class="btn btn-default btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><span class="button-text"> Go</span></button>';}_join_con.html(html_join);$.get(Wo_Ajax_Requests_File(),{f:'go_event',event_id:id},function(data){if(data.can_send==1){Wo_SendMessages();}});}function Wo_RegisterEventInterested(id){var _join_con=$('[id=interested-'+id+']');html_join='<button type="button" onclick="Wo_RegisterEventInterested('+id+')" class="btn-active btn btn-default btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10,17L5,12L6.41,10.58L10,14.17L17.59,6.58L19,8M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg><span class="button-text"> Interested</span></button>';if(_join_con.find('button').hasClass('btn-active')){html_join='<button type="button" onclick="Wo_RegisterEventInterested('+id+')" class="btn btn-default btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" /></svg><span class="button-text"> Interested</span></button>';}_join_con.html(html_join);$.get(Wo_Ajax_Requests_File(),{f:'interested_event',event_id:id},function(data){if(data.can_send==1){Wo_SendMessages();}});}function Wo_RegisterPageLike(id){element_like=$('[id=like-'+id+']');html_like='<button type="button" onclick="Wo_RegisterPageLike('+id+')" class="btn-active btn btn-default btn-sm wo_following_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg><span class="button-text"> Liked</span></button>';if(element_like.find('button').hasClass('btn-active')){html_like='<button type="button" onclick="Wo_RegisterPageLike('+id+')" class="btn btn-default btn-sm wo_follow_btn" id="wo_useract_btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg><span class="button-text"> Like</span></button>';}element_like.html(html_like);$.get(Wo_Ajax_Requests_File(),{f:'like_page',page_id:id},function(data){if(data.status==200){if($('.sidebar-listed-page-like').attr('data-type')=="sidebar"){setTimeout(function(){Wo_ReloadSideBarPages();},500);}}if(data.can_send==1){Wo_SendMessages();}});}function Wo_RegisterLike(post_id){var post=$('[id=post-'+post_id+']');html_like='<span class="active-like"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg><span class="like-btn-mobile"> Liked</span></span>';if(post.find("[id^=like-button]").parent().find('.active-like').length>0){html_like='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path fill="currentColor" d="M23,10C23,8.89 22.1,8 21,8H14.68L15.64,3.43C15.66,3.33 15.67,3.22 15.67,3.11C15.67,2.7 15.5,2.32 15.23,2.05L14.17,1L7.59,7.58C7.22,7.95 7,8.45 7,9V19A2,2 0 0,0 9,21H18C18.83,21 19.54,20.5 19.84,19.78L22.86,12.73C22.95,12.5 23,12.26 23,12V10M1,21H5V9H1V21Z"></path> </svg> <span class="like-btn-mobile"> Like</span>';}post.find("[id^=like-button]").html(html_like);$.get(Wo_Ajax_Requests_File(),{f:'posts',s:'register_like',post_id:post_id},function(data){if(data.status==200){post.find("[id^=likes]").text(data.likes);post.find("[id^=wonders]").text(data.wonders);}else{post.find("[id^=likes]").text(data.likes);post.find("[id^=wonders]").text(data.wonders);}if(data.can_send==1){Wo_SendMessages();}});}function Wo_RegisterWonder(post_id){var post=$('[id=post-'+post_id+']');wonder_icon='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-down"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg>';wonder_lang="Wonder";wonder_lang_2="Wondered";html_wonder='<span class="active-wonder">'+wonder_icon+'<span class="like-btn-mobile">'+wonder_lang_2+'</span></span>';if(post.find("[id^=wonder-button]").parent().find('.active-wonder').length>0){html_wonder=''+wonder_icon+'<span class="like-btn-mobile">'+wonder_lang+'</span>';}post.find("[id^=wonder-button]").html(html_wonder);$.get(Wo_Ajax_Requests_File(),{f:'posts',s:'register_wonder',post_id:post_id},function(data){if(data.status==200){post.find("[id^=wonders]").text(data.wonders);post.find("[id^=likes]").text(data.likes);}else{post.find("[id^=wonders]").text(data.wonders);post.find("[id^=likes]").text(data.likes);}if(data.can_send==1){Wo_SendMessages();}});}function Wo_IsLangValid(lang){var langs=["en","tr","fr","es","nl","de","it","pt","ru","ar"];if(lang&&langs.indexOf(lang)!=-1){return true;}else{return false;}}function Wo_DetectTextLang(text){var lcode=false;if(text||typeof(text)=='string'){guessLanguage.info(text,function(lang){lcode=lang[0];});}return lcode;}function Wo_Translate(id,lang){if(!id||!lang&&Wo_IsLangValid(lang)){return false;}else{var translatable_text=$("[data-translate-text="+id+"]").text();if(lang==Wo_DetectTextLang(translatable_text)){$("[data-trans-btn="+id+"]").removeAttr('onclick')
+return false;}$.ajax({url:'https://translate.yandex.net/api/v1.5/tr.json/translate',type:'GET',dataType:'json',data:{key:'trnsl.1.1.20170601T212421Z.5834b565b8d47a18.2620528213fbf6ee3335f750659fc342e0ea7923',text:String(translatable_text),lang:String(lang)},}).done(function(data){if(data.code==200){$("[data-translate-text="+id+"]").text(data.text[0])
+$("[data-trans-btn="+id+"]").removeAttr('onclick')}}).fail(function(){console.log("translation error");})}}$(document).on('click','#night_mode_toggle',function(event){mode=$(this).attr('data-mode');if(mode=='night'){$('head').append('<link rel="stylesheet" href="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/stylesheet/dark.css" id="night-mode-css">');$('#night_mode_toggle').attr('data-mode','day');$('#night-mode-text').text('Day mode');}else{$('#night-mode-css').remove();$('#night_mode_toggle').attr('data-mode','night');$('#night-mode-text').text('Night mode');}$.post(Wo_Ajax_Requests_File()+'?mode='+mode);});$(document).on('click','#share_post_on_btn',function(event){text=$('#share_post_text').val();type=$('#SearchForInputType').val();post_id=$('#SearchForInputPostId').val();type_id=$('#SearchForInputTypeId').val();self=this;$(this).text('Please wait..');$(this).attr('disabled','true');$.ajax({url:Wo_Ajax_Requests_File(),type:'GET',dataType:'json',data:{f:'share_post_on',s:type,type_id:type_id,post_id:post_id,text:text},}).done(function(data){$(self).text('Share');$(self).removeAttr('disabled');if(data.status==200){$('.share_post_modal_alert').html('<div class="alert alert-success">Post has been successfully shared.</div>');setTimeout(function(){$('#share_post_modal').modal('hide');},2000);}else{$('.share_post_modal_alert').html("<div class='alert alert-danger'>You can&#039;t share a post on a page or a Institution that is your not own.</div>");setTimeout(function(){$('.share_post_modal_alert').html('');},2000);}}).fail(function(){}).always(function(){});});$(document).on('change','#share_type_select',function(event){var type=$(this).val();if(type=='user'){$('.search_for_form').hide(400);$('#type_user_name').show(400);$('#SearchForInputType').val('user');}else if(type=='page'){$('.search_for_form').hide(400);$('#type_page_name').show(400);$('#SearchForInputType').val('page');}else if(type=='group'){$('.search_for_form').hide(400);$('#type_group_name').show(400);$('#SearchForInputType').val('group');}else if(type=='timeline'){$('.search_for_form').hide(400);$('#SearchForInputType').val('timeline');}});function Wo_LoadViewsInfo(self){$('#load_more_info_btn').html('Please wait..');var type=$(self).attr('data-type');var table=$(self).attr('table-type');var post_id=$(self).attr('post-id');var id=$('.views_info_count').last().attr('data-row-id');var request='';if(type=='like'){request='get_post_likes';}if(type=='wonder'){request='get_post_wonders';}if(type=='share'){request='get_post_shared';}$.get(Wo_Ajax_Requests_File(),{f:'posts',s:request,type:type,post_id:post_id,offset:id,table:table},function(data){if(data.status==200){if(data.html.length==0){$(self).css('display','none');}else{$('#views_info').append(data.html);$('#load_more_info_btn').html('Load more');}}$('#load_more_info_btn').html('Load more');});}function Wo_LoadReactedUsers(type){$('#reacted_users_box').html('<div class="lb-preloader" style="display:block"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></div>');var post_id=$('.reacted_users_load_more').attr('post-id');var col=$('.reacted_users_load_more').attr('col-type');$.get(Wo_Ajax_Requests_File(),{f:'posts',s:'get_post_reacted',type:type,post_id:post_id,col:col},function(data){if(data.status==200){if(data.html.length==0){$('.reacted_users_load_more').css('display','none');$('.reacted_users_load_more').attr('data-type','');$('#reacted_users_box').html('<span class="view-more-wrapper text-center">'+data.message+'</span>');}else{$('.reacted_users_load_more').attr('data-type',type);$('.reacted_users_load_more').attr('post-id',post_id);$('.reacted_users_load_more').attr('col-type',col);$('#load_more_reacted_btn').html('Load more');$('.reacted_users_load_more').css('display','inline');$('#reacted_users_box').html(data.html);}}});}function Wo_LoadMoreReactedUsers(self){$('.reacted_users_load_more').find('#load_more_reacted_btn').html('Please wait..');var type=$(self).attr('data-type');var post_id=$(self).attr('post-id');var id=$('.views_info_count').last().attr('data-row-id');var col=$('.reacted_users_load_more').attr('col-type');var request='get_post_reacted';$.get(Wo_Ajax_Requests_File(),{f:'posts',s:request,type:type,post_id:post_id,offset:id,col:col},function(data){if(data.status==200){if(data.html.length==0){$(self).css('display','none');}else{$('#reacted_users_box').append(data.html);$('.reacted_users_load_more').find('#load_more_reacted_btn').html('Load more');}}$('.reacted_users_load_more').find('#load_more_reacted_btn').html('Load more');});}function Wo_SortComments(type,post_id){if(type=='top'){$('.order-text-'+post_id).text('Top');}else{$('.order-text-'+post_id).text('Latest');}main_wrapper=$('#post-'+post_id);view_more_wrapper=main_wrapper.find('.view-more-wrapper');Wo_progressIconLoader(view_more_wrapper);$('#post-'+post_id).find('.view-more-wrapper .ball-pulse').fadeIn(100);$.get(Wo_Ajax_Requests_File(),{f:'posts',s:'load_more_comments_sort',post_id:post_id,type:type},function(data){if(data.status==200){main_wrapper.find('.comments-list').html(data.html);$('.ball-pulse-'+post_id).fadeOut('100');}});}function count_char(self,id){$(self).limit("640",'#charsLeft_'+id);}function ApplyJobNow(job_id){$.post(Wo_Ajax_Requests_File()+'?f=job&s=get_apply_modal',{job_id:job_id},function(data,textStatus,xhr){if(data.status==200){$('#apply-job-modal').html(data.html);$('#apply-job-modal').modal('show');}});}$(document).on('change','#i_currently_work',function(event){if($('#i_currently_work').is(":checked")){$('#experience_end_date').css('display','none');}else{$('#experience_end_date').css('display','block');}});function Wo_GetPaymentMethods(self){var amount=$('#fund_donate_amount').val();var fund_id=$('#fund_donate_id').val();if(!amount||!fund_id){$('#fund_donate_amount').attr('style','border-color: red !important');return false;}$('#fund_donate_amount').attr('style','border-color: unset');$(self).attr('disabled','true');$.get(Wo_Ajax_Requests_File()+'?f=funding&s=get_payment_donate_method&fund_id='+fund_id+'&amount='+amount,function(data){if(data.status==200){$('#donate_for_fund_modal').html(data.html);$('#dont_modal').modal('hide');$('#fund_payment_donate_modal').modal({show:true});}else{$('#amount_fund_alert').html('<div class="alert alert-danger">'+data['message']+'</div>');setTimeout(function(argument){$('#amount_fund_alert').html('');},2000);}$(self).removeAttr('disabled');});}function Wo_GetPayPalDonateLink(fund_id,amount){if(!amount||!fund_id){return false;}$('.btn-paypal').attr('disabled',true).text("Please wait..");$.post(Wo_Ajax_Requests_File()+'?f=funding&s=get_paypal_url',{fund_id:fund_id,amount:amount},function(data){if(data.status==200){window.location.href=data.url;}else{$('.btn-paypal').attr('disabled',false).html("PayPal App not set yet.");}});}function Wo_StripeDonate(fund_id,amount,type='credit_card'){if(!amount||!fund_id){return false;}if(type=='credit_card'){$('.btn-cart').attr('disabled',true).text("Please wait..");}else{$('.btn-alipay').attr('disabled',true).text("Please wait..");}var stripe=Stripe('');$.post(Wo_Ajax_Requests_File()+'?f=stripe&s=session',{amount:amount,type:'fund',fund_id:fund_id,payment_type:type},function(data,textStatus,xhr){if(data.status==200){return stripe.redirectToCheckout({sessionId:data.sessionId});}});}function Wo_BankTransferDonate(fund_id,amount){if(!amount||!fund_id){return false;}$('.bank_payment').attr('disabled',true).text("Please wait..");$('#configreset').click();$(".prv-img").html('<div class="thumbnail-rendderer"><div><h4 class="bold">Drop Image Here</h4><div class="error-text-renderer"></div><div><span>OR</span><p>Browse To Upload</p></div></div> </div>');$("#blog-alert").html('');$('#bank_donate_price').val(amount);$('#bank_donate_fund_id').val(fund_id);$('#pay-go-pro').modal('hide');$('#bank_transfer_donate_modal').modal({show:true});}function Wo_BitcoinDonate(fund_id,amount){if(!amount||!fund_id){return false;}$('.btn-bitcoin').attr('disabled',true).text("Please wait..");$('#pay-go-pro').modal('hide');$.get(Wo_Ajax_Requests_File()+'?f=donate_with_bitcoin&amount='+amount+"&fund_id="+fund_id,function(data){if(data.status==200){$(data.html).appendTo('body').submit();}});}function Wo_CheckOutCardDonate(fund_id,amount){if(!amount||!fund_id){return false;}$('.btn-check').attr('disabled',true).text("Please wait..");$('#donate_check_amount').val(amount)
+$('#donate_check_fund_id').val(fund_id)
+$("#2checkout_alert_donate_wallet").html('');$('#pay-go-pro').modal('hide');$('#2checkout_wallet_donate_modal').modal({show:true});}function openInNewTab(url,id){var myWindow=window.open(url,"","width=600,height=700");return false;}function Wo_LiveComment(text,event,post_id,insert=0){text=$('[id=post-'+post_id+']').find('.comment-textarea').val();if(text&&(event.keyCode==13||insert==1)){if($('#live_post_comments_'+post_id+' .live_comments').length>=4){$('#live_post_comments_'+post_id+' .live_comments').first().remove();}$('#live_post_comments_'+post_id).append('<div class="live_comments" live_comment_id=""><a class="pull-left" href="http://127.0.0.1:8080/itest/Script/admin"><img class="live_avatar pull-left" src="http://127.0.0.1:8080/itest/Script/upload/photos/2021/08/1qG722cVj2FN6E8KMEF2_10_7a45502b89d58a9144447f46d41273d5_avatar.jpg?cache=1628600754" alt="avatar"></a><div class="comment-body" style="float: left;"><div class="comment-heading"><span><a href="http://127.0.0.1:8080/itest/Script/admin" data-ajax="?link1=timeline&amp;u=admin" ><h4 class="live_user_h"> admin </h4></a></span><span class="verified-color" data-toggle="tooltip" title="Verified User"><i class="fa fa-check-circle"></i></span><div class="comment-text">'+text+'</div></div></div><div class="clear"></div></div>');}}</script>      <!-- Audio FILES -->
+            <audio id="notification-sound" class="sound-controls" preload="auto">
+         <source src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/mp3/New-notification.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="message-sound" class="sound-controls" preload="auto">
+         <source src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/mp3/New-message.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="calling-sound" class="sound-controls" preload="auto">
+         <source src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/mp3/calling.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="video-calling-sound" class="sound-controls" preload="auto">
+         <source src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/mp3/video_call.mp3" type="audio/mpeg">
+      </audio>
+            
+      <!-- End 'Audio FILES' -->
+      <script>$(window).on("popstate",function(e){location.reload();});$(document).ready(function(){$(".sun_lang_select_menu li a.English").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/united-states.svg"/></span> ');$(".sun_lang_select_menu li a.Arabic").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/saudi-arabia.svg"/></span> ');$(".sun_lang_select_menu li a.Dutch").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/netherlands.svg"/></span> ');$(".sun_lang_select_menu li a.French").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/france.svg"/></span> ');$(".sun_lang_select_menu li a.German").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/germany.svg"/></span> ');$(".sun_lang_select_menu li a.Hungarian").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/hungary.svg"/></span> ');$(".sun_lang_select_menu li a.Italian").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/italy.svg"/></span> ');$(".sun_lang_select_menu li a.Portuguese").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/portugal.svg"/></span> ');$(".sun_lang_select_menu li a.Russian").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/russia.svg"/></span> ');$(".sun_lang_select_menu li a.Spanish").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/spain.svg"/></span> ');$(".sun_lang_select_menu li a.Serbian").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/serbia.svg"/></span> ');$(".sun_lang_select_menu li a.Turkish").append('<span class="language_initial"><img src="http://127.0.0.1:8080/itest/Script/themes/GradeFeed/img/flags/turkey.svg"/></span> ');});</script>
+            <script>window.addEventListener("load",function(){window.cookieconsent.initialise({"palette":{"popup":{"background":"#3D8CFA","text":"#fff"},"button":{"background":"#9fc7ff"}},"theme":"edgeless","content":{"message":"This website uses cookies to ensure you get the best experience on our website.","dismiss":"Got It!","link":"Learn More","href":"http://127.0.0.1:8080/itest/Script/terms/privacy-policy"}})});</script>
+            	  
+		            <!-- // NEW STORY -->
+      <script type="text/javascript">$(document).on('click','.story-image-wrapper',function(event){event.preventDefault();$('#contnet').append('<div class="lightbox-container"><div class="lightbox-backgrond" onclick="Wo_CloseLightbox();"></div><div class="lb-preloader" style="display:block"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></div></div>');$value=$(this).parents(".story-container").attr('data-status-id');$.post(Wo_Ajax_Requests_File()+'?f=story_view',{id:$value},function(data,textStatus,xhr){if(data.status==200){document.body.style.overflow='hidden';$('.lightbox-container').html(data.html);$('.width_').addClass('load');setTimeout(function(){$('.width_').css('width','100%');},200);Wo_Delay(function(){if($('.dont_close_story_'+$value).length==0){Get_NextStory(data.story_id);}},10000);}else{Wo_CloseLightbox();}});});function Wo_GetMoreStoryViews(story_id,self){last_view=$('.story_views_').last().attr('id');$(self).addClass('dont_close_story_'+story_id);$(self).find('button').html('Please wait..');$.post(Wo_Ajax_Requests_File()+'?f=story_views_',{last_view:last_view,story_id:story_id},function(data,textStatus,xhr){if(data.status==200){$(self).find('button').html('<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></path></svg></span> Load more');$('.views_container_').append(data.html);}else{$(self).find('button').html('No more views');}});}$(document).on('click','.see_all_stories',function(event){event.preventDefault();story_loader=$(this);story_loader.addClass('story_start_load');$('#contnet').append('<div class="lightbox-container"></div>');user_id=$(this).attr('data_story_user_id');type=$(this).attr('data_story_type');$.post(Wo_Ajax_Requests_File()+'?f=view_all_stories',{user_id:user_id,type:type},function(data,textStatus,xhr){document.body.style.overflow='hidden';$('.lightbox-container').html(data.html);story_loader.removeClass('story_start_load');setTimeout(function(){video_story=$('#video_story').attr('data-story-video');if($('[data-story-video='+video_story+']').length==0){$('.width_').addClass('load');setTimeout(function(){$('.width_').css('width','100%');},200);Wo_Delay(function(){value=$('.user_story_').attr('id');if($('.dont_close_story_'+value).length==0){if(type=='user'){Get_NextStory(data.story_id);}else{Get_NextStory(data.story_id,'friends');}}},10000);}},200);});});function Get_PreviousStory(story_id,story_type=''){if($('.lightbox-container').is(":visible")){Wo_CloseLightbox();$('#contnet').append('<div class="lightbox-container"><div class="lightbox-backgrond" onclick="Wo_CloseLightbox();"></div><div class="lb-preloader" style="display:block"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></div></div>');$.post(Wo_Ajax_Requests_File()+'?f=view_story_by_id',{story_id:story_id,type:'previous',story_type:story_type},function(data,textStatus,xhr){if(data.status==200){document.body.style.overflow='hidden';$('.lightbox-container').html(data.html);video_story=$('#video_story').attr('data-story-video');if($('[data-story-video='+video_story+']').length==0){$('.width_').addClass('load');setTimeout(function(){$('.width_').css('width','100%');},200);Wo_Delay(function(){value=$('.user_story_').attr('id');if($('.dont_close_story_'+value).length==0){if(story_type=='user'){if($('.lightpost-'+data.story_id).length>0){Get_NextStory(data.story_id);}}else{if($('.lightpost-'+data.story_id).length>0){Get_NextStory(data.story_id,'friends');}}}},10000);}}else{Wo_CloseLightbox();}});}}function Get_NextStory(story_id,story_type=''){if($('.lightbox-container').is(":visible")){Wo_CloseLightbox();$('#contnet').append('<div class="lightbox-container"><div class="lightbox-backgrond" onclick="Wo_CloseLightbox();"></div><div class="lb-preloader" style="display:block"><svg width="50px" height="50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></div></div>');$.post(Wo_Ajax_Requests_File()+'?f=view_story_by_id',{story_id:story_id,type:'next',story_type:story_type},function(data,textStatus,xhr){if(data.status==200){document.body.style.overflow='hidden';$('.lightbox-container').html(data.html);video_story=$('#video_story').attr('data-story-video');if($('[data-story-video='+video_story+']').length==0){$('.width_').addClass('load');setTimeout(function(){$('.width_').css('width','100%');},200);Wo_Delay(function(){value=$('.user_story_').attr('id');if($('.dont_close_story_'+value).length==0){if(story_type=='user'){if($('.lightpost-'+data.story_id).length>0){Get_NextStory(data.story_id);}}else{if($('.lightpost-'+data.story_id).length>0){Get_NextStory(data.story_id,'friends');}}}},10000);}}else{if(story_type=='user'){if($('.unseen_story').length>0){$('.unseen_story').addClass('seen_story');$('.unseen_story').removeClass('unseen_story');}}Wo_CloseLightbox();}});}}</script>
+      <!-- // NEW STORY -->
+	          
+    <div class="modal fade sun_modal" id="apply-job-modal" role="dialog">
+    </div>
+
+
+
+
+
+
+   </body>
+</html>

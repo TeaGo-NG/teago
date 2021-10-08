@@ -1,0 +1,54 @@
+<?php
+if ($t['loggin'] == true) {
+   header("Location: " . $t['config']['site_url']);
+   exit();
+} else {
+  if (isset($_GET['link2'])) {
+   if ($_GET['link2'] == 'success') {
+?>
+<div class="text-center">
+   <h2><?php echo 'Your accout is Activated';?></h2>
+   <div class="account-activate-icon"><i class="fa fa-check-circle"></i></div>
+   <h4><?php echo 'You are free to login';?></h4>
+</div>
+<?php
+    } else {
+      t_redirect($t['config']['site_url']);
+      exit();
+    }
+  } else if (isset($_GET['email'], $_GET['code']) === true) {
+      $email = $_GET['email'];
+      $code  = $_GET['code'];
+      if (t_EmailExists($email) === false) {
+        t_redirect($t['config']['site_url']);
+        exit();
+      } else if (t_ActivateUser($email, $code) === false) {   
+        t_redirect($t['config']['site_url']);
+        exit();   
+      } else {
+        $session = t_CreateLoginSession(t_UserIdFromEmail($email));
+        $_SESSION['user_id'] = $session;
+        setcookie(
+            "user_id",
+            $session,
+            time() + (10 * 365 * 24 * 60 * 60)
+        );
+        // if (!empty($t['config']['auto_friend_users'])) {
+        //     $autoFollow = Wo_AutoFollow(Wo_UserIdFromEmail($email));
+        // }
+        // if (!empty($t['config']['auto_page_like'])) {
+        //     Wo_AutoPageLike(Wo_UserIdFromEmail($email));
+        // }
+        // if (!empty($t['config']['auto_group_join'])) {
+        //     Wo_AutoGroupJoin(Wo_UserIdFromEmail($email));
+        // }
+        // header("Location: " . Wo_SeoLink('index.php?link1=start-up'));
+        t_redirect($t['config']['site_url']);
+        exit();
+      }
+  } else {
+    header("Location: " . $t['config']['site_url'].'/welcome'));
+    exit();
+  }
+}
+?>

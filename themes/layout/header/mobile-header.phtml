@@ -1,0 +1,28 @@
+<div class="mobile-header-profile">
+                    <!-- profile picture end -->
+                    <div class="profile-thumb profile-setting-box">
+                        <a href="javascript:void(0)" class="profile-triger">
+                            <figure class="profile-thumb-middle">
+                                <img src="assets/images/profile/profile-small-1.jpg" alt="profile picture">
+                            </figure>
+                        </a>
+                        <div class="profile-dropdown text-left">
+                            <div class="profile-head">
+                                <h5 class="name"><a href="<?php  echo $t['config']['site_url'].'/'.$t['user']['username']?>"><?php echo $t['user']['first_name'].'/'.$t['user']['last_name'];?></a></h5>
+                                <a class="mail" href="<?php echo $t['config']['site_url'].'/'.$t['user']['username'];?>"><?php echo $t['user']['email'];?></a>
+                            </div>
+                            <div class="profile-body">
+                                <ul>
+                                    <li><a href=" <?php echo $t['config']['site_url'].'/'.$t['user']['username'];?>"><i class="flaticon-user"></i>Profile</a></li>
+                                    <li><a href="#"><i class="flaticon-message"></i>Inbox</a></li>
+                                    <li><a href="#"><i class="flaticon-document"></i>Activity</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#"><i class="flaticon-settings"></i>Setting</a></li>
+                                    <li><a href="<?php echo $t['config']['site_url'].'/logout'; ?>"><i class="flaticon-unlock"></i>Sing out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- profile picture end -->
+                </div>

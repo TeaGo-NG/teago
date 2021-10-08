@@ -1,0 +1,389 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Teago</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- CSS
+	============================================ -->
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/bicon.min.css">
+    <!-- Flat Icon CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/flaticon.css">
+    <!-- audio & video player CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/plyr.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <!-- nice-select CSS -->
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <!-- perfect scrollbar css -->
+    <link rel="stylesheet" href="assets/css/plugins/perfect-scrollbar.css">
+    <!-- light gallery css -->
+    <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <?php 
+    if($t['page'] == 'Create Blog'){
+      ?>
+     
+     	 
+            <script src="assets/js/tinymce/js/tinymce/tinymce.min.js?version=3.1.2"></script>
+            <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js?version=3.1.2"></script>
+    
+      <?php
+    }
+    ?>
+    <script>
+          function Wo_Ajax_Requests_File(){
+            return "<?php echo $t['config']['site_url'].'/requests.php';?>";
+         }
+    </script>
+</head>
+
+<body>
+    <?php if($t['loggedin'] == true){?>
+    
+   <?php echo t_loadpage('header/content') ?>
+    <main>
+        <div class="main-wrapper pt-80">
+            <div class="container">
+                <div class="row">
+                    <?php  //echo t_loadpage('sidebar/left') ?>
+
+                    <?php  //echo t_loadpage('timeline/content') ?>
+
+                   <?php  //echo t_loadpage('sidebar/right') ?>
+
+                   <?php  echo $t['content']; ?>
+
+                   
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Scroll to top start -->
+    <div class="scroll-top not-visible">
+        <i class="bi bi-finger-index"></i>
+    </div>
+    <!-- Scroll to Top End -->
+
+    <!-- footer area start -->
+   <?php echo t_loadpage('footer/content');  ?>
+    <!-- footer area end -->
+    <?php }else{ ?>
+            <main>
+                <div class="main-wrapper pb-0 mb-0">
+                    <div class="timeline-wrapper">
+                        <?php echo t_loadpage('header/logout')  ?>
+                        <?php echo $t['content'];  ?>
+                    </div>
+                </div>
+            </main>
+    <?php  } ?>
+    <!-- JS
+============================================ -->
+
+    <!-- Modernizer JS -->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <!-- jQuery JS -->
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <!-- nice select JS -->
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <!-- audio video player JS -->
+    <script src="assets/js/plugins/plyr.min.js"></script>
+    <!-- perfect scrollbar js -->
+    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <!-- light gallery js -->
+    <script src="assets/js/plugins/lightgallery-all.min.js"></script>
+    <!-- image loaded js -->
+    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <!-- isotope filter js -->
+    <script src="assets/js/plugins/isotope.pkgd.min.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+<script>
+  // console.log("<?php //echo $t['user']['user_id'] ?>");
+var working = false;
+$(function() {
+  
+  document.getElementById("sign_submit").disabled = true;
+  var $this = $('#register');
+  var $state = $this.find('.errors');
+  var $inneralert = $this.find('.inneralert');
+  $this.ajaxForm({
+    url: Wo_Ajax_Requests_File() + '?f=register',
+    beforeSend: function() {
+        <?php if ($t['config']['password_complexity_system'] == 1) { ?>
+    	if ($('.helper-text .length').hasClass('valid') && $('.helper-text .lowercase').hasClass('valid') && $('.helper-text .uppercase').hasClass('valid') && $('.helper-text .special').hasClass('valid')) {
+    		working = true;
+			$this.find('button').attr("disabled", true);
+			$this.find('button').text('Please wait...');
+    	}
+    	else{
+        $state.addClass('error-message');
+    		$inneralert.html("<?php echo 'Your password must contain <br> lowercase, uppercase, number and special character'; ?>");
+    		return false;
+    	}
+        <?php } else{ ?>
+        	working = true;
+			$this.find('button').attr("disabled", true);
+			 
+        <?php } ?>
+    },
+    success: function(data) {
+      if (data.status == 200) {
+     $state.removeClass('error-message');
+		 $state.addClass('success-message');
+     $inneralert.html(data.message);
+     $this.find('button').text('Welcome');
+    console.log('success');
+        setTimeout(function () {
+         window.location.href = data.location;
+        }, 1000);
+      } else if (data.status == 300) {
+        window.location.href = data.location;
+      } else {
+        $this.find('button').attr("disabled", false);
+		    $this.find('button').text('Create Account');
+        $state.removeClass('success-message');
+        $state.addClass('error-message');
+        $inneralert.html(data.errors);
+        // console.log(data);
+        // console.log('failed');
+      }
+      working = false;
+    }
+  });
+});
+
+function activateButton(element) {
+	if(element.checked) {
+		document.getElementById("sign_submit").disabled = false;
+	}
+	else  {
+		document.getElementById("sign_submit").disabled = true;
+	}
+};
+
+<?php if ($t['config']['password_complexity_system'] == 1) { ?>
+
+(function(){
+	var helperText = {
+		charLength: document.querySelector('.helper-text .length'),
+		lowercase: document.querySelector('.helper-text .lowercase'),
+		uppercase: document.querySelector('.helper-text .uppercase'),
+		special: document.querySelector('.helper-text .special')
+	};
+	var password = document.querySelector('#password');
+	
+	
+	
+	var pattern = {
+		charLength: function() {
+			if( password.value.length >= 6 ) {
+				return true;
+			}
+		},
+		lowercase: function() {
+			var regex = /^(?=.*[a-z]).+$/; // Lowercase character pattern
+
+			if( regex.test(password.value) ) {
+				return true;
+			}
+		},
+		uppercase: function() {
+			var regex = /^(?=.*[A-Z]).+$/; // Uppercase character pattern
+
+			if( regex.test(password.value) ) {
+				return true;
+			}
+		},
+		special: function() {
+			var regex = /^(?=.*[0-9_\W]).+$/; // Special character or number pattern
+
+			if( regex.test(password.value) ) {
+				return true;
+			}
+		}   
+	};
+	
+	// Listen for keyup action on password field
+  password.addEventListener('keyup', function (){
+  	    $('.helper-text').slideDown('slow', function() {
+  	    	
+  	    });
+		// Check that password is a minimum of 8 characters
+		patternTest( pattern.charLength(), helperText.charLength );
+		
+		// Check that password contains a lowercase letter		
+		patternTest( pattern.lowercase(), helperText.lowercase );
+		
+		// Check that password contains an uppercase letter
+		patternTest( pattern.uppercase(), helperText.uppercase );
+		
+		// Check that password contains a number or special character
+		patternTest( pattern.special(), helperText.special );
+    
+    // Check that all requirements are fulfilled
+    if( hasClass(helperText.charLength, 'valid') &&
+			  hasClass(helperText.lowercase, 'valid') && 
+			 	hasClass(helperText.uppercase, 'valid') && 
+			  hasClass(helperText.special, 'valid')
+		) {
+			addClass(password.parentElement, 'valid');
+    }
+    else {
+      removeClass(password.parentElement, 'valid');
+    }
+	});
+	
+	function patternTest(pattern, response) {
+		if(pattern) {
+      addClass(response, 'valid');
+    }
+    else {
+      removeClass(response, 'valid');
+    }
+	}
+	
+	function addClass(el, className) {
+		if (el.classList) {
+			el.classList.add(className);
+		}
+		else {
+			el.className += ' ' + className;
+		}
+	}
+	
+	function removeClass(el, className) {
+		if (el.classList)
+				el.classList.remove(className);
+			else
+				el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	}
+	
+	function hasClass(el, className) {
+		if (el.classList) {
+			console.log(el.classList);
+			return el.classList.contains(className);	
+		}
+		else {
+			new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);	
+		}
+	}
+	
+})();
+<?php } ?>
+//login
+$(function() {
+  $this = $('#login');
+  $('#login').ajaxForm({
+    url: Wo_Ajax_Requests_File() + '?f=login',
+    beforeSend: function() {
+		working = true;
+		$this.find('button').attr("disabled", true);
+    $('.error_message').removeClass('error');
+    $('.error_message').removeClass('success');
+    $('.inerror').text('Please wait...')
+    $('#error_modal').modal('show');
+	//	$this.find('.loading').removeClass('hidden');
+    },
+    success: function(data) {
+      if (data.status == 200 || data.status == 600) {
+        $('.error_message').removeClass('error');
+        $('.error_message').addClass('success');
+        $('.inerror').html('Welcome Back')
+      //	$state.addClass('success-alert');
+        console.log('welcome back');
+        //$state.html('<?php //echo $wo['lang']['welcome_back'] ?>');
+	//	$this.find('.loading').addClass('hidden');
+        setTimeout(function () {
+        	window.location.href = data.location;
+        }, 1000);
+      } else {
+        var errors = data.errors.join("<br>");
+        $('.error_message').removeClass('sucess');
+        $('.error_message').addClass('error');
+        $('.inerror').html(errors)
+        $this.find('button').attr("disabled", false);
+      // $this.find('.loading').addClass('hidden');
+        // $state.html(errors);
+        console.log('errors');
+        console.log(data);
+      } 
+      working = false;
+    }
+  });
+});
+</script>
+
+<style type="text/css">
+	 .helper-text {
+	    display: none;
+	    margin-top: 6px;
+      margin-left: 0px !important;
+	    font-size: 12px;
+	    line-height: 22px;
+	    color: #808080;
+	  }
+	  li.valid {
+      color: #1fd34a;
+    }
+    .error-message,.success-message{font-size:15px;color:#fff;border-radius:5px;width:100%;padding:10px}
+    .success-message{background-color:#89ba73}
+    .error-message{background-color:#af5b5b}
+    .error, .success {padding: 4px;font-size: 13px;margin-bottom: 10px;border: 1px solid;border-radius: 5px;}
+    .error i, .success i, .error:empty, .success:empty {display: none;}
+    .error {color: red}
+    .success {color: green}
+     /*Password Check*/
+    .helper-text {display: none;margin-top: 6px;font-size: 12px;line-height: 18px;}
+    .helper-text li.valid {color: #1aac20;}
+</style>
+
+
+<!-- Modal start -->
+                                  <div class="modal fade" id="error_modal" aria-labelledby="error_modal">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body custom-scroll">
+                                                 <div class="error_message">
+                                                   <center>
+                                                    <div class="inerror"></div>
+                                                    </center>
+                                                  </div>
+                                            </div>
+                                             
+                                        </div>
+                                    </div>
+                                </div>
+<!-- Modal end -->
+
+</body>
+
+</html>

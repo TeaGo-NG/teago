@@ -1,0 +1,257 @@
+
+<?php echo t_loadpage('sidebar/left'); ?>
+<div class="col-lg-8 order-1 order-lg-2">
+    <form class="form form-horizontal create-article-form" method="post" id="insert-blog" action="#">
+                        <div class="setting-panel row">
+                            <div class="form-group col-lg-12">
+                                <label class="col-md-12" for="new-blog-title"><?php echo 'Title' ?></label>
+                                <div class="col-md-12">
+                                    <input id="blog_title" name="blog_title" type="text" class="form-control input-md" autofocus > 
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label class="col-md-12" for="new-blog-desc"><?php echo 'description'; ?></label>
+                                <div class="col-md-12">
+                                    <textarea name="blog_description" id="new-blog-desc" rows="3" type="text" class="form-control input-md"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <label class="col-md-12" for="new-blog-content"><?php echo 'Content'; ?></label>
+                                <div class="col-md-12">
+                                    <textarea name="blog_content" id="new-blog-content" rows="3" type="text" class="form-control input-md"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-lg-6">
+                                <label class="col-md-12" for="new-blog-content"><?php echo 'Tags'; ?></label>
+                                <div class="col-md-12">
+                                <input data-role="tagsinput" id="blog_tags" name="blog_tags" type="text" class="form-control input-md" placeholder="<?php echo 'tags'; ?>"> 
+                                </div>
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <label class="col-md-12" for="new-blog-category"><?php echo 'Category'; ?></label>
+                                <div class="col-md-12">
+                                <select width="100%" name="blog_category" class="form-control" id="blog_category">
+                                        <option value="0">
+                                        <?php echo 'category';?>
+                                        </option>
+                                        
+                                        <option value="1">
+                                        <?php echo 'Education'; ?>
+                                        </option>
+                                        <option value="2">
+                                        <?php echo 'Entertainment'; ?>
+                                        </option>
+                                        <option value="3">
+                                        <?php echo 'Sport'; ?>
+                                        </option>
+                                        <option value="4">
+                                        <?php echo 'Travel'; ?>
+                                        </option>
+                                        <option value="5">
+                                        <?php echo 'Politics'; ?>
+                                        </option>
+                                        
+                                    </select>     
+                               </div>
+                            </div>
+                            <div class="col-12">
+                             <div id="drag-and-drop-zone" class="dm-uploader p-5">
+                             <div class="main prv-img pointer" id="select-img" data-block="thumdrop-zone">
+                                        <div class="thumbnail-rendderer">
+                                            <div>
+                                                <h4 class="bold"><?php echo 'Drop image here'; ?></h4>
+                                                <div class="error-text-renderer"></div>
+                                                <div>
+                                                    <span><?php echo 'Or'; ?></span>
+                                                    <p><?php echo 'Browse to upload'; ?></p>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                              </div><!-- /uploader -->
+                            </div>
+
+
+
+
+                            <div class="create_blog_area_acombo">
+                            <div class="form-group th-alert col-sm-7">
+                                <div class="col-md-12">
+                                    <div class="main prv-img pointer" id="select-img" data-block="thumdrop-zone">
+                                        <div class="thumbnail-rendderer">
+                                            <div>
+                                                <h4 class="bold"><?php echo 'Drop image here'; ?></h4>
+                                                <div class="error-text-renderer"></div>
+                                                <div>
+                                                    <span><?php echo 'Or'; ?></span>
+                                                    <p><?php echo 'Browse to upload'; ?></p>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 no-padding-right">
+                                <div class="form-group col-lg-12">
+                                <label class="col-md-12" for="blog_category"><?php echo 'category'; ?></label>
+                                
+                            </div>
+                            
+                            </div>
+                            </div>
+                            <input type="hidden" class="hidden" id="thumbnail" name="thumbnail" accept="image/*">
+                        </div>
+                        
+                        <div class="setting-update-alert" id="blog-alert"></div>
+                        <div class="form-group last-sett-btn modal-footer">
+                            <div class="ball-pulse"><div></div><div></div><div></div></div>
+                            <button type="submit" class="btn btn-main setting-panel-mdbtn"><?php echo 'publish'; ?></button>
+                        </div>
+                        <input type="hidden" name="hash_id" value="<?php echo t_CreateSession();?>">
+                        <input  name="image" type="hidden" id="upload" class="hidden">
+    </form>
+
+ </div>
+       
+<script src="assets/js/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js"></script>
+
+<script>
+jQuery(document).ready(function($) {
+    var thumb_drop_block = $("[data-block='thumdrop-zone']");
+    if (typeof(window.FileReader) == 'undefined') {
+      thumb_drop_block.find('.thumbnail-rendderer div').text('Drag drop is not supported in your browser!');
+    }
+    else{
+      thumb_drop_block[0].ondragover = function() {
+          thumb_drop_block.addClass('hover');
+          return false;
+      };
+          
+      thumb_drop_block[0].ondragleave = function() {
+          thumb_drop_block.removeClass('hover');
+          return false;
+      };
+
+      thumb_drop_block[0].ondrop = function(event) {
+          event.preventDefault();
+          thumb_drop_block.removeClass('hover');
+          var file = event.dataTransfer.files;
+          $("#thumbnail").prop('files', file);
+          $(".prv-img").html("<img src='" + window.URL.createObjectURL(event.dataTransfer.files[0]) + "' alt='Picture'>")
+      };
+    }
+
+    $("#blog_tags").tagsinput({
+      maxTags: 15,
+    });
+
+    $("#select-img").click(function(event) {
+      $("#thumbnail").click()
+    });
+
+    $("#thumbnail").change(function(event) {
+      $(".prv-img").html("<img src='" + window.URL.createObjectURL(this.files[0]) + "' alt='Picture'>")
+    });
+
+
+    $('#insert-blog').ajaxForm({
+      url: Wo_Ajax_Requests_File() + '?f=insert-blog',
+      beforeSend: function() {
+        $('.wo_settings_page').find('.last-sett-btn .ball-pulse').fadeIn(100);
+      },
+      success: function(data) {
+        if (data['status'] == 200) {
+          $("#blog-alert").html('<div class="alert alert-success">'+ data['message'] +'</div>');
+          window.location = data.url;
+        } else if (data['status'] == 300) {
+          $("#approve_post").modal('show');
+          Wo_Delay(function(){
+            $("#approve_post").modal('hide');
+            location.reload();
+          },3000);
+        } else if (data['message']) {
+          $("#blog-alert").html('<div class="alert alert-danger">' + data['message'] + '</div>');
+        } 
+        $('.wo_settings_page').find('.last-sett-btn .ball-pulse').fadeOut(100);
+      }});
+ });
+
+tinymce.init({
+  selector: '#blog',
+  height: 270,
+  images_upload_credentials: true,
+  paste_data_images: true,
+  image_advtab: true,
+  entity_encoding : "raw",
+  images_upload_url: Wo_Ajax_Requests_File() + '?f=upload-blog-image',
+  toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+  toolbar2: "print preview media | forecolor backcolor emoticons",
+  plugins: [
+      "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+      "searchreplace wordcount visualblocks visualchars code fullscreen",
+      "insertdatetime media nonbreaking save table contextmenu directionality",
+      "emoticons template paste textcolor colorpicker textpattern"
+    ],
+    file_picker_callback: function(callback, value, meta) {
+      if (meta.filetype == 'image') {
+        $('#upload').trigger('click');
+        $('#upload').on('change', function() {
+          var file = this.files[0];
+          var reader = new FileReader();
+          reader.onload = function(e) {
+            callback(e.target.result, {
+              alt: ''
+            });
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+    },
+});
+</script> 
+<style>
+  .dm-uploader {
+	border: 0.25rem dashed #A5A5C7;
+	text-align: center;
+} 
+/* #files {
+    overflow-y: scroll !important;
+    min-height: 920px;
+} */
+/* @media (min-width: 768px) {
+	#files {
+		min-height: 0;
+	}
+} */
+/* #debug {
+	overflow-y: scroll !important;
+	height: 180px;	
+} */
+
+.dm-uploader {
+	border: 0.25rem dashed #A5A5C7;
+	text-align: center;
+}
+.dm-uploader.active {
+	border-color: red;
+
+	border-style: solid;
+}
+</style>
+<script src="assets/js/book-v1.j"></script>
+     		 <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+            <script src="assets/js/tinymce/js/tinymce/tinymce.min.js?version=3.1.2"></script>
+            <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js?version=3.1.2"></script>
+            <script src="assets/js/jquery-3.1.1.min.js,qversion=3.1.2.pagespeed.jm.RvrvFCPmHb.js"></script>
+            <script src="assets/js/bok-v1.js"></script>
+      <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js?version=3.1.2"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js?version=3.1.2"></script>
+      <script src=".js/player/fluidplayer.min.js?version=3.1.2"></script>
+    
+<script src="assets/js/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="assets/js/script.js,qversion=3.1.2.pagespeed.jm.oxwNjroO9q.js"></script>
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOfpaMO_tMMsuvS2T4zx4llbtsFqMuT9Y&libraries=places"></script>
+            <script src="assets/js/audioRecord/recorder.js,qversion==3.1.2+record.js,qversion==3.1.2.pagespeed.jc.nJNgUFcc29.js"></script><script>eval(mod_pagespeed_pD8flaDZpS);</script>
+      

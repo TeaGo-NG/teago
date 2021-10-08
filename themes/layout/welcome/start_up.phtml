@@ -1,0 +1,196 @@
+
+<div class="card card-profile widget-item p-0">
+
+<center>
+                                <div class="profile-banner">
+                                    <figure class="profile-banner-small">
+                                        <a href="<?php  echo $t['config']['site_url'].'/'.$t['user']['username'] ?>">
+                                            <img src="<?php echo $t['user']['cover']; ?>" alt="">
+                                        </a>
+                                        <a href="<?php echo $t['config']['site_url'].'/'.$t['user']['username']?>" class="profile-thumb-2">
+                                            <img src="<?php echo $t['user']['avatar']; ?>" alt="<?php echo $t['user']['firstname']; ?>">
+                                        </a>
+                                    </figure>
+                                    <div class="profile-desc text-center">
+                                        <h6 class="author"><a href="<?php echo $t['config']['site_url'].'/'.$t['user']['username']?>"><?php echo $t['user']['first_name'] .' '.$t['user']['last_name']; ?></a></h6>
+                                        <p>Welcome to Teago community, Upload a picture to complete your registration </p>
+                                        <p>
+                                        <form action="" class="upm"  enctype="multipart/form-data">
+                                        <input type="file" name="" class="avatar-input" id="" hidden>
+                                        </form>
+                                        <p>
+                                         <div class="progress_area">
+                                        
+                                        </div>
+                                        </p>
+                                        <button type="button" class="upa post-share-btn"  >Upload</button>
+                                        </p>
+                                        </center>
+                                        <p  style="margin-rigth:2px !important">
+                                        <button type="button" class="post-share-btn"  >skip</button>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                            <script>
+                            const upload_avatar = document.querySelector(".upa"),
+                            avatar_input = document.querySelector(".avatar-input");
+                            const form = document.querySelector(".upm"),
+                            fileInput = document.querySelector(".file-input"),
+                            progressArea = document.querySelector(".progress-area"),
+                            uploadedArea = document.querySelector(".uploaded-area");
+                            uploadedcover = document.querySelector(".progress_area");
+                            upload_avatar.addEventListener("click", () =>{
+                            avatar_input.click();
+                            });
+                            avatar_input.onchange = ({target})=>{
+                            let file = target.files[0]; //getting file [0] this means if user has selected multiple files then get first one only
+                            
+                            if(file){
+                                let fileName = file.name; //getting file name
+                                 
+                                if(fileName.length >= 12){ //if file name length is greater than 12 then split it and add ...
+                                let splitName = fileName.split('.');
+                                fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
+                                
+                                }
+                                uploadcover(fileName, file); //calling uploadFile with passing file name as an argument
+                            }
+                            }
+                            function uploadcover(name, rf){
+                            let xhr = new XMLHttpRequest(); //creating new xhr object (AJAX)
+                            xhr.open("POST", "uploadcover.php", true); //sending post request to the specified URL
+                            
+                            xhr.upload.addEventListener("progress", ({loaded, total}) =>{ //file uploading progress event
+                                let fileLoaded = Math.floor((loaded / total) * 100);  //getting percentage of loaded file size
+                                let fileTotal = Math.floor(total / 1000); //gettting total file size in KB from bytes
+                                let fileSize;
+                                // if file size is less than 1024 then add only KB else convert this KB into MB
+                                (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024*1024)).toFixed(2) + " MB";
+                                let progressHTML = ` <li class="ro">
+                                                                    <div class="content">
+                                                                    <span class="name">${name} • Uploading</span>
+                                                                        <span class="percent">${fileLoaded}%</span>
+                                                                        <div class="progress-bar">
+                                                                        <div class="progress" style="width:${fileLoaded}%; height: 12px; border-radius:23px; background:;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>`;
+                                // uploadedArea.innerHTML = ""; //uncomment this line if you don't want to show upload history
+                                // uploadedcover.classList.add("onprogress");
+                                uploadedcover.innerHTML = progressHTML;
+                                if(loaded == total){
+                                xhr.responseType = 'json';
+                                xhr.onreadystatechange = function() {
+                                        if (xhr.readyState === 4 && xhr.status === 200) {
+                                            // document.getElementById("texthint").innerHTML = xhr.responseXML;
+                                            // console.log(xhr.responseXML);
+                                            let responseObj = xhr.response;
+                                            if(responseObj.status == 400){
+                                                console.log(responseObj);
+                                                v = responseObj.image_url;
+                                                document.getElementById('img_value').value = v;
+                                                //  let uploadedHTML = `<div class="ms_pro_form"><div class="form-group">  ${name}  • Uploaded    <span class="size">${fileSize}</span></label>`;
+                                                $('.upload-image').html('<img src="' + v + '" class="img-fluid">');
+                                                uploadedcover.innerHTML =''
+                                                // uploadedArea.insertAdjacentHTML("afterbegin", jk); //remove this line if you don't want to show upload history
+                                                
+                                            }else{
+                                            
+                                            uploadedcover.innerHTML = "<b style='color:red'>"+responseObj.message+"</b>";
+                                            }
+                                        }
+                                    };
+                                }
+                            });
+
+                            let data = new FormData(upload_avatar); //FormData is an object to easily send form data
+                            
+                            xhr.send(data); //sending form data
+                            
+                            }
+                            
+                            </script>
+
+
+
+
+<style>
+
+section .ro{
+  margin-bottom: 10px;
+  /* background: #E9F0FF; */
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section .ro i{
+  color: #6990F2;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+.progress-area .ro .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit;
+}
+.uploaded-area{
+   
+   
+}
+.uploaded-area.onprogress{
+  max-height: 100px;
+}
+.uploaded-area::-webkit-scrollbar{
+  width: 0px;
+}
+.uploaded-area .ro .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .ro .details{
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+.uploaded-area .ro .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
+.error_border{
+  border-radius : 20px;
+  border-style : solid;
+  border-color : red;
+  border-width : 1px;
+  margin-bottom : 12px;
+}
+
+                </style>

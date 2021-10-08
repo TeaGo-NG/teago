@@ -1,0 +1,18 @@
+ <!-- header area start -->
+ <?php echo t_loadpage('header/desktop-header') ?>
+    <!-- header area end -->
+    <!-- header area start -->
+    <header>
+        <div class="mobile-header-wrapper sticky d-block d-lg-none">
+            <div class="mobile-header position-relative ">
+                <div class="mobile-logo">
+                    <a href="<?php echo $t['config']['site_url']; ?>">
+                        <img src="assets/images/logo/logo-white.png" alt="logo">
+                    </a>
+                </div>
+              <?php echo t_loadpage('header/mobile-menu') ?>
+              <?php echo t_loadpage('header/mobile-header')?>
+            </div>
+        </div>
+    </header>
+    <!-- header area end -->
