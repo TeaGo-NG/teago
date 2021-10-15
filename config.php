@@ -10,6 +10,6 @@ $sql_db_pass = "";
 $sql_db_name = "teago";
 
 // Site URL
-$site_url = "http://localhost/Teago"; // e.g (http://example.com)
+$site_url = "http://localhost/software/teago"; // e.g (http://example.com)
  
  ?>
