@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^home$ index.php?link1=home [QSA]
+RewriteRule ^test$ index.php?link1=test [QSA]
+RewriteRule ^createblog$ index.php?link1=createblog [QSA]
+RewriteRule ^start-up$ index.php?link1=start-up [QSA]
+RewriteRule ^404$ index.php?link1=404 [QSA]
+RewriteRule ^start_up$ index.php?link1=start_up [QSA]
+RewriteRule ^logout$ index.php?link1=logout [QSA]
+RewriteRule ^welcome(.*)$ index.php?link1=welcome [QSA,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^@([^\/]+)(\/|)$  index.php?link1=timeline&u=$1 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([A-Za-z0-9_]+)/([^\/]+)(\/|)$  index.php?link1=timeline&u=$1&type=$2 [QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\/]+)(\/|)$  index.php?link1=timeline&u=$1 [QSA]
