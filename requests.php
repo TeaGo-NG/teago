@@ -11,7 +11,9 @@ if (isset($_GET['s'])) {
  
 $data            = array();
 $allow_array     = array(
+    'activate',
     'login',
+    'confirm-email',
     'register',
     'testajax',
     'upgrade',
@@ -30,6 +32,7 @@ $allow_array     = array(
 );
 $non_login_array = array(
     'register',
+    'confirm-email',
     'testajax',
     'session_status',
     'open_lightbox',

@@ -16,6 +16,9 @@ if($page !== ''){
             case 'home' :
                 include('sources/home.php');
             break;
+            case 'confirm-email' :
+                include('sources/confirm-email.php');
+            break;
             case 'start_up' :
                 include('sources/start_up.php');
             break;

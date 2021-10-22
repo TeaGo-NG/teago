@@ -1,4 +1,5 @@
 <?php
+$t['page'] == 'logout';
 session_unset();
 if (!empty($_SESSION['user_id'])) {
 	$_SESSION['user_id'] = '';

@@ -7,12 +7,77 @@
     <div class="timeline-page-wrapper">
                     <div class="container-fluid p-0">
                         <div class="row no-gutters">
-                            <div class="col-lg-6 order-2 order-lg-1">
+                            <!-- <div class="col-lg-6 order-2 order-lg-1">
                                 <div class="timeline-bg-content bg-img" data-bg="assets/images/timeline/adda-timeline.jpg">
                                     <h3 class="timeline-bg-title">Let’s see what’s happening to you and your world. Welcome in Adda.</h3>
                                 </div>
+                            </div> -->
+                           <?php  
+                            if($t['page'] == 'confrim-email'){
+                            ?>
+                             <div class="loginf col-lg-12 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                                <div class="signup-form-wrapper">
+                                    
+                                    <div class="signup-inner text-center">
+                                        <h3 class="title">Enter pin </h3>
+                                        <!-- form -->
+                                        <form id="login"  class="signup-inner--form" method="post">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <input class="single-field"  type="text" id="email_address" placeholder="Eenter your pin" name="username" />
+                                                    <!-- <label for="username">Username</label> -->
+                                                </div>
+                                                
+                                                <div class="clear"></div>
+                                                <div class="col-12">
+                                                <!-- <button type="submit" class="btn btn-main" id="sign_submit" disabled> -->
+                                                    <button type="submit"  class="submit-btn" >Login</button>
+                                                    <p class="py-3 justify-content-center">Or</p>
+                                                    <h6 class="justify-content-center cra" style="cursor:pointer">Resend</h6>
+                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                            <?php
+                                
+                            }else{
+
+                            ?>
+                             <div class="loginf col-lg-12 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                                    <div class="signup-form-wrapper">
+                                        
+                                        <div class="signup-inner text-center">
+                                            <h3 class="title">Login </h3>
+                                            <!-- form -->
+                                            <form id="login"  class="signup-inner--form" method="post">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <input class="single-field"  type="text" id="email_address" placeholder="Email or Userame" name="username" />
+                                                        <!-- <label for="username">Username</label> -->
+                                                    </div>
+                                                    <div class="col-12">
+                                                    <input class="single-field"  name="password" type="password"  id="lastname" placeholder="<?php echo  'Password';?>" autofocus />
+                                                            
+                                                            <!-- <label for="email_address"><?php //echo 'email Address' ?></label> -->
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                    <div class="col-12">
+                                                    <!-- <button type="submit" class="btn btn-main" id="sign_submit" disabled> -->
+                                                        <button type="submit"  class="submit-btn" >Login</button>
+                                                        <p class="py-3 justify-content-center">Or</p>
+                                                        <h6 class="justify-content-center cra" style="cursor:pointer">Create Accout</h6>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class=" hiden registerf col-lg-12 order-1 order-lg-2 d-flex align-items-center justify-content-center">
                                 <div class="signup-form-wrapper">
                                     <h1 class="create-acc text-center">Create An Account</h1>
                                     <div class="signup-inner text-center">
@@ -96,13 +161,20 @@
                                                 <div class="col-12">
                                                 <!-- <button type="submit" class="btn btn-main" id="sign_submit" disabled> -->
                                                     <button type="submit" id="sign_submit" class="submit-btn" >Create Account</button>
+                                                    <p class="py-3 justify-content-center"></p>
+                                                    <h6 class="justify-content-center loginb" style="cursor:pointer">Already have an account</h6>
                                                 </div>
-                                            </div>
-                                           
+                                            </div>   
                                         </form>
                                     </div>
                                 </div>
                             </div>
+                            <?php
+                            }
+
+
+                           ?>
+                           
                         </div>
                     </div>
  </div>

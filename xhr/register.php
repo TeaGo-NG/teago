@@ -53,7 +53,7 @@ if ($f == 'register') {
     if (empty($errors)) {
        
         $activate = ($t['config']['emailValidation'] == '1') ? '0' : '1';
-        $code = md5(rand(1111, 9999) . time());
+        $code = rand(111111, 999999);
         $rand = rand(1111, 9999);
         $_POST['username'] = $_POST['firstname'].'.'.$_POST['lastname'].$rand;
         $re_data  = array(
@@ -122,6 +122,7 @@ if ($f == 'register') {
                     $_SESSION['user_id'] = $session;
                     setcookie("user_id", $session, time() + (10 * 365 * 24 * 60 * 60));
                 }
+
             } 
             else if ($t['config']['sms_or_email'] == 'sms' && !empty($_POST['phone_num'])) {
                 $random_activation = t_Secure(rand(11111, 99999));
@@ -153,7 +154,9 @@ if ($f == 'register') {
 
     if (isset($errors)) {
         echo json_encode(array(
-            'errors' => $errors
+            'errors' => $errors,
+            'status' => 300,
+            'location' => $t['config']['site_url'].'confirm-email'
         ));
     } else {
         echo json_encode($data);

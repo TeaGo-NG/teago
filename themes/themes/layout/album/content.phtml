@@ -1,0 +1,72 @@
+<div class="ms_weekly_wrapper">
+                <div class="ms_weekly_inner">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ms_heading">
+                                <h1><?php 
+                                $check = check_album(base64_decode($_GET['id']));
+                                echo $check[0]['name'].' by '.$check[0]['artist'].' Album';
+                                if($check == false){
+                                    echo 'false';
+                                }else{
+                                    // var_dump($check);
+                                }
+                                ?> </h1>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 padding_right40">
+
+                             <?php $g = check_question(base64_decode($_GET['id']));
+                             if($g == false){
+                                 echo '<b style="color:white">'+base64_decode($_GET['id'])+'</b>';
+                             }
+
+                             $i = 1;
+                                foreach($g as $data){
+                                    // var_dump($g);
+                             ?>
+
+<div class="ms_weekly_box">
+                                <div class="weekly_left">
+                                    <span class="w_top_no">
+										<?php echo $i; ?>
+									</span>
+                                    <div class="w_top_song">
+                                        <div class="w_tp_song_img">
+                                            <img height="50px" src="<?php echo $t['config']['site_url'].$data['cover']?>" alt="<?php echo $data['title'] ?>" class="img-fluid">
+                                            <div class="ms_song_overlay">
+                                            </div>
+                                            <div class="ms_play_icon"onclick="Playmusic('<?php echo $t['config']['site_url'] . $data['cover']  ?>', '<?php echo $data['title']  ?>', '<?php echo $data['artistname']  ?>', '<?php echo $t['config']['site_url'].$data['music'] ?>')">
+                                                <img src="<?php echo $t['config']['site_url']?>images/svg/play.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="w_tp_song_name">
+                                            <h3><a href="#"><?php echo $data['title'] ?></a></h3>
+                                            <p><?php echo $data['artistname'] ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weekly_right">
+                                    <!-- <span class="w_song_time">5:10</span> -->
+                                    <span class="ms_more_icon" data-other="1">
+										<img src="<?php echo $t['config']['site_url']?>images/svg/more.svg" alt="">									
+									</span>
+                                </div>
+                                <ul class="more_option">
+           
+                                    <li><a onclick="Downloadfile('<?php echo $data['music'] ?>')" href="#"><span class="opt_icon"><span class="icon icon_dwn"></span></span>Download Now</a></li>
+                                    <li><a href="<?php echo $t['config']['site_url'] . 'track/ ' . base64_encode($data['title']) ?>"><span class="opt_icon"><span class="icon icon_view"></span></span>View</a></li>
+                                    <li><a href="#"><span class="opt_icon"><span class="icon icon_share"></span></span>Share</a></li>
+                                </ul>
+                            </div> 
+                          <?php //echo t_loadpage('album/list') ?>
+                            
+                        </div>
+                            <?php
+                             $i = $i +1;
+                                }
+                             ?>
+                      
+                       
+                </div>
+            </div>

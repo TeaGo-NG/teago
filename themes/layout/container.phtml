@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js" lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
@@ -50,13 +48,65 @@
             return "<?php echo $t['config']['site_url'].'/requests.php';?>";
          }
     </script>
+    <?php
+   if($t['page'] == 'confirm-email' || $page == 'logout'){
+
+   }
+   else{
+    // if($t['user']['activate'] == 0){
+  
+    //   header("Location: " . $t['config']['site_url'].'/confirm-email');
+    //   exit();
+    // }
+   }
+
+?>
 </head>
 
 <body>
-    <?php if($t['loggedin'] == true){?>
     
-   <?php echo t_loadpage('header/content') ?>
-    <main>
+  
+      <?php
+  
+    if($t['loggedin'] == true){
+      if( $t['user']['verified'] == 0){
+        ?>
+          <div class="loginf col-lg-12 order-1 order-lg-2 d-flex align-items-center justify-content-center">
+                                <div class="signup-form-wrapper">
+                                    
+                                    <div class="signup-inner text-center">
+                                        <h3 class="title">Confirm Email</h3>
+                                        <!-- form -->
+                                        <form id="activate"  class="signup-inner--form" method="post">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <input class="single-field"  type="text" id="email_address" placeholder="Eenter your pin" name="pin" />
+                                                    <!-- <label for="username">Username</label> -->
+                                                </div>
+                                                
+                                                <div class="clear"></div>
+                                                <div class="col-12">
+                                                <!-- <button type="submit" class="btn btn-main" id="sign_submit" disabled> -->
+                                                    <button type="submit"  class="submit-btn" >Confirm</button>
+                                                    <!-- <p class="py-3 justify-content-center">Or</p> -->
+                                                    <h6 class=" py-2 justify-content-center cra" style="cursor:pointer">Resend code</h6>
+                                                    
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+   
+
+        <?php
+
+      }else{
+        ?>
+        
+        <?php echo t_loadpage('header/content') ?>
+        <main>
         <div class="main-wrapper pt-80">
             <div class="container">
                 <div class="row">
@@ -84,7 +134,18 @@
     <!-- footer area start -->
    <?php echo t_loadpage('footer/content');  ?>
     <!-- footer area end -->
-    <?php }else{ ?>
+        <?php
+
+      }
+        ?>
+      
+      
+    
+    
+  
+    
+    <?php }
+    else{ ?>
             <main>
                 <div class="main-wrapper pb-0 mb-0">
                     <div class="timeline-wrapper">
@@ -101,6 +162,26 @@
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <!-- jQuery JS -->
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script>
+        jQuery(document).ready(function(){
+          
+          $('.cra').click(function(){
+          $('.loginf').fadeOut('7000');
+          $('.registerf').fadeIn('9000');
+          $('.registerf').removeClass('hiden');
+          $('.loginf').addClass('hiden');
+          // $('.cam').hide();
+        });
+        $('.loginb').click(function(){
+          $('.registerf').fadeOut('7000');
+          $('.loginf').fadeIn('9000');
+          $('.loginf').removeClass('hiden');
+          $('.registerf').addClass('hiden');
+          // $('.cam').hide();
+          
+        });
+    })
+    </script>
     <!-- Bootstrap JS -->
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <!-- Slick Slider JS -->
@@ -120,184 +201,15 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
+
+<?php 
+if($t['page'] == 'confirm-email'){
+?>
 <script>
-  // console.log("<?php //echo $t['user']['user_id'] ?>");
-var working = false;
-$(function() {
-  
-  document.getElementById("sign_submit").disabled = true;
-  var $this = $('#register');
-  var $state = $this.find('.errors');
-  var $inneralert = $this.find('.inneralert');
-  $this.ajaxForm({
-    url: Wo_Ajax_Requests_File() + '?f=register',
-    beforeSend: function() {
-        <?php if ($t['config']['password_complexity_system'] == 1) { ?>
-    	if ($('.helper-text .length').hasClass('valid') && $('.helper-text .lowercase').hasClass('valid') && $('.helper-text .uppercase').hasClass('valid') && $('.helper-text .special').hasClass('valid')) {
-    		working = true;
-			$this.find('button').attr("disabled", true);
-			$this.find('button').text('Please wait...');
-    	}
-    	else{
-        $state.addClass('error-message');
-    		$inneralert.html("<?php echo 'Your password must contain <br> lowercase, uppercase, number and special character'; ?>");
-    		return false;
-    	}
-        <?php } else{ ?>
-        	working = true;
-			$this.find('button').attr("disabled", true);
-			 
-        <?php } ?>
-    },
-    success: function(data) {
-      if (data.status == 200) {
-     $state.removeClass('error-message');
-		 $state.addClass('success-message');
-     $inneralert.html(data.message);
-     $this.find('button').text('Welcome');
-    console.log('success');
-        setTimeout(function () {
-         window.location.href = data.location;
-        }, 1000);
-      } else if (data.status == 300) {
-        window.location.href = data.location;
-      } else {
-        $this.find('button').attr("disabled", false);
-		    $this.find('button').text('Create Account');
-        $state.removeClass('success-message');
-        $state.addClass('error-message');
-        $inneralert.html(data.errors);
-        // console.log(data);
-        // console.log('failed');
-      }
-      working = false;
-    }
-  });
-});
-
-function activateButton(element) {
-	if(element.checked) {
-		document.getElementById("sign_submit").disabled = false;
-	}
-	else  {
-		document.getElementById("sign_submit").disabled = true;
-	}
-};
-
-<?php if ($t['config']['password_complexity_system'] == 1) { ?>
-
-(function(){
-	var helperText = {
-		charLength: document.querySelector('.helper-text .length'),
-		lowercase: document.querySelector('.helper-text .lowercase'),
-		uppercase: document.querySelector('.helper-text .uppercase'),
-		special: document.querySelector('.helper-text .special')
-	};
-	var password = document.querySelector('#password');
-	
-	
-	
-	var pattern = {
-		charLength: function() {
-			if( password.value.length >= 6 ) {
-				return true;
-			}
-		},
-		lowercase: function() {
-			var regex = /^(?=.*[a-z]).+$/; // Lowercase character pattern
-
-			if( regex.test(password.value) ) {
-				return true;
-			}
-		},
-		uppercase: function() {
-			var regex = /^(?=.*[A-Z]).+$/; // Uppercase character pattern
-
-			if( regex.test(password.value) ) {
-				return true;
-			}
-		},
-		special: function() {
-			var regex = /^(?=.*[0-9_\W]).+$/; // Special character or number pattern
-
-			if( regex.test(password.value) ) {
-				return true;
-			}
-		}   
-	};
-	
-	// Listen for keyup action on password field
-  password.addEventListener('keyup', function (){
-  	    $('.helper-text').slideDown('slow', function() {
-  	    	
-  	    });
-		// Check that password is a minimum of 8 characters
-		patternTest( pattern.charLength(), helperText.charLength );
-		
-		// Check that password contains a lowercase letter		
-		patternTest( pattern.lowercase(), helperText.lowercase );
-		
-		// Check that password contains an uppercase letter
-		patternTest( pattern.uppercase(), helperText.uppercase );
-		
-		// Check that password contains a number or special character
-		patternTest( pattern.special(), helperText.special );
-    
-    // Check that all requirements are fulfilled
-    if( hasClass(helperText.charLength, 'valid') &&
-			  hasClass(helperText.lowercase, 'valid') && 
-			 	hasClass(helperText.uppercase, 'valid') && 
-			  hasClass(helperText.special, 'valid')
-		) {
-			addClass(password.parentElement, 'valid');
-    }
-    else {
-      removeClass(password.parentElement, 'valid');
-    }
-	});
-	
-	function patternTest(pattern, response) {
-		if(pattern) {
-      addClass(response, 'valid');
-    }
-    else {
-      removeClass(response, 'valid');
-    }
-	}
-	
-	function addClass(el, className) {
-		if (el.classList) {
-			el.classList.add(className);
-		}
-		else {
-			el.className += ' ' + className;
-		}
-	}
-	
-	function removeClass(el, className) {
-		if (el.classList)
-				el.classList.remove(className);
-			else
-				el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-	}
-	
-	function hasClass(el, className) {
-		if (el.classList) {
-			console.log(el.classList);
-			return el.classList.contains(className);	
-		}
-		else {
-			new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);	
-		}
-	}
-	
-})();
-<?php } ?>
-//login
-$(function() {
-  $this = $('#login');
-  $('#login').ajaxForm({
-    url: Wo_Ajax_Requests_File() + '?f=login',
+  $(function() {
+  $this = $('#activate');
+  $('#activate').ajaxForm({
+    url: Wo_Ajax_Requests_File() + '?f=activate',
     beforeSend: function() {
 		working = true;
 		$this.find('button').attr("disabled", true);
@@ -311,9 +223,9 @@ $(function() {
       if (data.status == 200 || data.status == 600) {
         $('.error_message').removeClass('error');
         $('.error_message').addClass('success');
-        $('.inerror').html('Welcome Back')
+        $('.inerror').html('Account activated')
       //	$state.addClass('success-alert');
-        console.log('welcome back');
+        // console.log('welcome back');
         //$state.html('<?php //echo $wo['lang']['welcome_back'] ?>');
 	//	$this.find('.loading').addClass('hidden');
         setTimeout(function () {
@@ -335,6 +247,236 @@ $(function() {
   });
 });
 </script>
+<?php
+}else{
+?>
+<script>
+
+// console.log("<?php //echo $t['user']['user_id'] ?>");
+var working = false;
+$(function() {
+
+document.getElementById("sign_submit").disabled = true;
+var $this = $('#register');
+var $state = $this.find('.errors');
+var $inneralert = $this.find('.inneralert');
+$this.ajaxForm({
+  url: Wo_Ajax_Requests_File() + '?f=register',
+  beforeSend: function() {
+      <?php if ($t['config']['password_complexity_system'] == 1) { ?>
+    if ($('.helper-text .length').hasClass('valid') && $('.helper-text .lowercase').hasClass('valid') && $('.helper-text .uppercase').hasClass('valid') && $('.helper-text .special').hasClass('valid')) {
+      working = true;
+    $this.find('button').attr("disabled", true);
+    $this.find('button').text('Please wait...');
+    }
+    else{
+      $state.addClass('error-message');
+      $inneralert.html("<?php echo 'Your password must contain <br> lowercase, uppercase, number and special character'; ?>");
+      return false;
+    }
+      <?php } else{ ?>
+        working = true;
+    $this.find('button').attr("disabled", true);
+     
+      <?php } ?>
+  },
+  success: function(data) {
+    if (data.status == 200) {
+   $state.removeClass('error-message');
+   $state.addClass('success-message');
+   $inneralert.html(data.message);
+   $this.find('button').text('Welcome');
+  
+      setTimeout(function () {
+       window.location.href = data.location;
+      }, 1000);
+    } else if (data.status == 300) {
+      $this.find('button').attr("disabled", false);
+      $this.find('button').text('Create Account');
+      $state.removeClass('success-message');
+      $state.addClass('error-message');
+      $inneralert.html(data.errors);
+      setTimeout(function () {
+        window.location.href = data.location;
+      }, 1000);
+    } else {
+      $this.find('button').attr("disabled", false);
+      $this.find('button').text('Create Account');
+      $state.removeClass('success-message');
+      $state.addClass('error-message');
+      $inneralert.html(data.errors);
+      // console.log(data);
+      // console.log('failed');
+    }
+    working = false;
+  }
+});
+});
+
+function activateButton(element) {
+if(element.checked) {
+  document.getElementById("sign_submit").disabled = false;
+}
+else  {
+  document.getElementById("sign_submit").disabled = true;
+}
+};
+
+<?php if ($t['config']['password_complexity_system'] == 1) { ?>
+
+(function(){
+var helperText = {
+  charLength: document.querySelector('.helper-text .length'),
+  lowercase: document.querySelector('.helper-text .lowercase'),
+  uppercase: document.querySelector('.helper-text .uppercase'),
+  special: document.querySelector('.helper-text .special')
+};
+var password = document.querySelector('#password');
+var pattern = {
+  charLength: function() {
+    if( password.value.length >= 6 ) {
+      return true;
+    }
+  },
+  lowercase: function() {
+    var regex = /^(?=.*[a-z]).+$/; // Lowercase character pattern
+
+    if( regex.test(password.value) ) {
+      return true;
+    }
+  },
+  uppercase: function() {
+    var regex = /^(?=.*[A-Z]).+$/; // Uppercase character pattern
+
+    if( regex.test(password.value) ) {
+      return true;
+    }
+  },
+  special: function() {
+    var regex = /^(?=.*[0-9_\W]).+$/; // Special character or number pattern
+
+    if( regex.test(password.value) ) {
+      return true;
+    }
+  }   
+};
+
+// Listen for keyup action on password field
+password.addEventListener('keyup', function (){
+      $('.helper-text').slideDown('slow', function() {
+        
+      });
+  // Check that password is a minimum of 8 characters
+  patternTest( pattern.charLength(), helperText.charLength );
+  
+  // Check that password contains a lowercase letter		
+  patternTest( pattern.lowercase(), helperText.lowercase );
+  
+  // Check that password contains an uppercase letter
+  patternTest( pattern.uppercase(), helperText.uppercase );
+  
+  // Check that password contains a number or special character
+  patternTest( pattern.special(), helperText.special );
+  
+  // Check that all requirements are fulfilled
+  if( hasClass(helperText.charLength, 'valid') &&
+      hasClass(helperText.lowercase, 'valid') && 
+       hasClass(helperText.uppercase, 'valid') && 
+      hasClass(helperText.special, 'valid')
+  ) {
+    addClass(password.parentElement, 'valid');
+  }
+  else {
+    removeClass(password.parentElement, 'valid');
+  }
+});
+
+function patternTest(pattern, response) {
+  if(pattern) {
+    addClass(response, 'valid');
+  }
+  else {
+    removeClass(response, 'valid');
+  }
+}
+
+function addClass(el, className) {
+  if (el.classList) {
+    el.classList.add(className);
+  }
+  else {
+    el.className += ' ' + className;
+  }
+}
+
+function removeClass(el, className) {
+  if (el.classList)
+      el.classList.remove(className);
+    else
+      el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+}
+
+function hasClass(el, className) {
+  if (el.classList) {
+    console.log(el.classList);
+    return el.classList.contains(className);	
+  }
+  else {
+    new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);	
+  }
+}
+
+})();
+<?php } ?>
+//login
+$(function() {
+$this = $('#login');
+$('#login').ajaxForm({
+  url: Wo_Ajax_Requests_File() + '?f=login',
+  beforeSend: function() {
+  working = true;
+  $this.find('button').attr("disabled", true);
+  $('.error_message').removeClass('error');
+  $('.error_message').removeClass('success');
+  $('.inerror').text('Please wait...')
+  $('#error_modal').modal('show');
+//	$this.find('.loading').removeClass('hidden');
+  },
+  success: function(data) {
+    if (data.status == 200 || data.status == 600) {
+      $('.error_message').removeClass('error');
+      $('.error_message').addClass('success');
+      $('.inerror').html('Welcome Back')
+    //	$state.addClass('success-alert');
+      console.log('welcome back');
+      //$state.html('<?php //echo $wo['lang']['welcome_back'] ?>');
+//	$this.find('.loading').addClass('hidden');
+      setTimeout(function () {
+        window.location.href = data.location;
+      }, 1000);
+    } else {
+      var errors = data.errors.join("<br>");
+      $('.error_message').removeClass('sucess');
+      $('.error_message').addClass('error');
+      $('.inerror').html(errors)
+      $this.find('button').attr("disabled", false);
+    // $this.find('.loading').addClass('hidden');
+      // $state.html(errors);
+      console.log('errors');
+      console.log(data);
+    } 
+    working = false;
+  }
+});
+});
+
+
+</script>
+
+<?php
+}
+
+?>
 
 <style type="text/css">
 	 .helper-text {
