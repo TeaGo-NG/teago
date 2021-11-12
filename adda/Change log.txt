@@ -1,0 +1,5 @@
+Version: 1.2 ----------Date: 26.06.2021
+=========================================
+
+Fix: CSS minor issue fix
+     plugins update

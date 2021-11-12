@@ -8,7 +8,7 @@ $t['config']['smtp_or_mail'] = 'mail';
 $t['config']['sms_or_email'] = 'mail';
 $t['site_pages'] = ' ';
 $t['genders'] = ['male', 'female'];
-$t['config']['emailValidation'] = 0;
+$t['config']['emailValidation'] = 1;
 $t['config']['siteEmail'] = 'support@Teago.com';
 $t['config']['siteName'] = 'Teago';
 $t['config']['membership_system'] = 1;
@@ -44,10 +44,13 @@ $t['groupDefaultAvatar'] = 'upload/photos/d-group.jpg';
     $session_id         = (!empty($_SESSION['user_id'])) ? $_SESSION['user_id'] : $_COOKIE['user_id'];
     $t['user_session'] = t_GetUserFromSessionID($session_id);
     $t['user']         = t_UserData($t['user_session']);
+    
     $_SESSION['lang'] = $t['user']['language'];
-    if ($t['user']['user_id'] < 0 || empty($t['user']['user_id']) || !is_numeric($t['user']['user_id']) || t_UserActive($t['user']['username']) === false) {
-         t_redirect($site_url.'logout');
+    if ($t['user']['user_id'] < 0 || empty($t['user']['user_id']) || !is_numeric($t['user']['user_id'])) {
+         t_redirect($site_url.'/logout');
     }
+    
+   
     $t['loggedin'] = true;
 }
  
