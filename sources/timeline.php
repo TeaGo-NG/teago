@@ -11,23 +11,21 @@ if (isset($_GET['u'])) {
             $t['user_profile'] = t_UserData($user_id);
             $type               = 'timeline';
             $about              = $t['user_profile']['about'];
-            $name               = $t['user_profile']['name'];
-             
-           
+            $name               = $t['user_profile']['name'];           
         }
          else {
             header("Location: " . $t['config']['site_url'].'/404');
             exit();
         }
+    }else {
+        header("Location: " . $t['config']['site_url'].'/404');
+        exit();
     }
 } else {
     header("Location: " . $t['config']['site_url']);
     exit();
 }
- 
- 
- 
- 
+
 if (!empty($_GET['type']) && in_array($_GET['type'], array('activities','mutual_friends','following','followers','videos','photos','likes','groups','family_list','requests'))) {
     $name = $name ." | ".t_Secure($_GET['type']);
 }

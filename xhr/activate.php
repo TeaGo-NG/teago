@@ -4,8 +4,12 @@
         $email = $t['user']['email'];
         $code = t_Secure($_POST['pin']);
         if (t_EmailExists($email) === false) {
-            t_redirect($t['config']['site_url']);
-            exit();
+            // t_redirect($t['config']['site_url']);
+            // exit();
+            $data = array(
+              'status' => 500,
+              'messages' => 'Acess Denied'
+          );
           } else if (t_ActivateUser($email, $code) === false) {   
             $data = array(
                 'status' => 500,

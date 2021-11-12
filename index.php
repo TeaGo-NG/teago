@@ -43,6 +43,8 @@ if($page !== ''){
             case 'timeline' :
                 include('sources/timeline.php');
             break;
+        }else{
+            include('sources/404.php');
         }
         if (empty($t['content'])) {
                 include('sources/home.php');

@@ -75,7 +75,7 @@
                                 <div class="signup-form-wrapper">
                                     
                                     <div class="signup-inner text-center">
-                                        <h3 class="title">Confirm Email</h3>
+                                        <h3 class="title">Confirm</h3>
                                         <!-- form -->
                                         <form id="activate"  class="signup-inner--form" method="post">
                                             <div class="row">
@@ -220,27 +220,29 @@ if($t['page'] == 'confirm-email'){
 	//	$this.find('.loading').removeClass('hidden');
     },
     success: function(data) {
+      console.log(data);
       if (data.status == 200 || data.status == 600) {
         $('.error_message').removeClass('error');
         $('.error_message').addClass('success');
         $('.inerror').html('Account activated')
-      //	$state.addClass('success-alert');
-        // console.log('welcome back');
-        //$state.html('<?php //echo $wo['lang']['welcome_back'] ?>');
-	//	$this.find('.loading').addClass('hidden');
+            //	$state.addClass('success-alert');
+              // console.log('welcome back');
+              //$state.html('<?php //echo $wo['lang']['welcome_back'] ?>');
+        //	$this.find('.loading').addClass('hidden');
         setTimeout(function () {
         	window.location.href = data.location;
         }, 1000);
       } else {
-        var errors = data.errors.join("<br>");
-        $('.error_message').removeClass('sucess');
-        $('.error_message').addClass('error');
-        $('.inerror').html(errors)
-        $this.find('button').attr("disabled", false);
-      // $this.find('.loading').addClass('hidden');
-        // $state.html(errors);
-        console.log('errors');
-        console.log(data);
+          console.log(data);
+        //   var errors = data.errors.join("<br>");
+        //   $('.error_message').removeClass('sucess');
+        //   $('.error_message').addClass('error');
+        //   $('.inerror').html(errors)
+        //   $this.find('button').attr("disabled", false);
+        // // $this.find('.loading').addClass('hidden');
+        //   // $state.html(errors);
+        //   console.log('errors');
+        //   console.log(data);
       } 
       working = false;
     }
