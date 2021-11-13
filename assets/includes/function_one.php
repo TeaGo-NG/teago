@@ -442,7 +442,29 @@ function t_IsNameExist($username, $active = 0) {
  }
 
 
-
+function forgotPassword($email){
+            global $t, $sqlConnect;
+            $code = rand(111111, 999999);
+            $code = md5($code);
+            $email = t_Secure($email);
+            $query_two = mysqli_query($sqlConnect, " UPDATE " . T_USERS . "  SET `email_code` = '{$code}' WHERE `email` = '{$email}' ");
+            $link = $t['config']['site_url'].'/'.$email.'/'.$code;
+            $t['recoveru'] = $email;
+            $t['recoverl'] =  $link;
+            $body              = t_LoadPage('emails/recover');
+                $send_message_data = array(
+                    'from_email' => $t['config']['siteEmail'],
+                    'from_name' => $t['config']['siteName'],
+                    'to_email' => $email,
+                    'to_name' => $email,
+                    'subject' =>'Reset Password',
+                    'charSet' => 'utf-8',
+                    'message_body' => $body,
+                    'is_html' => true
+                );
+                $send              = t_SendMessage($send_message_data);
+            return true;
+}
 
 
 ?>

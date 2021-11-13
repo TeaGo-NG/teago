@@ -249,6 +249,7 @@ if($t['loggedin'] == true && $t['user']['active'] == 0){
 </script>
 <?php
 }else{
+  if($t['page'] !== 'forgotpassword'){
 ?>
 <script>
 
@@ -323,7 +324,6 @@ else  {
 };
 
 <?php if ($t['config']['password_complexity_system'] == 1) { ?>
-
 (function(){
 var helperText = {
   charLength: document.querySelector('.helper-text .length'),
@@ -469,7 +469,44 @@ $('#login').ajaxForm({
   }
 });
 });
-
+<?php
+}
+elseif($t['page'] == 'forgotpassword'){
+  ?>
+  <script>
+  $(function() {
+  $this = $('#fpass');
+  $('#fpass').ajaxForm({
+    url: Wo_Ajax_Requests_File() + '?f=forgotpassword',
+    beforeSend: function() {
+		working = true;
+    $('.error_message').removeClass('error');
+    $('.error_message').removeClass('success');
+    $('.inerror').text('Please wait...')
+    $('#error_modal').modal('show');
+	//	$this.find('.loading').removeClass('hidden');
+    },
+    success: function(data) {
+      console.log(data);
+      if (data.status == 200 || data.status == 600) {
+        $('.error_message').removeClass('error');
+        $('.error_message').addClass('success');
+        $('.inerror').html('Password reset procedure have been sent to your mail<br> check your mail to continue')
+        
+      } 
+      else if(data['status'] == 500 ) {
+        console.log(data);
+        $('.error_message').removeClass('sucess');
+        $('.error_message').addClass('error');
+        $('.inerror').html(data.messages)     
+       $this.find('button').attr("disabled", false);
+      }  
+      working = false;
+    }
+  });
+});
+</script>
+<?php }?>
 
 </script>
 

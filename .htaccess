@@ -10,6 +10,7 @@ RewriteRule ^404$ index.php?link1=404 [QSA]
 RewriteRule ^start_up$ index.php?link1=start_up [QSA]
 RewriteRule ^logout$ index.php?link1=logout [QSA]
 RewriteRule ^welcome(.*)$ index.php?link1=welcome [QSA,L]
+RewriteRule ^forgotpassword(.*)$ index.php?link1=forgotpassword [QSA,L]
 
 
 RewriteCond %{REQUEST_FILENAME} !-f

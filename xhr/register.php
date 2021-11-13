@@ -102,8 +102,8 @@ if ($f == 'register') {
                
             }
              else if ($t['config']['sms_or_email'] == 'mail') {
-               $t['user']        = $_POST;
-               $t['code']        = $code;
+                $t['user']        = $_POST;
+                $t['code']        = $code;
                 $body              = t_LoadPage('emails/activate');
                 $send_message_data = array(
                     'from_email' =>$t['config']['siteEmail'],

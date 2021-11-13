@@ -6,9 +6,12 @@ if ($t['loggedin'] == true && !isset($_GET['link1'])) {
 } elseif (isset($_GET['link1'])) {
     $page = $_GET['link1'];
 }
-
-if ((!isset($_GET['link1']) && $t['loggedin'] == false) || (isset($_GET['link1']) && $t['loggedin'] == false && $page == 'home')) {
-    $page = 'welcome';
+if ((!isset($_GET['link1']) && $t['loggedin'] == false ) || (isset($_GET['link1']) && $t['loggedin'] == false && $page == 'home') ) {
+    
+          
+        $page = 'welcome';
+ 
+   
 }
 
 if($page !== ''){  
@@ -30,6 +33,9 @@ if($page !== ''){
             break;
             case 'welcome' : 
                 include('sources/welcome.php');
+            break; 
+            case 'forgotpassword' : 
+                include('sources/forgotpassword.php');
             break; 
             case  'start-up' :
                 include('sources/start-up.php');
