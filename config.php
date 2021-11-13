@@ -8,7 +8,7 @@ $sql_db_pass = "teagolikesecured";
 // MySQL Database Name
 $sql_db_name = "teagonig_cose";
 // Site URL
-$site_url = "https://cose.teagonig.com/"; // e.g (http://example.com)
+$site_url = "https://fuoyecose.teagonig.com/"; // e.g (http://example.com)
 // MySQL Hostname
 // $sql_db_host = "localhost";
 // // MySQL Database User
