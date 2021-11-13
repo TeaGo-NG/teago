@@ -448,7 +448,7 @@ function forgotPassword($email){
             $code = md5($code);
             $email = t_Secure($email);
             $query_two = mysqli_query($sqlConnect, " UPDATE " . T_USERS . "  SET `email_code` = '{$code}' WHERE `email` = '{$email}' ");
-            $link = $t['config']['site_url'].'/'.$email.'/'.$code;
+            $link = $t['config']['site_url'].'/reset/e='.$email.'&t='.$code;
             $t['recoveru'] = $email;
             $t['recoverl'] =  $link;
             $body              = t_LoadPage('emails/recover');
@@ -466,5 +466,26 @@ function forgotPassword($email){
             return true;
 }
 
+function t_ResetPassword($user_id, $password) {
+    global $sqlConnect;
+    if (empty($password)) {
+        return false;
+    }
+    $user_id  = t_Secure($user_id);
+    $password = t_Secure($password);
+    $password = t_Secure(password_hash($password, PASSWORD_DEFAULT));
+    $query    = mysqli_query($sqlConnect, " UPDATE " . T_USERS . " SET `password` = '{$password}' WHERE `email` = {$user_id} ");
+    if ($query) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function t_isValidPasswordResetToken($email, $token) {
+    global $sqlConnect;
+    $query = mysqli_query($sqlConnect, " SELECT COUNT(`user_id`) FROM " . T_USERS . " WHERE `email` = {$email} AND `email_code` = '{$token}' AND `active` = '1' ");
+    return (t_Sql_Result($query, 0) == 1) ? true : false;
+}
 
 ?>

@@ -5,7 +5,8 @@
             if(forgotPassword($email)){
                 $data = array(
                     'status' => 200,
-                    'messages' => 'Success'
+                    'messages' => 'Success',
+                    'location' => $wo['config']['site_url']
                 );
             }
         }else{

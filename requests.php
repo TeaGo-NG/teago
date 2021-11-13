@@ -11,6 +11,7 @@ if (isset($_GET['s'])) {
  
 $data            = array();
 $allow_array     = array(
+    'reset',
     'forgotpassword',
     'activate',
     'login',
@@ -32,6 +33,7 @@ $allow_array     = array(
     'stripe'
 );
 $non_login_array = array(
+    'reset',
     'forgotpassword',
     'register',
     'confirm-email',

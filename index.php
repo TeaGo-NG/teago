@@ -33,6 +33,9 @@ if($page !== ''){
             break;
             case 'welcome' : 
                 include('sources/welcome.php');
+            break;
+            case 'reset' : 
+                include('sources/reset.php');
             break; 
             case 'forgotpassword' : 
                 include('sources/forgotpassword.php');

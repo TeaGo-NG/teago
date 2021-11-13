@@ -249,7 +249,7 @@ if($t['loggedin'] == true && $t['user']['active'] == 0){
 </script>
 <?php
 }else{
-  if($t['page'] !== 'forgotpassword'){
+  if($t['page'] !== 'forgotpassword' && $t['page'] !== 'reset'){
 ?>
 <script>
 
@@ -496,6 +496,58 @@ elseif($t['page'] == 'forgotpassword'){
       } 
       else if(data['status'] == 500 ) {
         console.log(data);
+        $('.error_message').removeClass('error');
+        $('.error_message').addClass('success');
+        $('.inerror').html('Password reset procedure have been sent to your mail<br> check your mail to continue')
+      
+      }  
+      working = false;
+    }
+  });
+});
+</script>
+<?php }
+elseif($t['page']  == 'reset'){
+?>
+ <script>
+ function checkPass(){
+  $this = $('#reset_password');
+   pass1 = document.getElementById('pass1').value;
+   pass = document.getElementById('pass2').value;
+   if(pass1 == pass){
+    $this.find('button').attr("disabled", false);
+    $('.passinfo').addClass('hiden');
+   }else{
+    $this.find('button').attr("disabled", true);
+    $('.passinfo').removeClass('hiden');
+   }
+ }
+  $(function() {
+  $this = $('#reset_password');
+  $this.find('button').attr("disabled", true);
+  $('#reset_password').ajaxForm({
+    url: Wo_Ajax_Requests_File() + '?f=reset_password',
+    beforeSend: function() {
+		working = true;
+    $('.error_message').removeClass('error');
+    $('.error_message').removeClass('success');
+    $('.inerror').text('Please wait...')
+    $('#error_modal').modal('show');
+	//	$this.find('.loading').removeClass('hidden');
+    },
+    success: function(data) {
+      console.log(data);
+      if (data.status == 200 || data.status == 600) {
+        $('.error_message').removeClass('error');
+        $('.error_message').addClass('success');
+        $('.inerror').html('Password reset successfully')
+       
+        setTimeout(function () {
+        window.location.href = data.location;
+      }, 1000);
+      } 
+      else if(data['status'] == 500 ) {
+        console.log(data);
         $('.error_message').removeClass('sucess');
         $('.error_message').addClass('error');
         $('.inerror').html(data.messages)     
@@ -506,7 +558,10 @@ elseif($t['page'] == 'forgotpassword'){
   });
 });
 </script>
-<?php }?>
+
+<?php
+}
+?>
 
 </script>
 
