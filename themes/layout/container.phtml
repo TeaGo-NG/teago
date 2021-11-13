@@ -221,7 +221,6 @@ if($t['loggedin'] == true && $t['user']['active'] == 0){
 	//	$this.find('.loading').removeClass('hidden');
     },
     success: function(data) {
-      
       if (data.status == 200 || data.status == 600) {
         $('.error_message').removeClass('error');
         $('.error_message').addClass('success');

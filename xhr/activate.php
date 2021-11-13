@@ -26,7 +26,8 @@
              
             $data = array(
                 'status' => 200,
-                'messages' => 'Success'
+                'messages' => 'Success',
+                'location' => $site_url
             );
          
           }
