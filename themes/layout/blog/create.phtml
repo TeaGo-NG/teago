@@ -18,17 +18,12 @@
                             <div class="form-group col-lg-12">
                                 <label class="col-md-12" for="new-blog-content"><?php echo 'Content'; ?></label>
                                 <div class="col-md-12">
-                                    <textarea name="blog_content" id="new-blog-content" rows="3" type="text" class="form-control input-md"></textarea>
+                                <textarea id="blog">Hello, World!</textarea>
                                 </div>
                             </div>
 
-                            <div class="form-group col-lg-6">
-                                <label class="col-md-12" for="new-blog-content"><?php echo 'Tags'; ?></label>
-                                <div class="col-md-12">
-                                <input data-role="tagsinput" id="blog_tags" name="blog_tags" type="text" class="form-control input-md" placeholder="<?php echo 'tags'; ?>"> 
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-6">
+                             
+                            <div class="form-group col-lg-12">
                                 <label class="col-md-12" for="new-blog-category"><?php echo 'Category'; ?></label>
                                 <div class="col-md-12">
                                 <select width="100%" name="blog_category" class="form-control" id="blog_category">
@@ -56,6 +51,7 @@
                                </div>
                             </div>
                             <div class="col-12">
+                            <section class="progress-area"></section>
                              <div id="drag-and-drop-zone" class="dm-uploader p-5">
                              <div class="main prv-img pointer" id="select-img" data-block="thumdrop-zone">
                                         <div class="thumbnail-rendderer">
@@ -75,31 +71,7 @@
 
 
 
-                            <div class="create_blog_area_acombo">
-                            <div class="form-group th-alert col-sm-7">
-                                <div class="col-md-12">
-                                    <div class="main prv-img pointer" id="select-img" data-block="thumdrop-zone">
-                                        <div class="thumbnail-rendderer">
-                                            <div>
-                                                <h4 class="bold"><?php echo 'Drop image here'; ?></h4>
-                                                <div class="error-text-renderer"></div>
-                                                <div>
-                                                    <span><?php echo 'Or'; ?></span>
-                                                    <p><?php echo 'Browse to upload'; ?></p>
-                                                </div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-5 no-padding-right">
-                                <div class="form-group col-lg-12">
-                                <label class="col-md-12" for="blog_category"><?php echo 'category'; ?></label>
-                                
-                            </div>
                             
-                            </div>
-                            </div>
                             <input type="hidden" class="hidden" id="thumbnail" name="thumbnail" accept="image/*">
                         </div>
                         
@@ -111,71 +83,87 @@
                         <input type="hidden" name="hash_id" value="<?php echo t_CreateSession();?>">
                         <input  name="image" type="hidden" id="upload" class="hidden">
     </form>
-
+    <form action="#" class="f" enctype="multipart/form-data">
+      <input class="file-input" type="file" name="file" accept="image/*" hidden >
+      <i class="fas fa-cloud-upload-alt"></i>
+      
+    </form>
+    <section class="progress-area"></section>
  </div>
        
-<script src="assets/js/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js"></script>
-
+ 
+    
 <script>
-jQuery(document).ready(function($) {
-    var thumb_drop_block = $("[data-block='thumdrop-zone']");
-    if (typeof(window.FileReader) == 'undefined') {
-      thumb_drop_block.find('.thumbnail-rendderer div').text('Drag drop is not supported in your browser!');
+const form = document.querySelector(".dm-uploader"),
+f = document.querySelector(".f"),
+fileInput = document.querySelector(".file-input"),
+progressArea = document.querySelector(".progress-area"),
+uploadedArea = document.querySelector(".uploaded-area");
+// form click event
+form.addEventListener("click", () =>{
+  fileInput.click();
+});
+
+fileInput.onchange = ({target})=>{
+  let file = target.files[0]; //getting file [0] this means if user has selected multiple files then get first one only
+  if(file){
+    let fileName = file.name; //getting file name
+    if(fileName.length >= 12){ //if file name length is greater than 12 then split it and add ...
+      let splitName = fileName.split('.');
+      fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
+     
     }
-    else{
-      thumb_drop_block[0].ondragover = function() {
-          thumb_drop_block.addClass('hover');
-          return false;
-      };
-          
-      thumb_drop_block[0].ondragleave = function() {
-          thumb_drop_block.removeClass('hover');
-          return false;
-      };
+    uploadFile(fileName, file); //calling uploadFile with passing file name as an argument
+  }
+}
 
-      thumb_drop_block[0].ondrop = function(event) {
-          event.preventDefault();
-          thumb_drop_block.removeClass('hover');
-          var file = event.dataTransfer.files;
-          $("#thumbnail").prop('files', file);
-          $(".prv-img").html("<img src='" + window.URL.createObjectURL(event.dataTransfer.files[0]) + "' alt='Picture'>")
-      };
+// file upload function
+function uploadFile(name){
+  let xhr = new XMLHttpRequest(); //creating new xhr object (AJAX)
+  xhr.open("POST", "themes/uploadcover.php"); //sending post request to the specified URL
+  xhr.upload.addEventListener("progress", ({loaded, total}) =>{ //file uploading progress event
+    let fileLoaded = Math.floor((loaded / total) * 100);  //getting percentage of loaded file size
+    let fileTotal = Math.floor(total / 1000); //gettting total file size in KB from bytes
+    let fileSize;
+    // if file size is less than 1024 then add only KB else convert this KB into MB
+    (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024*1024)).toFixed(2) + " MB";
+    let progressHTML = `<li class="rrow">
+                          <i class="fas fa-file-alt"></i>
+                          <div class="content">
+                            <div class="details">
+                              <span class="name">${name} • Uploading</span>
+                              <span class="percent">${fileLoaded}%</span>
+                            </div>
+                            <div class="progress-bar">
+                              <div class="progress" style="width: ${fileLoaded}%"></div>
+                            </div>
+                          </div>
+                        </li>`;
+    uploadedArea.innerHTML = ""; //uncomment this line if you don't want to show upload history
+    uploadedArea.classList.add("onprogress");
+    progressArea.innerHTML = progressHTML;
+    if(loaded == total){
+      progressArea.innerHTML = "";
+      let uploadedHTML = `<li class="row">
+                            <div class="content upload">
+                              <i class="fas fa-file-alt"></i>
+                              <div class="details">
+                                <span class="name">${name} • Uploaded</span>
+                                <span class="size">${fileSize}</span>
+                              </div>
+                            </div>
+                            <i class="fas fa-check"></i>
+                          </li>`;
+      uploadedArea.classList.remove("onprogress");
+      // uploadedArea.innerHTML = uploadedHTML; //uncomment this line if you don't want to show upload history
+      uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML); //remove this line if you don't want to show upload history
     }
+  });
+  let data = new FormData(f); //FormData is an object to easily send form data
+  xhr.send(data); //sending form data
 
-    $("#blog_tags").tagsinput({
-      maxTags: 15,
-    });
+}
 
-    $("#select-img").click(function(event) {
-      $("#thumbnail").click()
-    });
-
-    $("#thumbnail").change(function(event) {
-      $(".prv-img").html("<img src='" + window.URL.createObjectURL(this.files[0]) + "' alt='Picture'>")
-    });
-
-
-    $('#insert-blog').ajaxForm({
-      url: Wo_Ajax_Requests_File() + '?f=insert-blog',
-      beforeSend: function() {
-        $('.wo_settings_page').find('.last-sett-btn .ball-pulse').fadeIn(100);
-      },
-      success: function(data) {
-        if (data['status'] == 200) {
-          $("#blog-alert").html('<div class="alert alert-success">'+ data['message'] +'</div>');
-          window.location = data.url;
-        } else if (data['status'] == 300) {
-          $("#approve_post").modal('show');
-          Wo_Delay(function(){
-            $("#approve_post").modal('hide');
-            location.reload();
-          },3000);
-        } else if (data['message']) {
-          $("#blog-alert").html('<div class="alert alert-danger">' + data['message'] + '</div>');
-        } 
-        $('.wo_settings_page').find('.last-sett-btn .ball-pulse').fadeOut(100);
-      }});
- });
 
 tinymce.init({
   selector: '#blog',
@@ -211,6 +199,29 @@ tinymce.init({
 });
 </script> 
 <style>
+  .progress-area .rrow .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit;
+}
   .dm-uploader {
 	border: 0.25rem dashed #A5A5C7;
 	text-align: center;
@@ -238,20 +249,4 @@ tinymce.init({
 
 	border-style: solid;
 }
-</style>
-<script src="assets/js/book-v1.j"></script>
-     		 <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
-            <script src="assets/js/tinymce/js/tinymce/tinymce.min.js?version=3.1.2"></script>
-            <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js?version=3.1.2"></script>
-            <script src="assets/js/jquery-3.1.1.min.js,qversion=3.1.2.pagespeed.jm.RvrvFCPmHb.js"></script>
-            <script src="assets/js/bok-v1.js"></script>
-      <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js?version=3.1.2"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js?version=3.1.2"></script>
-      <script src=".js/player/fluidplayer.min.js?version=3.1.2"></script>
-    
-<script src="assets/js/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js"></script>
-<script type="text/javascript" src="assets/js/script.js,qversion=3.1.2.pagespeed.jm.oxwNjroO9q.js"></script>
-                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOfpaMO_tMMsuvS2T4zx4llbtsFqMuT9Y&libraries=places"></script>
-            <script src="assets/js/audioRecord/recorder.js,qversion==3.1.2+record.js,qversion==3.1.2.pagespeed.jc.nJNgUFcc29.js"></script><script>eval(mod_pagespeed_pD8flaDZpS);</script>
-      
+</style> 

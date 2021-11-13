@@ -35,12 +35,9 @@
     <?php 
     if($t['page'] == 'Create Blog'){
       ?>
-     
-     	 
-            <script src="assets/js/tinymce/js/tinymce/tinymce.min.js?version=3.1.2"></script>
-            <script src="//media.twiliocdn.com/sdk/js/video/v1/twilio-video.min.js?version=3.1.2"></script>
-    
-      <?php
+     <!-- <script src="assets\js\tiny.js"></script> -->
+     <script src="assets/js/tinymce/js/tinymce/tinymce.min.js"></script>
+       <?php
     }
     ?>
     <script>
@@ -248,7 +245,7 @@ if($t['loggedin'] == true && $t['user']['active'] == 0){
 </script>
 <?php
 }else{
-  if($t['page'] !== 'forgotpassword' && $t['page'] !== 'reset'){
+  if($t['page'] == 'welcome'){
 ?>
 <script>
 
@@ -296,10 +293,9 @@ $this.ajaxForm({
       $state.removeClass('success-message');
       $state.addClass('error-message');
       $inneralert.html(data.errors);
-      setTimeout(function () {
-        window.location.href = data.location;
-      }, 1000);
-    } else {
+      
+    } 
+    else {
       $this.find('button').attr("disabled", false);
       $this.find('button').text('Create Account');
       $state.removeClass('success-message');

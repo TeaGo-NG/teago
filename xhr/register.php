@@ -89,7 +89,8 @@ if ($f == 'register') {
             if ($activate == 1) {
                 $data  = array(
                     'status' => 200,
-                    'message' => $success_icon . 'Welcome to TeaGo'
+                    'message' => $success_icon . 'Welcome to TeaGo',
+                    'location' => $site_url
                 );
                 $login = t_Login($_POST['email'], $_POST['password']);
                
@@ -116,7 +117,11 @@ if ($f == 'register') {
                     'is_html' => true
                 );
                 $send              = t_SendMessage($send_message_data);
-                $errors            = $success_icon .'An email have been sent to your address, <br> Please confirm your email to continue';
+                $data  = array(
+                    'status' => 200,
+                    'message' => $success_icon .'An email have been sent to your address, <br> Please confirm your email to continue',
+                    'location' => $site_url.'/confirm-email'
+                );
                 if ($t['config']['membership_system'] == 1) {
                     $session             = t_CreateLoginSession(t_UserIdFromUsername($_POST['username']));
                     $_SESSION['user_id'] = $session;
