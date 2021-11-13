@@ -66,7 +66,7 @@ if ($f == 'register') {
             'src' => 'site',
             'gender' => t_Secure($gender),
             'lastseen' => time(),
-            'active' => 1,
+            'active' => 0,
             'birthday' => '0000-00-00'
         );
         if (!empty($_POST['phone_num'])) {
