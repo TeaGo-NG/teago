@@ -2,9 +2,9 @@
 // MySQL Hostname
 $sql_db_host = "localhost";
 // MySQL Database User
-$sql_db_user = "teagonig_teago";
+$sql_db_user = "teagonig_teagonig";
 // MySQL Database Password
-$sql_db_pass = "teagolikesecured";
+$sql_db_pass = "securemelikekilode";
 // MySQL Database Name
 $sql_db_name = "teagonig_cose";
 // Site URL
