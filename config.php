@@ -1,5 +1,5 @@
 <?php
-// MySQL Hostname
+MySQL Hostname
 $sql_db_host = "localhost";
 // MySQL Database User
 $sql_db_user = "teagonig_teago";
@@ -9,6 +9,7 @@ $sql_db_pass = "teagolikesecured";
 $sql_db_name = "teagonig_cose";
 // Site URL
 $site_url = "https://cose.teagonig.com/"; // e.g (http://example.com)
+
 // MySQL Hostname
 // $sql_db_host = "localhost";
 // // MySQL Database User
